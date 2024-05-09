@@ -48,3 +48,60 @@
         </div>
     </div>
 </div>
+
+
+
+
+<div class="ct-getTheLook" style="background:{{ section.settings.bgcolor }}; margin:{{ section.settings.mtop }}px 0px {{ section.settings.mbot }}px 0px">
+    <div class="ct-getTheLook-inner">
+        <div class="ct-getTheLook-heading-title">{{ section.settings.heading }}</div>
+        <div class="ct-getTheLook-container">
+          <div class="ct-getTheLook-image">
+              {% if section.settings.image != blank %}
+                 {{- section.settings.image | image_url: width: section.settings.image.width | image_tag: fetchpriority:'high',  sizes: '50px)', widths: '100, 200, 750', class: 'ct-getTheLook-img' -}}
+              {% endif %}
+          </div>
+          <div class="ct-getTheLook-wrapper">
+              {% for block in section.blocks %}
+                <div id="ct_getTheLook_content{{ forloop.index }}" class="ct-getTheLook-product-cart">
+                  <div class="swiper ct_fea_collection  collection collection-quick-add-bulk section-{{ section.id }}-padding" >
+                      <div class="ct-getTheLook-btn-main">
+                        <div class="ct-getTheLook-btn swiper-button-next"></div>
+                        <div class="ct-getTheLook-btn swiper-button-prev"></div>
+                      </div>
+                      <div class="ct-getTheLook-slide-main swiper-wrapper">
+                        {%- for product in block.settings.collection.products -%}
+                          <li class="ct-collection-slide-main swiper-slide">
+                            {% render 'ct-card-product',
+                              card_product: product,
+                              media_aspect_ratio: section.settings.image_ratio,
+                              image_shape: section.settings.image_shape,
+                              show_secondary_image: section.settings.show_secondary_image,
+                              show_vendor: section.settings.show_vendor,
+                              show_rating: section.settings.show_rating,
+                              section_id: section.id,
+                              quick_add: section.settings.quick_add
+                            %}
+                          </li>
+                        {%- endfor -%}
+                      </div>
+                  </div>
+                </div>
+              {% endfor %}
+          </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="ct-getTheLook-link-wrapper">
+    <div class="ct-getTheLook-link-box">
+        <a href="" class="ct-getTheLook-link-title"></a>
+    </div>
+    <div class="ct-getTheLook-link-box">
+        <a href="" class="ct-getTheLook-link-title"></a>
+    </div>
+    <div class="ct-getTheLook-link-box">
+        <a href="" class="ct-getTheLook-link-title"></a>
+    </div>
+</div>
