@@ -105,3 +105,630 @@
         <a href="" class="ct-getTheLook-link-title"></a>
     </div>
 </div>
+
+
+{% if product.compare_at_price > product.price %}
+  {% assign discount_amount = product.compare_at_price | minus: product.price %}
+  {% assign discount_percentage = discount_amount | times: 100 | divided_by: product.compare_at_price %}
+  
+  <div class="product-listing">
+    <h2>{{ product.title }}</h2>
+    <p class="price">
+      <span class="original-price">{{ product.compare_at_price | money }}</span>
+      <span class="sale-price">{{ product.price | money }}</span>
+    </p>
+    <span class="discount-badge">{{ discount_percentage | round }}% OFF</span>
+  </div>
+{% else %}
+  <div class="product-listing">
+    <h2>{{ product.title }}</h2>
+    <p class="price">{{ product.price | money }}</p>
+  </div>
+{% endif %}
+
+
+{% if product.compare_at_price > product.price %}
+  {% assign discount_amount = product.compare_at_price | minus: product.price %}
+  {% assign discount_percentage = discount_amount | times: 100 | divided_by: product.compare_at_price %}
+  <span class="discount-badge">{{ discount_percentage | round }}% OFF</span>
+{% endif %}
+
+
+
+// accordion
+
+<style>
+    .ct-faq-main {
+      width: 100%;
+       padding: 36px 0 0px 0;
+  }
+  .ct-faq-inner {
+      width: 100%;
+      max-width: 981px;
+      margin: 0 auto;
+  }
+    .ct-faq-container-headding {
+      height: max-content;
+      border-left: 1px solid #ccc;
+      padding-bottom: 20px;
+  }
+  .ct-faq-mtitle {
+     color: #000;
+    text-align: center;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+  .ct-faq-container-main {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+  }
+  .ct--faq-container-headding1, .ct--faq-container-headding2, .ct--faq-container-headding3,.ct--faq-container-headding4, .ct--faq-container-headding5, .ct--faq-container-headding6, .ct--faq-container-headding7, .ct-faq-container-headding .faq_headding8 {
+      cursor: pointer;
+      padding: 10px 30px;
+      color: #1A1A1A;
+      font-family: Circular Std;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 14.769px;
+      opacity: 0.7;
+  }
+    .ct--faq-container-headding3{
+      margin-bottom: 0px;
+    }
+    .ct-faq-container-title {
+      width: 100%;
+      max-width: 668px;
+      display: none;
+  }
+    .ct-faq-container-title.ct_active {
+      display: block;
+  }
+    .ct--faq-container-title {
+      width: 668px;
+      padding: 20px 0 20px 24px;
+      background: #FAEDCD;
+      color: #1A1A1A;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 19.556px;
+  }
+  .ct--faq-container-potions {
+      width: 100%;
+  }
+    .ct--faq-potions-main:first-child{
+      border-top: none;
+    }
+    .ct--faq-potions-main{
+      padding: 20px 24px;
+      border-top: 0.8px solid rgba(26, 26, 26, 0.15);
+    }
+    .ct--faq-potions-main.active svg {
+      transform: rotate(45deg);
+  }
+  .ct--faq-potions-title {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+  }
+  .ct--faq-potions, .ct--faq-potions-info {
+      color: #1A1A1A;
+      font-family: Circular Std;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 450;
+      line-height: 26px;
+  }
+    .ct--faq-potions-info {
+      height: 0;
+      overflow: hidden;
+      transition: all 0.2s ease-out;
+  }
+  .ct--faq-potions-info a {
+      color: #1A1A1A;
+  }
+   .ct--faq-potions-main.active .ct--faq-potions-info {
+      height: auto;
+      line-height: normal;
+     margin-block-start: 10px;
+  }
+    .ct-faq-container-headding  .faq_headding1, .ct-faq-container-headding  .faq_headding2, .ct-faq-container-headding .faq_headding3,.ct-faq-container-headding .faq_headding4, .ct-faq-container-headding .faq_headding5, .ct-faq-container-headding .faq_headding6, .ct-faq-container-headding .faq_headding7, .ct-faq-container-headding .faq_headding8{
+      display:block;
+    }
+    .faq_headding2, .faq_headding3,.faq_headding4{
+      display:none;
+    }
+  .faq_headding.s_ct_active {
+      border-left: 2px solid #000;
+      font-weight: 700;
+      opacity: 1;
+  }
+    .ct-faq-faqdesc p {
+      margin-block-start: 4px;
+  }
+    .ct-faq-faqdesc {
+      color: #000;
+      font-family: Circular Std;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 450;
+      line-height: normal;
+      text-align: center;
+  }
+  @media screen and (max-width:989px){
+    .ct-faq-container-title {
+      max-width: 100%;
+     }
+    .ct--faq-container-title{
+      width: auto;
+    }
+    .ct-faq-container-main{
+        justify-content: center;
+    }
+    .ct--faq-potions-title{
+      gap: 40px;
+    }
+  }
+  @media screen and (max-width:768px){
+  .ct-faq-container-main {
+    margin-top: 0px;
+  }
+  .ct-faq-main {
+      padding: 30px 16px !important;
+  }
+  .ct-faq-mtitle {
+      font-size: 22px;
+  }
+  .ct-faq-faqdesc {
+      font-size: 14px;
+      margin: 5px 0 20px 0;
+  }
+  .ct-faq-faqdesc p {
+      margin: 0;
+  }
+  .ct-faq-container-headding {
+      display: none;
+  }
+  .ct-faq-container-main .ct_wrap {
+      width: 100%;
+  }
+  .ct-faq-container-title {
+      display: block;
+  }
+  .ct--faq-container-title {
+      padding: 15px 0 15px 17px;
+      font-size: 14px;
+  }
+  .ct--faq-potions-main {
+      padding: 15px 15px 15px 10px;
+  }
+  .ct--faq-potions, .ct--faq-potions-info {
+      font-size: 12px;
+      line-height: 18px;
+  }
+  .ct--faq-potions-title svg {
+      width: 8px;
+      height: 8px;
+  }
+  #shopify-section-template--20240771187013__3861ebf9-4754-4635-a507-9b401a844586 .ct-faq-main {
+      padding-block-start: 60px !important;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+  }
+  </style>
+  
+  <div id="ct_faq" class="ct-faq-main for_JS">
+    <div class="ct-faq-inner">
+      <div class="ct-faq-mtitle">{{ section.settings.Mtitle }}</div>
+      <div class="ct-faq-faqdesc">{{ section.settings.faqdesc }}</div>
+      <div class="ct-faq-container-main">
+        <div class="ct-faq-container-headding">
+          {% if section.settings.headding1 != blank %} 
+          <div id="faq_headding1" class="faq_headding1 ct--faq-container-headding1 faq_headding s_ct_active">{{ section.settings.headding1 }}</div>
+          {% endif %}
+          {% if section.settings.headding2 != blank %} 
+          <div id="faq_headding2" class="faq_headding2 ct--faq-container-headding2 faq_headding">{{ section.settings.headding2 }}</div>
+          {% endif %}
+          {% if section.settings.headding3 != blank %}
+          <div id="faq_headding3" class="faq_headding3 ct--faq-container-headding3 faq_headding">{{ section.settings.headding3 }}</div>
+          {% endif %}
+          {% if section.settings.headding4 != blank %}
+          <div id="faq_headding4" class="faq_headding4 ct--faq-container-headding4 faq_headding">{{ section.settings.headding4 }}</div>
+          {% endif %}
+          {% if section.settings.headding5 != blank %}
+          <div id="faq_headding5" class="faq_headding5 ct--faq-container-headding5 faq_headding">{{ section.settings.headding5 }}</div>
+          {% endif %}
+          {% if section.settings.headding6 != blank %}
+          <div id="faq_headding6" class="faq_headding6 ct--faq-container-headding6 faq_headding">{{ section.settings.headding6 }}</div>
+          {% endif %}
+          {% if section.settings.headding7 != blank %}
+          <div id="faq_headding7" class="faq_headding7 ct--faq-container-headding7 faq_headding">{{ section.settings.headding7 }}</div>
+          {% endif %}
+          {% comment %}
+          {% if section.settings.headding8 != blank and product.metafields.custom.product_faq_s_heading != blank %}
+          <div id="faq_headding8" class="faq_headding8 ct--faq-container-headding8 faq_headding">{{ section.settings.headding8 }}</div> 
+          {% endif %}
+          {% endcomment %}
+          
+        </div>
+        <div class="ct_wrap">
+        {% for block in section.blocks %}
+          <div id="" for="{{ block.settings.cid }}" class="ct-faq-container-title {% if forloop.index0 == 0 %} ct_active {% endif  %}">
+            <div class="ct--faq-container-title">{{ block.settings.Ctitle }}</div>
+            <div class="ct--faq-container-potions">
+              {% if block.settings.Htitle1 != blank %}
+                <div class="ct--faq-potions-main">
+                  <div class="ct--faq-potions-title">
+                    <div class="ct--faq-potions">{{ block.settings.Htitle1 }}</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11" fill="none">
+                      <rect x="4" y="10.55" width="10" height="2" transform="rotate(-90 4 10.55)" fill="#1A1A1A"/>
+                      <rect y="6.55005" width="2" height="10" transform="rotate(-90 0 6.55005)" fill="#1A1A1A"/>
+                    </svg>
+                  </div>
+                  <div class="ct--faq-potions-info">{{ block.settings.info1 }}</div>
+                </div>
+              {% endif %}
+              {% if block.settings.Htitle2 != blank %}
+                <div class="ct--faq-potions-main">
+                  <div class="ct--faq-potions-title">
+                    <div class="ct--faq-potions">{{ block.settings.Htitle2 }}</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11" fill="none">
+                      <rect x="4" y="10.55" width="10" height="2" transform="rotate(-90 4 10.55)" fill="#1A1A1A"/>
+                      <rect y="6.55005" width="2" height="10" transform="rotate(-90 0 6.55005)" fill="#1A1A1A"/>
+                    </svg>
+                  </div>
+                  <div class="ct--faq-potions-info">{{ block.settings.info2 }}</div>
+                </div>
+              {% endif %}
+              {% if block.settings.Htitle3 != blank %}
+                <div class="ct--faq-potions-main">
+                  <div class="ct--faq-potions-title">
+                    <div class="ct--faq-potions">{{ block.settings.Htitle3 }}</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11" fill="none">
+                      <rect x="4" y="10.55" width="10" height="2" transform="rotate(-90 4 10.55)" fill="#1A1A1A"/>
+                      <rect y="6.55005" width="2" height="10" transform="rotate(-90 0 6.55005)" fill="#1A1A1A"/>
+                    </svg>
+                  </div>
+                  <div class="ct--faq-potions-info">{{ block.settings.info3 }}</div>
+                </div>
+              {% endif %}
+              {% if block.settings.Htitle4 != blank %}
+                <div class="ct--faq-potions-main">
+                  <div class="ct--faq-potions-title">
+                    <div class="ct--faq-potions">{{ block.settings.Htitle4 }}</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11" fill="none">
+                      <rect x="4" y="10.55" width="10" height="2" transform="rotate(-90 4 10.55)" fill="#1A1A1A"/>
+                      <rect y="6.55005" width="2" height="10" transform="rotate(-90 0 6.55005)" fill="#1A1A1A"/>
+                    </svg>
+                  </div>
+                  <div class="ct--faq-potions-info">{{ block.settings.info4 }}</div>
+                </div>
+              {% endif %}
+              {% if block.settings.Htitle5 != blank %}
+                <div class="ct--faq-potions-main">
+                  <div class="ct--faq-potions-title">
+                    <div class="ct--faq-potions">{{ block.settings.Htitle5 }}</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11" fill="none">
+                      <rect x="4" y="10.55" width="10" height="2" transform="rotate(-90 4 10.55)" fill="#1A1A1A"/>
+                      <rect y="6.55005" width="2" height="10" transform="rotate(-90 0 6.55005)" fill="#1A1A1A"/>
+                    </svg>
+                  </div>
+                  <div class="ct--faq-potions-info">{{ block.settings.info5 }}</div>
+                </div>
+              {% endif %}
+              {% if block.settings.Htitle6 != blank %}
+                <div class="ct--faq-potions-main">
+                  <div class="ct--faq-potions-title">
+                    <div class="ct--faq-potions">{{ block.settings.Htitle6 }}</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11" fill="none">
+                      <rect x="4" y="10.55" width="10" height="2" transform="rotate(-90 4 10.55)" fill="#1A1A1A"/>
+                      <rect y="6.55005" width="2" height="10" transform="rotate(-90 0 6.55005)" fill="#1A1A1A"/>
+                    </svg>
+                  </div>
+                  <div class="ct--faq-potions-info">{{ block.settings.info6 }}</div>
+                </div>
+              {% endif %}
+              {% if block.settings.Htitle7 != blank %}
+                <div class="ct--faq-potions-main">
+                  <div class="ct--faq-potions-title">
+                    <div class="ct--faq-potions">{{ block.settings.Htitle7 }}</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11" fill="none">
+                      <rect x="4" y="10.55" width="10" height="2" transform="rotate(-90 4 10.55)" fill="#1A1A1A"/>
+                      <rect y="6.55005" width="2" height="10" transform="rotate(-90 0 6.55005)" fill="#1A1A1A"/>
+                    </svg>
+                  </div>
+                  <div class="ct--faq-potions-info">{{ block.settings.info7 }}</div>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %} 
+  
+  
+  
+  
+          {% comment %}
+  
+  {% for faq_heading in product.metafields.custom.product_faq_s_heading.value %}
+       {% if forloop.index == 1 %}
+          {% assign faq_heading1 = faq_heading %}  
+        {% elsif forloop.index == 2 %}
+          {% assign faq_heading2 = faq_heading %}  
+        {% elsif forloop.index == 3 %}
+          {% assign faq_heading3 = faq_heading %}
+        {% endif %}
+  {% endfor %}
+              <div id="faq-headding8" for="faq_headding8" class="ct-faq-container-title">
+              <div class="ct--faq-container-title">{{ product.title }}</div>
+            {% if faq_heading1 != blank %}
+                <div class="ct--faq-potions-main">
+                  <div class="ct--faq-potions-title">
+                    <div class="ct--faq-potions">{{ faq_heading1 }}</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11" fill="none">
+                      <rect x="4" y="10.55" width="10" height="2" transform="rotate(-90 4 10.55)" fill="#1A1A1A"/>
+                      <rect y="6.55005" width="2" height="10" transform="rotate(-90 0 6.55005)" fill="#1A1A1A"/>
+                    </svg>
+                  </div> 
+                  <div class="ct--faq-potions-info">{{ product.metafields.custom.product_faq_s_content_1 | metafield_tag }}</div>
+                </div>
+              {% endif %}
+              {% if faq_heading2 != blank %}
+                <div class="ct--faq-potions-main">
+                  <div class="ct--faq-potions-title">
+                    <div class="ct--faq-potions">{{ faq_heading2 }}</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11" fill="none">
+                      <rect x="4" y="10.55" width="10" height="2" transform="rotate(-90 4 10.55)" fill="#1A1A1A"/>
+                      <rect y="6.55005" width="2" height="10" transform="rotate(-90 0 6.55005)" fill="#1A1A1A"/>
+                    </svg>
+                  </div> 
+                  <div class="ct--faq-potions-info">{{ product.metafields.custom.product_faq_s_content_2 | metafield_tag }}</div>
+                </div>
+              {% endif %}
+              {% if faq_heading3 != blank %}
+                <div class="ct--faq-potions-main">
+                  <div class="ct--faq-potions-title">
+                    <div class="ct--faq-potions">{{ faq_heading3 }}</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11" fill="none">
+                      <rect x="4" y="10.55" width="10" height="2" transform="rotate(-90 4 10.55)" fill="#1A1A1A"/>
+                      <rect y="6.55005" width="2" height="10" transform="rotate(-90 0 6.55005)" fill="#1A1A1A"/>
+                    </svg>
+                  </div> 
+                  <div class="ct--faq-potions-info">{{ product.metafields.custom.product_faq_s_content_3 | metafield_tag }}</div>
+                </div>
+              {% endif %}
+              {% if faq_heading4 != blank %}
+                <div class="ct--faq-potions-main">
+                  <div class="ct--faq-potions-title">
+                    <div class="ct--faq-potions">{{ faq_heading4 }}</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11" fill="none">
+                      <rect x="4" y="10.55" width="10" height="2" transform="rotate(-90 4 10.55)" fill="#1A1A1A"/>
+                      <rect y="6.55005" width="2" height="10" transform="rotate(-90 0 6.55005)" fill="#1A1A1A"/>
+                    </svg>
+                  </div> 
+                  <div class="ct--faq-potions-info">{{ product.metafields.custom.product_faq_s_content_4 | metafield_tag }}</div>
+                </div>
+              {% endif %}
+              {% if faq_heading5 != blank %}
+                <div class="ct--faq-potions-main">
+                  <div class="ct--faq-potions-title">
+                    <div class="ct--faq-potions">{{ faq_heading5 }}</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11" fill="none">
+                      <rect x="4" y="10.55" width="10" height="2" transform="rotate(-90 4 10.55)" fill="#1A1A1A"/>
+                      <rect y="6.55005" width="2" height="10" transform="rotate(-90 0 6.55005)" fill="#1A1A1A"/>
+                    </svg>
+                  </div> 
+                  <div class="ct--faq-potions-info">{{ product.metafields.custom.product_faq_s_content_5 | metafield_tag }}</div>
+                </div>
+              {% endif %}
+              </div>
+          {% endcomment %}
+                        
+      </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <script>
+    $(document).ready(function(){
+  
+      $(".ct--faq-potions-title").click(function() {
+      // Remove 'active' class from all other elements
+      $(".ct--faq-potions-title").not(this).parent().removeClass("active");
+  
+      // Toggle 'active' class on the clicked element's parent
+      $(this).parent().toggleClass("active");
+  });
+  
+      jQuery('.ct-faq-container-headding .faq_headding').click(function(){
+        jQuery('.ct-faq-container-headding .faq_headding').removeClass("s_ct_active")
+        jQuery(this).addClass('s_ct_active')
+       var id=jQuery(this).attr('id');
+        jQuery('.ct_wrap .ct-faq-container-title').each(function(){
+            
+            var side_id=jQuery(this).attr('for');
+            if(id == side_id)
+            {
+                jQuery('.ct_wrap .ct-faq-container-title').removeClass("ct_active")
+                jQuery(this).addClass("ct_active");
+            }
+        })
+        
+    })
+  });
+  </script>
+  
+                        
+  {% schema %}
+  {
+    "name": "CT FAQ",
+    "settings": [
+      {
+        "type": "text",
+        "id": "Mtitle",
+        "label": "Heading"
+      },
+      {
+        "type": "richtext",
+        "id": "faqdesc",
+        "label": "description"
+      },
+      {
+        "type": "text",
+        "id": "headding1",
+        "label": "Option Heading1"
+      },
+      {
+        "type": "text",
+        "id": "headding2",
+        "label": "Option Heading 2"
+      },
+      {
+        "type": "text",
+        "id": "headding3",
+        "label": "Option Heading 3"
+      },
+      {
+        "type": "text",
+        "id": "headding4",
+        "label": "Option Heading 4"
+      },
+      {
+        "type": "text",
+        "id": "headding5",
+        "label": "Option Heading 5"
+      },
+      {
+        "type": "text",
+        "id": "headding6",
+        "label": "Option Heading 6"
+      },
+      {
+        "type": "text",
+        "id": "headding7",
+        "label": "Option Heading 7"
+      },
+      {
+        "type": "text",
+        "id": "headding8",
+        "label": "Option Heading 8 Do Not Touch",
+        "default":"Product FAQ`s"
+      }    
+    ],
+    "blocks":[{
+      "name":"option",
+      "type":"option",
+      "limit":7,
+      "settings":[
+        {
+        "type": "text",
+        "id": "cid",
+        "label": "Custom Class",
+        "info":"Use Custom Class: faq_headding1, 2 , 3 & 4"
+      },
+        {
+        "type": "text",
+        "id": "Ctitle",
+        "label": "Heading"
+      },
+       {
+        "type": "text",
+        "id": "Htitle1",
+        "label": "Option Heading 1"
+      },
+       {
+        "type": "text",
+        "id": "info1",
+        "label": "Option Info 1"
+      },
+       {
+        "type": "text",
+        "id": "Htitle2",
+        "label": "Option Heading 2"
+      },
+       {
+        "type": "text",
+        "id": "info2",
+        "label": "Option Info 2"
+      },
+       {
+        "type": "text",
+        "id": "Htitle3",
+        "label": "Option Heading 3"
+      },
+       {
+        "type": "text",
+        "id": "info3",
+        "label": "Option Info 3"
+      },
+       {
+        "type": "text",
+        "id": "Htitle4",
+        "label": "Option Heading 4"
+      },
+       {
+        "type": "text",
+        "id": "info4",
+        "label": "Option Info 4"
+      },
+       {
+        "type": "text",
+        "id": "Htitle5",
+        "label": "Option Heading 5"
+      },
+       {
+        "type": "text",
+        "id": "info5",
+        "label": "Option Info 5"
+      },
+       {
+        "type": "text",
+        "id": "Htitle6",
+        "label": "Option Heading 6"
+      },
+       {
+        "type": "text",
+        "id": "info6",
+        "label": "Option Info 6"
+      },
+       {
+        "type": "text",
+        "id": "Htitle7",
+        "label": "Option Heading 7"
+      },
+       {
+        "type": "text",
+        "id": "info7",
+        "label": "Option Info 7"
+      }
+      ]
+    }],
+    "presets":[{
+      "name": "CT FAQ"
+    }]
+  }
+  {% endschema %}
+  
+  {% stylesheet %}
+  {% endstylesheet %}
+  
+  {% javascript %}
+  {% endjavascript %}
+  

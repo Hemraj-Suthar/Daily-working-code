@@ -1,0 +1,333 @@
+<div id="ct_faq" class="ct-faq-main for_JS">
+    <div class="ct-faq-inner">
+        <div class="ct-faq-mtitle">{{ section.settings.Mtitle }}</div>
+        <div class="ct-faq-faqdesc">{{ section.settings.faqdesc }}</div>
+        <div class="ct-faq-container-main">
+            <div class="ct_wrap">
+                {% for block in section.blocks %}
+                <div id="" for="{{ block.settings.cid }}"
+                    class="ct-faq-container-title {% if forloop.index0 == 0 %} ct_active {% endif  %}">
+                    <div class="ct--faq-container-title">{{ block.settings.Ctitle }}</div>
+                    <div class="ct--faq-container-potions">
+                        {% if block.settings.Htitle1 != blank %}
+                        <div class="ct--faq-potions-main">
+                            <div class="ct--faq-potions-title">
+                                <div class="ct--faq-potions">{{ block.settings.Htitle1 }}</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11"
+                                    fill="none">
+                                    <rect x="4" y="10.55" width="10" height="2" transform="rotate(-90 4 10.55)"
+                                        fill="#1A1A1A" />
+                                    <rect y="6.55005" width="2" height="10" transform="rotate(-90 0 6.55005)"
+                                        fill="#1A1A1A" />
+                                </svg>
+                            </div>
+                            <div class="ct--faq-potions-info">{{ block.settings.info1 }}</div>
+                        </div>
+                        {% endif %}
+                        {% if block.settings.Htitle2 != blank %}
+                        <div class="ct--faq-potions-main">
+                            <div class="ct--faq-potions-title">
+                                <div class="ct--faq-potions">{{ block.settings.Htitle2 }}</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11"
+                                    fill="none">
+                                    <rect x="4" y="10.55" width="10" height="2" transform="rotate(-90 4 10.55)"
+                                        fill="#1A1A1A" />
+                                    <rect y="6.55005" width="2" height="10" transform="rotate(-90 0 6.55005)"
+                                        fill="#1A1A1A" />
+                                </svg>
+                            </div>
+                            <div class="ct--faq-potions-info">{{ block.settings.info2 }}</div>
+                        </div>
+                        {% endif %}
+                        {% if block.settings.Htitle3 != blank %}
+                        <div class="ct--faq-potions-main">
+                            <div class="ct--faq-potions-title">
+                                <div class="ct--faq-potions">{{ block.settings.Htitle3 }}</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11"
+                                    fill="none">
+                                    <rect x="4" y="10.55" width="10" height="2" transform="rotate(-90 4 10.55)"
+                                        fill="#1A1A1A" />
+                                    <rect y="6.55005" width="2" height="10" transform="rotate(-90 0 6.55005)"
+                                        fill="#1A1A1A" />
+                                </svg>
+                            </div>
+                            <div class="ct--faq-potions-info">{{ block.settings.info3 }}</div>
+                        </div>
+                        {% endif %}
+                        {% if block.settings.Htitle4 != blank %}
+                        <div class="ct--faq-potions-main">
+                            <div class="ct--faq-potions-title">
+                                <div class="ct--faq-potions">{{ block.settings.Htitle4 }}</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11"
+                                    fill="none">
+                                    <rect x="4" y="10.55" width="10" height="2" transform="rotate(-90 4 10.55)"
+                                        fill="#1A1A1A" />
+                                    <rect y="6.55005" width="2" height="10" transform="rotate(-90 0 6.55005)"
+                                        fill="#1A1A1A" />
+                                </svg>
+                            </div>
+                            <div class="ct--faq-potions-info">{{ block.settings.info4 }}</div>
+                        </div>
+                        {% endif %}
+                        {% if block.settings.Htitle5 != blank %}
+                        <div class="ct--faq-potions-main">
+                            <div class="ct--faq-potions-title">
+                                <div class="ct--faq-potions">{{ block.settings.Htitle5 }}</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11"
+                                    fill="none">
+                                    <rect x="4" y="10.55" width="10" height="2" transform="rotate(-90 4 10.55)"
+                                        fill="#1A1A1A" />
+                                    <rect y="6.55005" width="2" height="10" transform="rotate(-90 0 6.55005)"
+                                        fill="#1A1A1A" />
+                                </svg>
+                            </div>
+                            <div class="ct--faq-potions-info">{{ block.settings.info5 }}</div>
+                        </div>
+                        {% endif %}
+                        {% if block.settings.Htitle6 != blank %}
+                        <div class="ct--faq-potions-main">
+                            <div class="ct--faq-potions-title">
+                                <div class="ct--faq-potions">{{ block.settings.Htitle6 }}</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11"
+                                    fill="none">
+                                    <rect x="4" y="10.55" width="10" height="2" transform="rotate(-90 4 10.55)"
+                                        fill="#1A1A1A" />
+                                    <rect y="6.55005" width="2" height="10" transform="rotate(-90 0 6.55005)"
+                                        fill="#1A1A1A" />
+                                </svg>
+                            </div>
+                            <div class="ct--faq-potions-info">{{ block.settings.info6 }}</div>
+                        </div>
+                        {% endif %}
+                        {% if block.settings.Htitle7 != blank %}
+                        <div class="ct--faq-potions-main">
+                            <div class="ct--faq-potions-title">
+                                <div class="ct--faq-potions">{{ block.settings.Htitle7 }}</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11"
+                                    fill="none">
+                                    <rect x="4" y="10.55" width="10" height="2" transform="rotate(-90 4 10.55)"
+                                        fill="#1A1A1A" />
+                                    <rect y="6.55005" width="2" height="10" transform="rotate(-90 0 6.55005)"
+                                        fill="#1A1A1A" />
+                                </svg>
+                            </div>
+                            <div class="ct--faq-potions-info">{{ block.settings.info7 }}</div>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% schema %}
+{
+"name": "CT FAQ",
+"settings": [
+{
+"type": "text",
+"id": "Mtitle",
+"label": "Heading"
+},
+{
+"type": "richtext",
+"id": "faqdesc",
+"label": "description"
+}
+],
+"blocks":[{
+"name":"option",
+"type":"option",
+"limit":7,
+"settings":[
+{
+"type": "text",
+"id": "cid",
+"label": "Custom Class",
+"info":"Use Custom Class: faq_headding1, 2 , 3 & 4"
+},
+{
+"type": "text",
+"id": "Ctitle",
+"label": "Heading"
+},
+{
+"type": "text",
+"id": "Htitle1",
+"label": "Option Heading 1"
+},
+{
+"type": "text",
+"id": "info1",
+"label": "Option Info 1"
+},
+{
+"type": "text",
+"id": "Htitle2",
+"label": "Option Heading 2"
+},
+{
+"type": "text",
+"id": "info2",
+"label": "Option Info 2"
+},
+{
+"type": "text",
+"id": "Htitle3",
+"label": "Option Heading 3"
+},
+{
+"type": "text",
+"id": "info3",
+"label": "Option Info 3"
+},
+{
+"type": "text",
+"id": "Htitle4",
+"label": "Option Heading 4"
+},
+{
+"type": "text",
+"id": "info4",
+"label": "Option Info 4"
+},
+{
+"type": "text",
+"id": "Htitle5",
+"label": "Option Heading 5"
+},
+{
+"type": "text",
+"id": "info5",
+"label": "Option Info 5"
+},
+{
+"type": "text",
+"id": "Htitle6",
+"label": "Option Heading 6"
+},
+{
+"type": "text",
+"id": "info6",
+"label": "Option Info 6"
+},
+{
+"type": "text",
+"id": "Htitle7",
+"label": "Option Heading 7"
+},
+{
+"type": "text",
+"id": "info7",
+"label": "Option Info 7"
+}
+]
+}],
+"presets":[{
+"name": "CT FAQ"
+}]
+}
+{% endschema %}
+
+
+
+
+
+
+
+
+
+
+{% schema %}
+{
+  "name": "Custom Accordion",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "accordion_item",
+      "name": "Accordion Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "header",
+          "label": "Accordion Header",
+          "default": "Accordion Title Here"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Accordion Content",
+          "default": "<p>Accordion content goes here...</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Default Accordion",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+/* Add your custom CSS here */
+.accordion__header {
+  cursor: pointer;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.accordion__content {
+  display: none;
+  overflow: hidden;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+{% endstylesheet %}
+
+{% javascript %}
+// Add your custom JavaScript here
+document.querySelectorAll('.accordion__header').forEach(function(header) {
+  header.addEventListener('click', function() {
+    this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block';
+    this.querySelector('svg').innerHTML = this.nextElementSibling.style.display === 'block' ? minusSVG : plusSVG;
+  });
+});
+{% endjavascript %}
+
+{% liquid
+  // Plus and Minus SVG Icons
+  assign plusSVG = "<svg fill='#000000' viewBox='0 0 30 30' width='20px' height='20px'><rect height='10' width='30' y='10'/><rect height='30' width='10' x='10'/></svg>"
+  assign minusSVG = "<svg fill='#000000' viewBox='0 0 30 30' width='20px' height='20px'><rect height='10' width='30' y='10'/></svg>"
+
+  for block in section.blocks
+    case block.type
+    when 'accordion_item'
+      // Render the accordion items
+      capture header_id 
+        append 'accordion-header-' | append: forloop.index
+      endcapture
+
+      capture content_id 
+        append 'accordion-content-' | append: forloop.index
+      endcapture
+
+      <div class="accordion">
+        <div class="accordion__header" id="{{ header_id }}">
+          {{ block.settings.header }}
+          <span class="icon" aria-hidden="true">{{ plusSVG }}</span>
+        </div>
+        <div class="accordion__content" id="{{ content_id }}">
+          {{ block.settings.content }}
+        </div>
+      </div>
+    endcase
+  endfor
+%}
+
