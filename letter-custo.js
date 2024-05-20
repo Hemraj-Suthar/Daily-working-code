@@ -165,7 +165,7 @@ try {
             }
         });
 
-        console.log(Allproduct_Data)
+        // console.log(Allproduct_Data)
 
         if (messageElement.innerHTML == "") {
             Allproduct_Data.note = collectionName.innerText + " " + userInput;
@@ -212,13 +212,9 @@ try {
                     paragraphElement.style.borderRadius = "32px";
                     paragraphElement.style.transform = "translateX(50%)";
                     paragraphElement.style.whiteSpace = "nowrap";
-                    document
-                        .querySelector(".ct-felt-bunting")
-                        .lastElementChild.before(paragraphElement);
+                    document.querySelector(".ct-felt-bunting").lastElementChild.before(paragraphElement);
 
-                    setTimeout(function () {
-                        paragraphElement.remove();
-                    }, 3000);
+                    setTimeout(function () { paragraphElement.remove(); }, 3000);
 
                     setTimeout(function () {
                         document.querySelector(".mm-ajaxcart-open").click();
@@ -228,8 +224,7 @@ try {
                     console.error("Error:", error);
                 });
         } else {
-            document.querySelector(".felt-bunting-message").innerHTML =
-                "Sorry, the Letter is insufficient for the selected quantity.";
+            document.querySelector(".felt-bunting-message").innerHTML = "Sorry, the Letter is insufficient for the selected quantity.";
         }
     });
 } catch (err) {
