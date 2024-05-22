@@ -60,3 +60,71 @@
         <a href class="ct-getTheLook-link-title"></a>
     </div>
 </div>
+
+<!-- chatgpt structure -->
+{% assign current_time = 'now' | date: "%s" %}
+{% assign end_time = current_time | plus: 68700 %}
+{% assign time_left = end_time | minus: current_time %}
+{% assign arrival_date_start = '2024-04-04' %}
+{% assign arrival_date_end = '2024-04-06' %}
+
+<div class="policy-info">
+  {% if time_left > 0 %}
+    <p>Order in <strong>{{ time_left | divided_by: 3600 }} hrs {{ time_left | modulo: 3600 | divided_by: 60 }} mins</strong> and your order will arrive between <strong>{{ arrival_date_start }} - {{ arrival_date_end }}</strong></p>
+  {% else %}
+    <p>The time window for today has passed. Please check again tomorrow.</p>
+  {% endif %}
+  
+  <div class="shipping-details">
+    <div class="shipping-item">
+      <img src="path/to/shipping-icon.png" alt="Shipping Icon">
+      <span>Free shipping on orders above <strong>$500 MXN</strong></span>
+    </div>
+    <div class="shipping-item">
+      <img src="path/to/warranty-icon.png" alt="Warranty Icon">
+      <span>1 year warranty</span>
+    </div>
+    <div class="shipping-item">
+      <img src="path/to/return-icon.png" alt="Return Icon">
+      <span>30 days return</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- my custom structure -->
+{% assign current_time = 'now' | date: "%s" %}
+{% assign end_time = current_time | plus: 68700 %}
+{% assign time_left = end_time | minus: current_time %}
+{% assign arrival_date_start = '2024-04-04' %}
+{% assign arrival_date_end = '2024-04-06' %}
+
+<div class="ct-timeTracker">
+    <div class="ct-timeTracker-inner">
+        <div class="ct-timeTracker-title">
+            Order in <strong>{{ time_left | divided_by: 3600 }} hrs {{ time_left | modulo: 3600 | divided_by: 60 }} mins</strong> and your order will arrive between <strong>{{ arrival_date_start }} - {{ arrival_date_end }}</strong>
+        </div>
+        <div class="ct-policy-wrapper">
+            <div class="ct-policy-upper">
+                {% if  != blank %}  
+                    {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: fetchpriority:'high',  sizes: '50px)', widths: '100, 200, 750', class: 'ct-trust-badge-img' -}}
+                {% endif %}
+                <div class="ct-policy-title"></div>
+            </div>
+            <div class=".ct-policy-bottom">
+                <div class="ct-policy-left">
+                    {% if  != blank %}  
+                        {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: fetchpriority:'high',  sizes: '50px)', widths: '100, 200, 750', class: 'ct-trust-badge-img' -}}
+                    {% endif %}
+                    <div class="ct-policy-title"></div>
+                </div>
+                <div class="ct-policy-right">
+                    {% if  != blank %}  
+                        {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: fetchpriority:'high',  sizes: '50px)', widths: '100, 200, 750', class: 'ct-trust-badge-img' -}}
+                    {% endif %}
+                    <div class="ct-policy-title"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
