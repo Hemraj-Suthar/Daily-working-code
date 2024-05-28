@@ -1,0 +1,110 @@
+/* ct size chart */
+.ct-size-chart {
+    width: 100%;
+}
+.ct-size-chart-inner {
+    width: 100%;
+    max-width: 916px;
+    margin: 0 auto;
+}
+.ct-size-chart-heading {
+    width: 100%;
+    font-family: PP Editorial New;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 46.08px;
+    letter-spacing: -0.02em;
+    border-bottom: 1px solid black;
+    padding-bottom: 12px;
+}
+.ct-size-chart-upper-container {
+    width: 100%;
+    display: flex;
+    gap: 77px;
+    justify-content: space-between;
+}
+.upper-left-box {
+    width: 100%;
+    max-width: 60%;
+}
+ol {
+    margin-top: 48px;
+}
+li {
+    color: #000;
+    font-family: Apercu;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29.5px;
+    text-align: left;
+    margin-bottom: 29px;
+}
+.upper-right-box {
+    width: 100%;
+    max-width: 40%;
+}
+
+.ct-size-chart-bottom-container {
+    width: 100%;
+    display: flex;
+    gap: 31px;
+}
+.bottom-left-box {
+    width: 100%;
+    max-width: 40%;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    text-align: center;
+    padding: 9px;
+    color: #000;
+    font-family: Apercu;
+    font-size: 24px;
+}
+th {
+    font-weight: 700;
+    line-height: 29.88px;
+}
+td {
+    font-weight: 400;
+    line-height: 29.06px;
+}
+table tr:nth-child(odd) {
+    background-color: #CCFD51;
+}
+.bottom-right-box {
+    width: 100%;
+    max-width: 60%;
+}
+.bottom-right-text1, .bottom-right-text2 {
+    color: #000;
+    margin-top: 44px;
+    font-family: Apercu;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.38px;
+    max-width: 367px;
+}
+.bottom-right-text1 {
+    margin-top: 44px;
+}
+.bottom-right-text2 {
+    margin-top: 28px;
+}
+.ct-size-chart-bottom-title {
+    width: 100%;
+    max-width: 437px;
+    margin: 0 auto;
+    margin-top: 65px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: #CCFD51;
+    font-family: Apercu;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24.58px;
+    text-align: left;
+}
