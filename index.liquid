@@ -1,0 +1,26 @@
+<div class="ct-product-details-wrapper" style="display:none">
+  {% if autoAddToCart != blank %}
+    <div class="autoAddToCart-detail" style="display: none;">{{ autoAddToCart }}</div> 
+  {% endif %}
+  {% if minimumPrice != blank %}
+    <div class="minimumPrice" style="display: none;">{{ minimumPrice }}</div> 
+  {% endif %}
+    <div class="ct-product-details" style="display:none">
+        {% for collection in collections %}
+          {% if collection.handle == 'grow-kind-felt-bunting' %}
+            <div class="collectionName" style="display: none;">{{ collection.title }}</div>  
+            {% for product in collection.products %}
+              {% for variant in product.variants %}
+                <div class="ct-product-details-box ct_pro_{{ product.title | split: "Letter " | last | replace: ' ', '-' }}"
+                    product-variant-color="{{ variant.title | split: "/ " | last }}"
+                    product-name="{{ product.title | split: 'Letter ' | last | replace: ' ', '-' }}"                 
+                    product-inventory="{{ variant.inventory_quantity }}"
+                    product-price="{{ variant.price | divided_by: 100 | round: 2 }}"                         
+                    product-variant-id="{{ variant.id }}"
+                ></div>
+                {% endfor %}
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+    </div>
+</div>
