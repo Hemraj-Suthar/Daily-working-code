@@ -26,29 +26,26 @@ try {
         const userInputValue = this.value.toUpperCase();
         const characters = userInputValue.split('');
         let totalAdditionalPrice = 0;
-    
-        if (userInputValue.length < 3) {
-            messageElement.innerHTML = "Please enter at least three characters";
-            addToCartBtn.disabled = true;
-            feltBuntingPriceElement.innerHTML = `₹ ${initialPrice}`;
-        } else {
+
+        if (userInputValue.length >= 3) {
+            for (let i = 3; i < characters.length; i++) {
+                const proTitle = document.querySelector(`.ct_pro_${characters[i]}[product-name="${characters[i]}"]`);
+                if (proTitle) {
+                    const productPrice = parseInt(proTitle.getAttribute("product-price"), 10);
+                    totalAdditionalPrice += productPrice;
+                }
+            }
             messageElement.innerHTML = "";
             addToCartBtn.disabled = false;
             feltBuntingPriceElement.innerHTML = `₹ ${initialPrice + totalAdditionalPrice}`;
-        }
-
-      
-        if (userInputValue.length >= 3) {
-            for (var i = 3; i < characters.length; i++) {
-                let pro_title = document.querySelector(`.ct_pro_${characters[i]}[product-name="${characters[i]}"]`);
-                if (pro_title) {
-                    totalAdditionalPrice += parseInt(pro_title.getAttribute("product-price"), 10);
-                }
-            }
+        } else {
+            messageElement.innerHTML = "Please enter at least three characters";
+            addToCartBtn.disabled = true;
+            feltBuntingPriceElement.innerHTML = `₹ ${initialPrice}`;
         }
     });
 } catch (error) {
-    console.log(error);
+    console.error(error);
 }
 
 try {
@@ -77,15 +74,12 @@ try {
   
       messageElement.innerHTML = "";
       
-      // debugger
       const autoAddToCart = document.querySelector(".autoAddToCart-detail");
       if (autoAddToCart) {
           var autoAddToCartObj = JSON.parse(autoAddToCart.innerText);
           let element = document.querySelector(".ct-product-details-box");
-            console.log(element)
             if (element) {
               let elementno = parseInt(element.getAttribute("product-inventory"));
-              console.log(elementno)
                 if (elementno < quantity) {
                     messageElement.innerHTML = "Sorry, the cart and star is insufficient for the selected quantity.";
                     setTimeout(() => (messageElement.innerHTML = ""), 3000);
@@ -94,7 +88,6 @@ try {
             }
             autoAddToCartObj.quantity *= quantity;
             Allproduct_Data.items.push(autoAddToCartObj);
-            console.log(autoAddToCartObj);
       } else {
           alert("This product is not available.");
           return;
@@ -134,31 +127,29 @@ try {
               document.querySelector(".felt-bunting-message").innerHTML = "Sorry, the Letter is insufficient for the selected quantity.";
           }
       });
-  
-      console.log(Allproduct_Data)
       
       if (messageElement.innerHTML == "") {
-        Allproduct_Data.note = collectionName.innerText + " " + userInputValue;
-  
-        fetch("/cart/add.js", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(Allproduct_Data),
-        })
-          .then((response) => {
-              if (!response.ok) {
-                throw new Error("Network response was not ok");
-              }
-              return response.json();
+          Allproduct_Data.note = collectionName.innerText + " " + userInputValue;
+    
+          fetch("/cart/add.js", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(Allproduct_Data),
           })
-          .then((cart) => {
-                 animation();
-          })
-          .catch((error) => {
-            console.error("Error:", error);
-          });
+            .then((response) => {
+                if (!response.ok) {
+                  throw new Error("Network response was not ok");
+                }
+                return response.json();
+            })
+            .then((cart) => {
+                   animation();
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+            });
       } else {
           messageElement.innerHTML = "Sorry, the Letter is insufficient for the selected quantity.";
       }
