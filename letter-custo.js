@@ -5,6 +5,7 @@ const addToCartBtn = document.querySelector(".felt-bunting-addtocart-btn");
 const focusInputButton = document.querySelector("#mobile-btn");
 let initialPrice = parseInt(document.querySelector(".minimumPrice").innerText);
 const cart_clear_btn = document.querySelector(".ct-cart-clear");
+const proTitleParent = document.querySelector(".ct-product-details");
 const feltBuntingPriceElement = document.querySelector(".ct-felt-bunting-price");
 feltBuntingPriceElement.innerHTML = `₹ ${initialPrice}`;
 
@@ -29,7 +30,7 @@ try {
 
         if (userInputValue.length >= 3) {
             for (let i = 3; i < characters.length; i++) {
-                const proTitle = document.querySelector(`.ct_pro_${characters[i]}[product-name="${characters[i]}"]`);
+                const proTitle = proTitleParent.querySelector(`.ct_pro_${characters[i]}[product-name="${characters[i]}"]`);
                 if (proTitle) {
                     const productPrice = parseInt(proTitle.getAttribute("product-price"), 10);
                     totalAdditionalPrice += productPrice;
@@ -108,8 +109,7 @@ try {
       }
   
       characters.forEach(function (character) {
-          // let pro_title = document.querySelector(`.ct_pro_${character}[product-variant-color="${selectedColor.value}"][product-name="${character}"]`);
-          let pro_title = document.querySelector(`.ct_pro_${character}[product-name="${character}"]`);
+          let pro_title = proTitleParent.querySelector(`.ct_pro_${character}[product-variant-color="${selectedColor.value}"][product-name="${character}"]`);
           if (pro_title && pro_title != null) {
               let inventory = parseInt(pro_title.getAttribute("product-inventory"));
               let letter = pro_title.getAttribute("product-name");
