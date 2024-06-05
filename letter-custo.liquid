@@ -15,65 +15,37 @@
   endunless
 -%}
 
-
-{% assign autoAddToCart = product.metafields.custom.cart  %}
-{% assign minimumPrice = product.metafields.custom.minimum_price  %}
-
-
 <script type="application/json" class="ctProductJson-{{ product.id }}" data-product-json>
   {{ product | json }} 
 </script>
 
-{% assign product_name = product.title %}
-{% assign first_word = product_name | split: ' ' | first %}
-
-{% assign product_collections = product.collections %}
-{% assign related_collection = '' %}
-
-{% for collection in product_collections %}
-  {% assign collection_first_word = collection.title | split: ' ' | first %}
-  {% if collection_first_word == first_word %}
-    {% assign related_collection_name = collection.title %}
-    {% assign related_collection = collection %}
-  {% endif %}
-{% endfor %}
-  
-
-{% comment %}
-{% assign current_product_handle = product.handle %}
-{% assign related_collection = '' %}
-
-{% for collection in collections %}
-  {% for product in collection.products %}
-    {% if product.handle == current_product_handle %}
-      {% assign related_collection = collection %}
-    {% endif %}
-  {% endfor %}
-{% endfor %}
-{% endcomment %}
+{% assign autoAddToCart = product.metafields.custom.cart  %}
+{% assign minimumPrice = product.metafields.custom.minimum_price  %}
+{% assign collection_handle = product.metafields.custom.ctcollectiondata | split: '/' | last %}
+{% assign related_collection = collections[collection_handle] %}
 
 <div class="ct-product-details-wrapper" style="display:none">
-  {% if autoAddToCart != blank %}
-    <div class="autoAddToCart-detail" style="display: none;">{{ autoAddToCart }}</div> 
-  {% endif %}
-  {% if minimumPrice != blank %}
-    <div class="minimumPrice" style="display: none;">{{ minimumPrice }}</div> 
-  {% endif %}
+    {% if autoAddToCart != blank %}
+      <div class="autoAddToCart-detail" style="display: none;">{{ autoAddToCart }}</div> 
+    {% endif %}
+    {% if minimumPrice != blank %}
+      <div class="minimumPrice" style="display: none;">{{ minimumPrice }}</div> 
+    {% endif %}
   
-  <div class="ct-product-details" style="display:none">
-    <div class="collectionName" style="display: none;">{{ related_collection_name }}</div>
-    {% for product in related_collection.products %}
-      {% for variant in product.variants %}
-        <div class="ct-product-details-box ct_pro_{{ product.title | split: "Letter " | last | replace: ' ', '-' }}"
-            product-variant-color="{{ variant.title | split: "/ " | last }}"
-            product-name="{{ product.title | split: 'Letter ' | last | replace: ' ', '-' }}"                 
-            product-inventory="{{ variant.inventory_quantity }}"
-            product-price="{{ variant.price | divided_by: 100 | round: 2 }}"                         
-            product-variant-id="{{ variant.id }}"
-        ></div>
+    <div class="ct-product-details" style="display:none">
+      <div class="collectionName" style="display: none;">{{ related_collection.title }}</div>
+      {% for product in related_collection.products %}
+        {% for variant in product.variants %}
+          <div class="ct-product-details-box ct_pro_{{ product.title | split: "Letter " | last | replace: ' ', '-' }}"
+               product-variant-color="{{ variant.title | split: "/ " | last }}"
+               product-name="{{ product.title | split: 'Letter ' | last | replace: ' ', '-' }}"                 
+               product-inventory="{{ variant.inventory_quantity }}"
+               product-price="{{ variant.price | divided_by: 100 | round: 2 }}"                         
+               product-variant-id="{{ variant.id }}">
+          </div>
+        {% endfor %}
       {% endfor %}
-    {% endfor %}
-  </div>
+    </div>
 </div>
 
 <div
