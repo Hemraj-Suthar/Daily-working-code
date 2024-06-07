@@ -890,4 +890,4 @@ function observeHrefChanges() {
 
 document.addEventListener('DOMContentLoaded', () => {
     observeHrefChanges();
-});
+}); 
