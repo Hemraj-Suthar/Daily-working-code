@@ -1,218 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
-    <body>
-        <h1>Hemraj Suthar</h1>
-    </body>
-</html>
 
-<div class="ct-bold-hoops">
-    <div class="ct-bold-hoops-inner">
-        <div class="ct-bold-hoops-heading-box">
-            <div class="ct-bold-hoops-heading"></div>
-            <div class="ct-bold-hoops-sub-heading"></div>
-        </div>
-        <div class="ct-bold-hoops-box-wrapper">
-            <div class="ct-bold-hoops-box">
-                <div class="ct-bold-hoops-quantity"></div>
-                <div class="ct-bold-hoops-discount"></div>
-            </div>
-        </div>
-        <div class="ct-bold-hoops-bottom-title"><span
-                class=".ct-bold-hoops-price"></span></div>
-        <div class="ct-bold-hoops-button"><a href></a></div>
-    </div>
+<select id="product-select-3718510149696" name="id" title="Variant">
+    <option selected="selected" value="42480238592164" data-sku="JC0703">30 ml - ₹630</option>
+    <option value="45856372490404" data-sku="JC0703A">100 ml - ₹1,770</option>
+    <option value="45209498452132" data-sku="JC0703M">10 ml - ₹240</option>
+</select>
+
+<div class="Popover__ValueList" data-scrollable="">
+    <button type="button" class="Popover__Value Heading Link Link--primary u-h6 is-selected" data-value="30 ml" data-option-position="1" data-action="select-value">30 ml</button>
+    <button type="button" class="Popover__Value Heading Link Link--primary u-h6" data-value="100 ml" data-option-position="1" data-action="select-value">100 ml</button>
+    <button type="button" class="Popover__Value  Heading Link Link--primary u-h6" data-value="10 ml" data-option-position="1" data-action="select-value">10 ml</button>
 </div>
 
-<input type="hidden" class="oiling" value>
-<input type="hidden" class="extra-grip" value>
-
-<div class="ct-our-commitment">
-    <div class="ct-our-commitment-inner">
-        <div class="ct-our-commitment-container">
-            <div class="ct-our-commitment-heading"></div>
-            <div class="ct-our-commitment-flex-wrapper">
-
-                <div class="ct-our-commitment-box">
-                    <div class="ct-our-commitment-icon"></div>
-                    <div class="ct-our-commitment-title"></div>
-                    <div class="ct-our-commitment-subtitle"></div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>
+<button type="button" class="ProductForm__Item" aria-expanded="false" aria-controls="popover-3718510149696-product-template-size"></button>
 
 
-<div class="ct-getTheLook-link-wrapper">
-    <div class="ct-getTheLook-link-box">
-        <a href class="ct-getTheLook-link-title"></a>
-    </div>
-    <div class="ct-getTheLook-link-box">
-        <a href class="ct-getTheLook-link-title"></a>
-    </div>
-    <div class="ct-getTheLook-link-box">
-        <a href class="ct-getTheLook-link-title"></a>
-    </div>
-</div>
+<script>
+    document.querySelectorAll('.Popover__Value').forEach(button => {
+    button.addEventListener('click', function() {
+        
+            const selectedValue = this.getAttribute('data-value');
+            
+            const selectElement = document.getElementById('product-select-3718510149696');
+            const options = selectElement.options;
+            
+            for (let i = 0; i < options.length; i++) {
+                options[i].removeAttribute('selected');
+                
+                if (options[i].text.includes(selectedValue)) {
+                    options[i].setAttribute('selected', 'selected');
+                    selectElement.selectedIndex = i;
+                }
+            } 
+            hidePopover();
+        });
+    });
 
-<!-- chatgpt structure -->
-{% assign current_time = 'now' | date: "%s" %}
-{% assign end_time = current_time | plus: 68700 %}
-{% assign time_left = end_time | minus: current_time %}
-{% assign arrival_date_start = '2024-04-04' %}
-{% assign arrival_date_end = '2024-04-06' %}
-
-<div class="policy-info">
-  {% if time_left > 0 %}
-    <p>Order in <strong>{{ time_left | divided_by: 3600 }} hrs {{ time_left | modulo: 3600 | divided_by: 60 }} mins</strong> and your order will arrive between <strong>{{ arrival_date_start }} - {{ arrival_date_end }}</strong></p>
-  {% else %}
-    <p>The time window for today has passed. Please check again tomorrow.</p>
-  {% endif %}
-  
-  <div class="shipping-details">
-    <div class="shipping-item">
-      <img src="path/to/shipping-icon.png" alt="Shipping Icon">
-      <span>Free shipping on orders above <strong>$500 MXN</strong></span>
-    </div>
-    <div class="shipping-item">
-      <img src="path/to/warranty-icon.png" alt="Warranty Icon">
-      <span>1 year warranty</span>
-    </div>
-    <div class="shipping-item">
-      <img src="path/to/return-icon.png" alt="Return Icon">
-      <span>30 days return</span>
-    </div>
-  </div>
-</div>
-
-
-<!-- my custom structure -->
-{% assign current_time = 'now' | date: "%s" %}
-{% assign end_time = current_time | plus: 68700 %}
-{% assign time_left = end_time | minus: current_time %}
-{% assign arrival_date_start = '2024-04-04' %}
-{% assign arrival_date_end = '2024-04-06' %}
-
-<div class="ct-timeTracker">
-    <div class="ct-timeTracker-inner">
-        <div class="ct-timeTracker-title">
-            Order in <strong>{{ time_left | divided_by: 3600 }} hrs {{ time_left | modulo: 3600 | divided_by: 60 }} mins</strong> and your order will arrive between <strong>{{ arrival_date_start }} - {{ arrival_date_end }}</strong>
-        </div>
-        <div class="ct-policy-wrapper">
-            <div class="ct-policy-upper">
-                {% if  != blank %}  
-                    {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: fetchpriority:'high',  sizes: '50px)', widths: '100, 200, 750', class: 'ct-trust-badge-img' -}}
-                {% endif %}
-                <div class="ct-policy-title"></div>
-            </div>
-            <div class=".ct-policy-bottom">
-                <div class="ct-policy-left">
-                    {% if  != blank %}  
-                        {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: fetchpriority:'high',  sizes: '50px)', widths: '100, 200, 750', class: 'ct-trust-badge-img' -}}
-                    {% endif %}
-                    <div class="ct-policy-title"></div>
-                </div>
-                <div class="ct-policy-right">
-                    {% if  != blank %}  
-                        {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: fetchpriority:'high',  sizes: '50px)', widths: '100, 200, 750', class: 'ct-trust-badge-img' -}}
-                    {% endif %}
-                    <div class="ct-policy-title"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="ct-review-heading">
-    <div class="ct-review-heading-inner">
-        <div class="ct-review-heading-container"></div>
-    </div>
-</div>
-
-
-<div class="ct-reviews">
-    <div class="ct-reviews-inner">
-        <div class="ct-reviews-container">
-
-            <div class="ct-reviews-card">
-                <div class="ct-reviews-card-img"><img src="" alt=""></div>
-                <div class="ct-reviews-card-information">
-                    <div class="ct-reviews-upper">
-                        <div class="ct-reviews-upper-img-left"><img src="" alt=""></div>
-                        <div class="ct-reviews-upper-title"></div>
-                        <div class="ct-reviews-upper-img-right"><img src="" alt=""></div>
-                    </div>
-                    <div class="ct-reviews-paragraph"></div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-
-
-<div class=".ct-size-chart">
-    <div class="ct-size-chart-inner">
-        <div class="ct-size-chart-heading"></div>
-        <div class="ct-size-chart-line"></div>
-        <div class="ct-size-chart-upper-container">
-            <div class="upper-left-box">
-                <ol>
-                    <li>Select a ring that fits well on the finger you want</li>
-                    <li>Measure the internal diameter of ring 2 (only the inside of the ring)</li>
-                    <li>Use the table below to compare measurements.</li>
-                </ol>
-            </div>
-            <div class="upper-right-box">
-                <img src="" alt="">
-                <div class="image-title"></div>
-            </div>
-        </div>
-        <div class="ct-size-chart-bottom-container">
-            <div class="bottom-left-box">
-                <table>
-                    <tr>
-                        <th>Size</th>
-                        <th>Diameter</th>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>1.56cm</td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>1.65cm</td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td>1.73cm</td>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td>1.82cm</td>
-                    </tr>
-                    <tr>
-                        <td>9</td>
-                        <td>1.89cm</td>
-                    </tr>
-                    <tr>
-                        <td>10</td>
-                        <td>1.98cm</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="bottom-right-box">
-                <div class="bottom-left-box">At the moment we do not have half sizes, if you are unsure which one to choose between two sizes, we suggest you choose the larger size oF the two</div>
-                <div class="bottom-right-box">*We do not make size changes please make sure your size is correct*</div>
-            </div>
-        </div>
-        <div class="ct-size-chart-bottom-title">You have doubts? Please write to us on: 33-1293-6083</div>
-    </div>
-</div>
+    function hidePopover() {
+        const popover = document.getElementById('popover-3718510149696-product-template-size');
+        popover.style.display = 'none';
+        document.querySelector('.ProductForm__Item').setAttribute('aria-expanded', 'false');
+    }
+</script>
