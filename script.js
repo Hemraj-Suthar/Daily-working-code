@@ -887,7 +887,7 @@ function observeHrefChanges() {
     });
 }
 
-// Initial setup to observe changes
+
 document.addEventListener('DOMContentLoaded', () => {
     observeHrefChanges();
 });
