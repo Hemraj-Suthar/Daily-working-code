@@ -24,3 +24,80 @@
         {% endfor %}
     </div>
 </div>
+
+
+
+
+
+<button type="submit" data-use-primary-button="{% if use_primary_button %}true{% else %}false{% endif %}" class="ProductForm__AddToCart Button {% if selected_variant.available and use_primary_button %}Button--primary{% else %}Button--secondary{% endif %} Button--full" {% if selected_variant.available %}data-action="add-to-cart"{% else %}disabled="disabled"{% endif %}>
+  {%- if selected_variant.available -%}
+    <span>{% if product.template_suffix == 'pre-order' %}{{ 'product.form.pre_order' | t }}{% else %}{{ 'product.form.add_to_cart' | t }} 
+      <svg xmlns="http://www.w3.org/2000/svg" width="17.297" height="17.281" viewBox="0 0 17.297 17.281"><defs><style>.a{fill:fff;}</style></defs><path class="productcart" d="M21.891,8.719H18.266V6.25H10.906V8.719H7.281L5.937,23.531h17.3ZM12.132,7.484H17.04V8.719H12.132ZM7.287,22.3,8.4,9.953h2.509v2.469h1.227V9.953h4.907v2.469h1.227V9.953h2.509L21.885,22.3Z" transform="translate(-5.937 -6.25)"></path></svg>
+      
+      {% endif %}</span>
+
+    {%- if section.settings.show_price_in_button -%}
+      <span class="Button__SeparatorDot"></span>
+      <span>{{ selected_variant.price | money_without_trailing_zeros }}</span>
+    {%- endif -%}
+  {%- else -%}
+    {{- 'product.form.sold_out' | t -}}
+  {%- endif -%}
+</button>
+
+{% for value in option.values %}
+  <button type="button" 
+          class="Popover__Value {% if value == option.selected_value %}is-selected{% endif %} Heading Link Link--primary u-h6"
+          data-value="{{ value | escape }}"
+          data-option-position="{{ option.position }}"
+          data-inventory="{{ option.inventory_quantity }}"
+          data-action="select-value">
+    {{- value | escape -}}
+  </button>
+{% endfor %}
+
+
+<button type="button" class="Popover__Value {% if value == option.selected_value %}is-selected{% endif %} Heading Link Link--primary u-h6"
+  data-value="{{ value | escape }}"
+  data-option-position="{{ option.position }}"
+  data-action="select-value">
+{{- value | escape -}}
+</button>
+
+
+<button type="submit" data-use-primary-button="true" class="ProductForm__AddToCart Button Button--primary Button--full" data-action="add-to-cart">
+  <span>Add to cart</span>   
+</button>
+
+
+
+
+
+
+
+<div class="mob-collection-price ProductItem__PriceList {% if show_price_on_hover %}ProductItem__PriceList--showOnHover{% endif %} Heading">
+          
+  {%- if product.compare_at_price > product.price -%}
+       <span class="ProductItem__Price Price Price--compareAt Text--subdued">{{ product.compare_at_price | money_without_trailing_zeros }}</span>
+      <span class="ProductItem__Price Price Price--highlight Text--subdued">{{ product.price | money_without_trailing_zeros }}</span>
+     {%- elsif product.price_varies -%}
+     {%- capture formatted_min_price -%}{{ product.price_min | money_without_trailing_zeros }}{%- endcapture -%}
+     {%- capture formatted_max_price -%}{{ product.price_max | money_without_trailing_zeros }}{%- endcapture -%}
+     <span class="ProductItem__Price Price Text--subdued">{{ 'collection.product.from_price_html' | t: min_price: formatted_min_price, max_price: formatted_max_price }}</span>
+     {%- else -%}
+     <span class="ProductItem__Price Price Text--subdued">{{ product.price | money_without_trailing_zeros }}</span>
+     {%- endif -%}
+</div>
+
+
+
+
+<div class="desk-collection-price ProductItem__PriceList {% if show_price_on_hover %}ProductItem__PriceList--showOnHover{% endif %} Heading">
+            
+  {%- if product.compare_at_price > product.price -%}
+    <div class="ProductItem__Price Price Price--compareAt Text--subdued"><span class="price-mrp">MRP</span> {{ product.first_available_variant.compare_at_price | money_without_trailing_zeros }}</div>
+    <span class="ProductItem__Price Price Price--highlight Text--subdued">{{ product.first_available_variant.price| money_without_trailing_zeros }}</span>
+  {%- else -%}
+    <span class="ProductItem__Price Price Text--subdued"><span class="price-mrp">MRP</span> {{ product.first_available_variant.price | money_without_trailing_zeros }}</span>
+  {%- endif -%}
+</div>
