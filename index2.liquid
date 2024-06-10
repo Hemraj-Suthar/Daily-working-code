@@ -256,3 +256,236 @@
         </div>
     </div>
 </div>
+
+
+<style>
+    .ct-explore {
+        width: 100%;
+    }
+    .ct-explore-inner {
+        width: 100%;
+        max-width: 1214px;
+        /* padding: 0 30px; */
+        margin: 0 auto;
+    }
+    .ct-explore-heading {
+        width: 100%;
+        max-width: 100%;
+        font-family: PP Editorial New;
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 46.08px;
+        letter-spacing: -0.02em;
+        text-align: left;
+        margin-bottom: 30px;
+        color: #000;
+        text-transform: capitalize;
+     }
+    .ct-explore-content-main {
+        width: 100%;
+        display: flex;
+        gap: 16px;
+        align-items: baseline;
+    }
+    .ct-explore-content {
+        width: 100%;
+        max-width: 230px;
+        text-align: center;
+        line-height: 0;
+    }
+    .ct-explore-content img {
+        width: 100%;
+        height: 100%;
+    } 
+    .ct-explore-title {
+        text-align: center;
+        margin-top: 10px;
+    } 
+    .ct-explore-title a {
+        font-family: Apercu;
+        text-decoration: none;
+        color: #000000;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.38px;
+        letter-spacing: normal;
+    }
+    
+    
+    @media(max-width:1300px){
+      .ct-explore {
+          padding: 0px 30px;
+      }
+    }
+      
+    @media(max-width:990px){
+      .ct-explore {
+          margin-top: 20px !important;
+      }
+      .ct-explore-content {
+          max-width: 150px;
+      } 
+    }
+      
+    @media(max-width:768px){
+      .ct-explore-heading {
+        font-size: 26px;
+        line-height: 33.28px;
+        margin-bottom: 20px;
+     }
+      .ct-explore-content-main {
+          flex-wrap: wrap;
+      }
+      .ct-explore-content {
+          max-width: 120px;
+      }
+      .ct-explore-title {
+          line-height: 14px;
+          margin-top: 5px;
+      } 
+      .ct-explore-title a {
+          font-size: 13px;
+      }
+    }  
+    </style>
+    
+    <div class="ct-explore" style="margin: {{ section.settings.margintop }}px 0px {{ section.settings.marginbot }}px 0px; background-color: {{ section.settings.bgcolor }};">
+        <div class="ct-explore-inner">
+            {% if section.settings.heading != blank %} 
+               <div class="ct-explore-heading">{{ section.settings.heading }}</div>
+            {% endif %}
+              <div class="ct-explore-content-main">
+                {% for block in section.blocks %}
+                      <div class="ct-explore-content">
+                           {% if block.settings.image != blank %}  
+                              <div>{{- block.settings.image | image_url: width: block.settings.image.width | image_tag: fetchpriority:'high',  sizes: '50px)', widths: '100, 200, 750', class: 'ct-explore-img' -}}</div>
+                           {% endif %}
+                           {% if block.settings.link_title != blank %}
+                              <div class="ct-explore-title">
+                                  <a href="{{ block.settings.link_url }}" title="{{ block.settings.link_title | escape }}">
+                                      {{ block.settings.link_title }}
+                                  </a>
+                              </div>
+                           {% endif %}
+                      </div>
+                {% endfor %}
+              </div>
+        </div>
+    </div>
+    
+    {% schema %}
+      {
+        "name": "CT Explore category",
+        "settings": [
+          {
+            "type": "range",
+            "id": "margintop",
+            "min": 0,
+            "max": 100,
+            "step": 2,
+            "unit": "px",
+            "label": "Margin Top",
+            "default": 0
+          },
+          {
+            "type": "range",
+            "id": "marginbot",
+            "min": 0,
+            "max": 100,
+            "step": 2,
+            "unit": "px",
+            "label": "Margin Bottom",
+            "default": 0
+          },
+          {
+            "type": "color",
+            "id": "bgcolor",
+            "label": "Background Color"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+          }
+        ],
+        "blocks": [{
+         "type": "Explore_category",
+         "name": "Explore_category",
+          "settings": [
+            {
+              "type": "image_picker",
+              "id": "image",
+              "label": "Image"
+            },
+            {
+              "type": "text",
+              "id": "link_title",
+              "label": "Link Title"
+            },
+            {
+              "type": "url",
+              "id": "link_url",
+              "label": "Link URL"
+            }
+          ]
+        }],
+        "presets": [{
+          "name": "CT Explore category"
+        }]
+      }
+    {% endschema %}
+
+
+
+<style>
+    .whychooseimg {
+      width: 100%;
+    }
+    .whychooseimg img {
+      width: 100%;
+    }
+  </style>
+  
+  {%- if section.settings.image != blank -%}
+    <div class="whychooseimg" style="margin: {{ section.settings.margintop }}px 0px {{ section.settings.marginbot }}px 0px;">
+      <img loading="lazy" src="{{ section.settings.image | image_url }}" data-src="{{ section.settings.image | image_url}}" width="{{ section.settings.image.width }}" height="{{ section.settings.image.height }}" alt="{{ section.settings.image.alt }}" class="lazy lazyImage" />
+    </div>
+  {%- endif -%} 
+  
+  {% schema %}
+    {
+      "name": "Why Choose Us 2",
+      "settings": [
+         {
+          "type": "range",
+          "id": "margintop",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "unit": "px",
+          "label": "Margin Top",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "marginbot",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "unit": "px",
+          "label": "Margin Bottom",
+          "default": 0
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ],
+      "presets": [
+      {
+        "name": "Why Choose Us 2"
+      }
+    ]
+  }
+  {% endschema %}
