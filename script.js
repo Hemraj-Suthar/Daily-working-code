@@ -886,8 +886,3 @@ function observeHrefChanges() {
         observer.observe(anchor, { attributes: true });
     });
 }
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    observeHrefChanges();
-});
