@@ -886,3 +886,45 @@ function observeHrefChanges() {
         observer.observe(anchor, { attributes: true });
     });
 }
+
+const tabTitles = document.querySelectorAll('.ct-explore-collection-title');
+const tabContents = document.querySelectorAll('.ct-explore-collection');
+const displayDiv = document.querySelector('.ct-explore-best-collection-name');
+const bannerText = "BESTSELLERS BANNER";
+
+function adjustHeights() {
+    var h3height = 0;
+    $('.ct-explore-best .product-title').each(function() {
+        if(h3height < $(this).outerHeight()){
+            h3height = $(this).outerHeight();
+        };
+    });
+    $('.ct-explore-best .product-title').height(h3height);
+    
+    var h3height = 0;
+    $('.ct-explore-best .var_form').each(function() {
+        if(h3height < $(this).outerHeight()){
+            h3height = $(this).outerHeight();
+        };
+    });
+    $('.ct-explore-best .var_form').height(h3height);
+}
+
+function handleTabClick(title, index) {
+    tabTitles.forEach(title => title.classList.remove('is_active'));
+    tabContents.forEach(content => content.classList.remove('is_active'));
+  
+    title.classList.add('is_active');
+    tabContents[index].classList.add('is_active');  
+    displayDiv.innerText = `${title.innerText} ${bannerText}`;  
+    // adjustHeights();
+}
+
+tabTitles.forEach((title, index) => {
+    title.addEventListener('click', () => handleTabClick(title, index));
+});
+
+if (tabTitles.length > 0) {
+    handleTabClick(tabTitles[0], 0);
+}
+
