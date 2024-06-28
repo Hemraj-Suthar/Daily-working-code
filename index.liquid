@@ -1,26 +1,538 @@
 <div class="ct-product-details-wrapper" style="display:none">
   {% if autoAddToCart != blank %}
-    <div class="autoAddToCart-detail" style="display: none;">{{ autoAddToCart }}</div> 
+    <div class="autoAddToCart-detail" style="display: none;">{{ autoAddToCart }}</div>
   {% endif %}
   {% if minimumPrice != blank %}
-    <div class="minimumPrice" style="display: none;">{{ minimumPrice }}</div> 
+    <div class="minimumPrice" style="display: none;">{{ minimumPrice }}</div>
   {% endif %}
-    <div class="ct-product-details" style="display:none">
-        {% for collection in collections %}
-          {% if collection.handle == 'grow-kind-felt-bunting' %}
-            <div class="collectionName" style="display: none;">{{ collection.title }}</div>  
-            {% for product in collection.products %}
-              {% for variant in product.variants %}
-                <div class="ct-product-details-box ct_pro_{{ product.title | split: "Letter " | last | replace: ' ', '-' }}"
-                    product-variant-color="{{ variant.title | split: "/ " | last }}"
-                    product-name="{{ product.title | split: 'Letter ' | last | replace: ' ', '-' }}"                 
-                    product-inventory="{{ variant.inventory_quantity }}"
-                    product-price="{{ variant.price | divided_by: 100 | round: 2 }}"                         
-                    product-variant-id="{{ variant.id }}"
-                ></div>
-                {% endfor %}
-            {% endfor %}
-          {% endif %}
+  <div class="ct-product-details" style="display:none">
+    {% for collection in collections %}
+      {% if collection.handle == 'grow-kind-felt-bunting' %}
+        <div class="collectionName" style="display: none;">{{ collection.title }}</div>
+        {% for product in collection.products %}
+          {% for variant in product.variants %}
+            <div
+              class="ct-product-details-box ct_pro_{{ product.title | split: "Letter " | last | replace: ' ', '-' }}"
+              product-variant-color="{{ variant.title | split: "/ " | last }}"
+              product-name="{{ product.title | split: 'Letter ' | last | replace: ' ', '-' }}"
+              product-inventory="{{ variant.inventory_quantity }}"
+              product-price="{{ variant.price | divided_by: 100 | round: 2 }}"
+              product-variant-id="{{ variant.id }}"
+            ></div>
+          {% endfor %}
         {% endfor %}
-    </div>
+      {% endif %}
+    {% endfor %}
+  </div>
 </div>
+
+<button
+  type="submit"
+  data-use-primary-button="{% if use_primary_button %}true{% else %}false{% endif %}"
+  class="ProductForm__AddToCart Button {% if selected_variant.available and use_primary_button %}Button--primary{% else %}Button--secondary{% endif %} Button--full"
+  {% if selected_variant.available %}
+    data-action="add-to-cart"
+  {% else %}
+    disabled="disabled"
+  {% endif %}
+>
+  {%- if selected_variant.available -%}
+    <span>
+      {%- if product.template_suffix == 'pre-order' -%}
+        {{- 'product.form.pre_order' | t -}}
+      {%- else -%}
+        {{- 'product.form.add_to_cart' | t }}
+        <svg xmlns="http://www.w3.org/2000/svg" width="17.297" height="17.281" viewBox="0 0 17.297 17.281">
+          <defs><style>.a{fill:fff;}</style></defs><path class="productcart" d="M21.891,8.719H18.266V6.25H10.906V8.719H7.281L5.937,23.531h17.3ZM12.132,7.484H17.04V8.719H12.132ZM7.287,22.3,8.4,9.953h2.509v2.469h1.227V9.953h4.907v2.469h1.227V9.953h2.509L21.885,22.3Z" transform="translate(-5.937 -6.25)"></path>
+        </svg>
+      {% endif -%}
+      ></span
+    >
+
+    {%- if section.settings.show_price_in_button -%}
+      <span class="Button__SeparatorDot"></span>
+      <span>{{ selected_variant.price | money_without_trailing_zeros }}</span>
+    {%- endif -%}
+  {%- else -%}
+    {{- 'product.form.sold_out' | t -}}
+  {%- endif -%}
+</button>
+
+{% for value in option.values %}
+  <button
+    type="button"
+    class="Popover__Value {% if value == option.selected_value %}is-selected{% endif %} Heading Link Link--primary u-h6"
+    data-value="{{ value | escape }}"
+    data-option-position="{{ option.position }}"
+    data-inventory="{{ option.inventory_quantity }}"
+    data-action="select-value"
+  >
+    {{- value | escape -}}
+  </button>
+{% endfor %}
+
+<button
+  type="button"
+  class="Popover__Value {% if value == option.selected_value %}is-selected{% endif %} Heading Link Link--primary u-h6"
+  data-value="{{ value | escape }}"
+  data-option-position="{{ option.position }}"
+  data-action="select-value"
+>
+  {{- value | escape -}}
+</button>
+
+<button
+  type="submit"
+  data-use-primary-button="true"
+  class="ProductForm__AddToCart Button Button--primary Button--full"
+  data-action="add-to-cart"
+>
+  <span>Add to cart</span>
+</button>
+
+<div class="mob-collection-price ProductItem__PriceList {% if show_price_on_hover %}ProductItem__PriceList--showOnHover{% endif %} Heading">
+  {%- if product.compare_at_price > product.price -%}
+    <span class="ProductItem__Price Price Price--compareAt Text--subdued">
+      {{- product.compare_at_price | money_without_trailing_zeros -}}
+    </span>
+    <span class="ProductItem__Price Price Price--highlight Text--subdued">
+      {{- product.price | money_without_trailing_zeros -}}
+    </span>
+  {%- elsif product.price_varies -%}
+    {%- capture formatted_min_price -%}{{ product.price_min | money_without_trailing_zeros }}{%- endcapture -%}
+    {%- capture formatted_max_price -%}{{ product.price_max | money_without_trailing_zeros }}{%- endcapture -%}
+    <span class="ProductItem__Price Price Text--subdued">
+      {{- 'collection.product.from_price_html' | t: min_price: formatted_min_price, max_price: formatted_max_price -}}
+    </span>
+  {%- else -%}
+    <span class="ProductItem__Price Price Text--subdued">{{ product.price | money_without_trailing_zeros }}</span>
+  {%- endif -%}
+</div>
+
+<div class="desk-collection-price ProductItem__PriceList {% if show_price_on_hover %}ProductItem__PriceList--showOnHover{% endif %} Heading">
+  {%- if product.compare_at_price > product.price -%}
+    <div class="ProductItem__Price Price Price--compareAt Text--subdued">
+      <span class="price-mrp">MRP</span>
+      {{ product.first_available_variant.compare_at_price | money_without_trailing_zeros }}
+    </div>
+    <span class="ProductItem__Price Price Price--highlight Text--subdued">
+      {{- product.first_available_variant.price | money_without_trailing_zeros -}}
+    </span>
+  {%- else -%}
+    <span class="ProductItem__Price Price Text--subdued"
+      ><span class="price-mrp">MRP</span> {{ product.first_available_variant.price | money_without_trailing_zeros -}}
+    </span>
+  {%- endif -%}
+</div>
+
+{%- if show_quick_buy and product.available -%}
+  {%- if product.variants.size == 1 and product.selling_plan_groups.size == 0 -%}
+  {%- else -%}
+    <form action="/cart/add" method="post" class="var_form">
+      <div class="variant-picker__option-values h-stack gap-2.5 wrap">
+        {% for variant in product.variants %}
+          {%- assign savings = '' %}
+          {% if variant.compare_at_price %}
+            {%- if settings.discount_mode == 'percentage' -%}
+              {%- assign savings = variant.compare_at_price
+                | minus: variant.price
+                | times: 100.0
+                | divided_by: variant.compare_at_price
+                | round
+                | append: '%'
+              -%}
+            {%- else -%}
+              {%- capture savings -%}{{ variant.compare_at_price | minus: variant.price | money }}{%- endcapture -%}
+            {%- endif -%}
+          {%- endif -%}
+          {% assign prod_avail = true %}
+          {% unless variant.available %}
+            {% assign prod_avail = false %}
+          {% endunless %}
+          <label class="dev_var block-swatch {% if forloop.index == 1 %} active {% endif %} {% unless variant.available %} is-disabled{% endunless %}">
+            <input
+              type="radio"
+              class="sr-only"
+              data-available="{{ prod_avail }}"
+              name="id"
+              value="{{ variant.id }}"
+              data-price="{{ variant.price | money }}"
+              data-badge="{{ savings }}"
+              data-compare="{{ variant.compare_at_price | money }}"
+            >
+            {{ variant.title }}
+          </label>
+        {% endfor %}
+      </div>
+    </form>
+  {%- endif -%}
+{%- endif -%}
+
+{%- if show_quick_buy -%}
+  {%- if product.variants.size == 1 and product.selling_plan_groups.size == 0 -%}
+    {%- form 'product', product, is: 'product-form' -%}
+      <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+      <button type="submit" class="button w-full custom__quick-add-button">
+        <span class="">{{ 'product.general.add_to_cart_button' | t }}</span>
+      </button>
+    {%- endform -%}
+  {%- else -%}
+    {%- form 'product', product, is: 'product-form' -%}
+      <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+      {% if product.available %}
+        <button type="submit" class="button w-full custom__quick-add-button dev_atc_btn available_btn">
+          <span class="">{{ 'product.general.add_to_cart_button' | t }}</span>
+        </button>
+      {% else %}
+        <button type="button" class="button button--outline w-full dev_sold_btn" disabled>Sold out</button>
+      {% endif %}
+    {%- endform -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- assign slideshow_id = 'slideshow-' | append: section.id -%}
+
+<x-slideshow
+  class="slideshow {% unless section.settings.full_width %}slideshow--boxed{% endunless %} {% if section.blocks.size > 1 %}slideshow--multiple-slides{% endif %}"
+  {% if section.settings.allow_transparent_header %}
+    allow-transparent-header
+  {% endif %}
+>
+  {%- unless section.settings.full_width -%}
+    <span class="slideshow__slide-background"></span>
+  {%- endunless -%}
+
+  <slideshow-carousel
+    id="{{ slideshow_id }}"
+    class="ct-hero slideshow__carousel"
+    reveal-on-scroll="true"
+    selector=".slideshow__slide"
+    transition="{{ section.settings.transition_type }}"
+    {% if section.settings.autoplay %}
+      autoplay="{{ section.settings.cycle_speed }}"
+    {% endif %}
+    role="region"
+  >
+    {%- for block in section.blocks -%}
+    {%- endfor -%}
+
+    <div class="slideshow__controls">
+      <page-dots class="numbered-dots" aria-controls="{{ slideshow_id }}">
+        {%- for i in (1..section.blocks.size) -%}
+          <button
+            type="button"
+            class="numbered-dots__item"
+            aria-current="{% if forloop.first %}true{% else %}false{% endif %}"
+          >
+            <svg
+              width="100%"
+              height="100%"
+              {% if section.settings.autoplay %}
+                style="--percent: 0"
+              {% endif %}
+            >
+              <circle cx="50%" cy="50%" r="15"></circle>
+              <circle cx="50%" cy="50%" r="15"></circle>
+            </svg>
+            <span>{{- forloop.index -}}</span>
+          </button>
+        {%- endfor -%}
+      </page-dots>
+    </div>
+  </slideshow-carousel>
+</x-slideshow>
+
+{% schema %}
+{
+  "name": "CT Hero",
+  "class": "shopify-section--slideshow",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
+  "max_blocks": 5,
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "allow_transparent_header",
+      "label": "Allow transparent header",
+      "info": "This setting only applies when this section is the first one.",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "image_size",
+      "label": "Image size",
+      "options": [
+        {
+          "value": "auto",
+          "label": "Original image ratio"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        },
+        {
+          "value": "fill",
+          "label": "Fill screen height"
+        }
+      ],
+      "info": "Choose \"Original image ratio\" to not cut images. [Learn more](https://help.shopify.com/en/manual/online-store/images/theme-images#best-practices-for-slideshows-and-full-width-images)",
+      "default": "auto"
+    },
+    {
+      "type": "select",
+      "id": "transition_type",
+      "label": "Transition type",
+      "options": [
+        {
+          "value": "fade",
+          "label": "Fade"
+        },
+        {
+          "value": "fade_with_text",
+          "label": "Fade with text transition"
+        }
+      ],
+      "default": "fade_with_text"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Auto rotate between slides",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "cycle_speed",
+      "min": 4,
+      "max": 20,
+      "step": 1,
+      "unit": "sec",
+      "label": "Change slides every",
+      "default": 6
+    },
+    {
+      "type": "header",
+      "content": "Background",
+      "info": "When \"Full width\" is enabled, the background is shown while image is loading. You can override the background for each slide."
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#F2F2F2"
+    },
+    {
+      "type": "color_background",
+      "id": "background_gradient",
+      "label": "Background gradient"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "info": "2800 x 1000px .jpg recommended",
+          "label": "Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Mobile image",
+          "info": "1200 x 1600px .jpg recommended"
+        },
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "range",
+          "id": "content_max_width",
+          "label": "Content maximum width",
+          "min": 400,
+          "max": 1200,
+          "step": 20,
+          "unit": "px",
+          "default": 780
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "CT Hero",
+      "blocks": []
+    }
+  ]
+}
+{% endschema %}
+
+{%- paginate blog.articles by section.settings.posts_per_page -%}
+  <blog-posts
+    class="blog-post-list"
+    {% if settings.stagger_blog_posts_apparition %}
+      reveal-on-scroll="true"
+    {% endif %}
+  >
+    {%- capture sizes -%}(max-width: 699px) 95vw, (max-width: 1149px) calc(100vw / 2), calc((80rem - (5rem * ({{ section.settings.blog.articles_count | default: 3 | at_most: 3 }} - 1) / 3){%- endcapture -%}
+
+    {%- for article in blog.articles -%}
+      {%- if section.settings.feature_first_blog_post and forloop.first -%}
+        <div class="featured-blog-post group">
+          <a
+            href="{{ article.url }}"
+            class="content-over-media content-over-media--xs"
+            style="{% render 'surface', text_color: section.settings.featured_blog_post_text_color %}"
+          >
+            {%- capture sizes -%}(max-width: 1149px) 95vw, 1260px{%- endcapture -%}
+
+            {%- if article.image != blank -%}
+              {{-
+                article.image
+                | image_url: width: article.image.width
+                | image_tag:
+                  loading: 'lazy',
+                  sizes: sizes,
+                  widths: '200,300,400,500,600,800,1000,1200,1400,1600,1800,2000,2200',
+                  class: 'zoom-image group-hover:zoom'
+              -}}
+            {%- endif -%}
+
+            <div class="prose place-self-end-start">
+              <h2 class="h2">
+                {%- if article -%}
+                  {{ article.title }}
+                {%- else -%}
+                  {{- 'general.on_boarding.blog_post_title' | t -}}
+                {%- endif -%}
+              </h2>
+            </div>
+          </a>
+      {%- endif -%}
+
+      <div class="ct-editors-pick">
+        {%- render 'blog-post-card',
+          article: article,
+          blog: blog,
+          show_category: section.settings.show_category,
+          show_excerpt: section.settings.show_excerpt,
+          show_read_more: section.settings.show_read_more,
+          sizes: sizes
+        -%}
+      </div>
+    {%- endfor -%}
+  </blog-posts>
+  {%- render 'pagination', paginate: paginate -%}
+{%- endpaginate -%}
+
+{%- paginate blog.articles by section.settings.posts_per_page -%}
+  <blog-posts
+    class="blog-post-list"
+    {% if settings.stagger_blog_posts_apparition %}
+      reveal-on-scroll="true"
+    {% endif %}
+  >
+    {%- capture sizes -%}(max-width: 699px) 95vw, (max-width: 1149px) calc(100vw / 2), calc((80rem - (5rem * ({{ section.settings.blog.articles_count | default: 3 | at_most: 3 }} - 1) / 3){%- endcapture -%}
+
+    {%- for article in blog.articles -%}
+      {%- if section.settings.feature_first_blog_post and forloop.first -%}
+        <div class="featured-blog-post group">
+          <a
+            href="{{ article.url }}"
+            class="content-over-media content-over-media--xs"
+            style="{% render 'surface', text_color: section.settings.featured_blog_post_text_color %}"
+          >
+            {%- capture sizes -%}(max-width: 1149px) 95vw, 1260px{%- endcapture -%}
+
+            {%- if article.image != blank -%}
+              {{-
+                article.image
+                | image_url: width: article.image.width
+                | image_tag:
+                  loading: 'lazy',
+                  sizes: sizes,
+                  widths: '200,300,400,500,600,800,1000,1200,1400,1600,1800,2000,2200',
+                  class: 'zoom-image group-hover:zoom'
+              -}}
+            {%- endif -%}
+
+            <div class="prose place-self-end-start">
+              <h2 class="h2">
+                {%- if article -%}
+                  {{ article.title }}
+                {%- else -%}
+                  {{- 'general.on_boarding.blog_post_title' | t -}}
+                {%- endif -%}
+              </h2>
+            </div>
+          </a>
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+
+    <div class="ct-editors-pick">
+      {%- for article in blog.articles -%}
+        {%- unless section.settings.feature_first_blog_post and forloop.first -%}
+          {%- render 'blog-post-card',
+            article: article,
+            blog: blog,
+            show_category: section.settings.show_category,
+            show_excerpt: section.settings.show_excerpt,
+            show_read_more: section.settings.show_read_more,
+            sizes: sizes
+          -%}
+        {%- endunless -%}
+      {%- endfor -%}
+    </div>
+  </blog-posts>
+  {%- render 'pagination', paginate: paginate -%}
+{%- endpaginate -%}
+
+<div class="fieldset">
+  <div class="fieldset-row">
+    {%- assign label = 'blog.comments.name' | t -%}
+    {%- render 'input',
+      type: 'text',
+      name: 'comment[author]',
+      label: label,
+      value: customer.name,
+      required: true,
+      autocomplete: 'name'
+    -%}
+
+    {%- assign label = 'blog.comments.email' | t -%}
+    {%- render 'input',
+      type: 'email',
+      name: 'comment[email]',
+      label: label,
+      value: customer.email,
+      required: true,
+      autocomplete: 'email'
+    -%}
+  </div>
+
+  {%- assign label = 'blog.comments.message' | t -%}
+  {%- render 'input', name: 'comment[body]', label: label, multiline: 4, required: true -%}
+</div>
+
+
+<a  href="{{ routes.cart_change_url }}?id={{ line_item.key }}&quantity={{ line_item.quantity | minus: 1 }}" class="quantity-selector__button ct_minus {{ var_ct_id }} {% if line_item.quantity == 1 %}ct_one_quantity {% endif %}" data-line-quantity="{{ line_item.quantity }}">
