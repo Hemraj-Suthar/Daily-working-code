@@ -244,3 +244,65 @@
         every day.
     </p>
 </div>
+
+<div class="ct-true-trans">
+    <div class="ct-true-trans-right">
+        <div class="ct-true-trans-review"></div>
+        <div class="ct-true-trans-title"></div>
+        <div class="ct-true-trans-author"></div>
+        <a href="#" class="ct-true-trans-button"></a>
+    </div>
+</div>
+
+<!-- Add active class to selected navigation menu -->
+<ul>
+    <li class="header__primary-nav-item" data-title="Suit Sets">
+        <a href="/collections/suit-sets" class="block h6 ct-primary-nav-menu">Suit Sets</a>
+    </li>
+    <li class="header__primary-nav-item" data-title="Dupattas">
+        <a href="/collections/dupatta-1" class="block h6 ct-primary-nav-menu">Dupattas</a>
+    </li>
+    <li class="header__primary-nav-item" data-title="Gifting">
+        <a href="/products/shaam-gift-box" class="block h6 ct-primary-nav-menu" aria-current="page">Gifting</a>
+    </li>
+    <li class="header__primary-nav-item" data-title="Reviews">
+        <a href="/pages/reviews" class="block h6 ct-primary-nav-menu">Reviews</a>
+    </li>
+</ul>
+
+<style>
+    .header__primary-nav-item.active:before {
+        transform: scaleX(1);
+    }
+    
+    .header__primary-nav-item:before {
+        content: attr(data-title);
+        transform-origin: var(--transform-origin-start);
+        background: rgb(var(--text-color));
+        color: #0000;
+        font-size: var(--text-h6);
+        font-family: var(--heading-font-family);
+        font-weight: var(--heading-font-weight);
+        font-style: var(--heading-font-style);
+        letter-spacing: var(--heading-letter-spacing);
+        text-transform: var(--heading-text-transform);
+        pointer-events: none;
+        width: max-content;
+        height: 2px;
+        transition: transform .2s ease-in-out;
+        position: absolute;
+        inset-block-end: 0;
+        transform: scaleX(0);
+    }
+</style>
+
+<script>
+    const navItems = document.querySelectorAll('.header__primary-nav-item');
+
+    navItems.forEach(item => {
+        const anchor = item.querySelector('a');
+        if (anchor.hasAttribute('aria-current')) {
+            item.classList.add('active');
+        }
+    });
+</script>

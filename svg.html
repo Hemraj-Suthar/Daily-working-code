@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Rating SVG</title>
+    <style>
+        .star-container {
+            display: flex;
+        }
+        .star {
+            width: 17px;
+            height: 17px;
+        }
+    </style>
+</head>
+<body>
+    <div id="star-rating" class="star-container"></div>
+
+    <script>
+        function generateStarSvg(starType) {
+            const fullStar = `
+                <svg class="star" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.2574 14.2851L6.34594 11.8507L2.46179 14.3398L3.25503 9.99069L0 6.98184L4.40386 6.6536L6.23652 2.35915L8.1786 6.62625L12.5825 6.87243L9.38214 9.93598L10.2574 14.2851Z" fill="black"></path>
+                </svg>`;
+
+            const halfStar = `
+                <svg class="star" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.1786 6.62625L6.23652 2.35915L4.40386 6.6536L0 6.98184L3.25503 9.99069L2.46179 14.3398L6.34594 11.8507L8.118 9.98292V0L8.1786 6.62625Z" fill="black"/>
+                </svg>`;
+
+            return starType === 'full' ? fullStar : halfStar;
+        }
+
+        function renderStars(starCount) {
+            const container = document.getElementById('star-rating');
+            container.innerHTML = '';
+
+            const fullStars = Math.floor(starCount);
+            const halfStar = starCount % 1 >= 0.5;
+
+            for (let i = 0; i < fullStars; i++) {
+                container.innerHTML += generateStarSvg('full');
+            }
+
+            if (halfStar) {
+                container.innerHTML += generateStarSvg('half');
+            }
+        }
+        renderStars(3.5);
+    </script>
+</body>
+</html>
+
