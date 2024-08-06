@@ -391,3 +391,63 @@
             });
         });
 </script>
+
+
+<script>
+  var Currency_rates =  JSON.parse(localStorage.getItem("EnteredCurrency"));
+  var CountryCurrencyDropDown ='<option value="'+ Shopify.currency.active +'">'+ Shopify.currency.active +'</option>', i;
+  var CountryCurrencyDropDownCustom ='<li data-value="'+ Shopify.currency.active +'">'+ Shopify.currency.active +'</li>', i;
+  var EnteredCurrency_key = Object.keys(Currency_rates);
+  const CurrencySelector = document.querySelector('#currencies');
+  // const CurrencySelectorMobile = document.querySelector('#currencies-mobile');
+
+  const customSelector = document.querySelector('.select-currencies');
+
+  var AllCodes = ['USD','EUR','GBP','CAD','ARS','AUD','ILS','BBD','BDT','BSD','BHD','BRL','BOB','BND','BGN','MMK','KYD','CLP','CNY','COP','CRC','HRK','CZK','DKK','DOP','XCD','EGP','XPF','FJD','GHS','GTQ','GYD','GEL','HKD','HUF','ISK','INR','IDR','NIS','JMD','JPY','JOD','KZT','KES','KWD','LVL','LTL','MXN','MYR','MUR','MDL','MAD','MNT','MZN','ANG','NZD','NGN','NOK','OMR','PKR','PYG','PEN','PHP','PLN','QAR','RON','RUB','SAR','RSD','SCR','SGD','SYP','ZAR','KRW','LKR','SEK','CHF','TWD','THB','TZS','TTD','TRY','TND','UAH','AED','UYU','VEB','VND','ZMK','EURO','Yen','Yuan'];
+
+  var countrySelected = 'INR';
+  if(sessionStorage.getItem("Country")){
+    countrySelected = sessionStorage.getItem("Country");
+  }
+  $(".dropdown-text").text(countrySelected);
+
+  for (let i = 0; i < EnteredCurrency_key.length; i++) {
+    if(AllCodes.includes(EnteredCurrency_key[i])){
+      CountryCurrencyDropDown = CountryCurrencyDropDown + '<option value="'+ EnteredCurrency_key[i] +'">'+ EnteredCurrency_key[i] +'</option>'
+      CountryCurrencyDropDownCustom = CountryCurrencyDropDownCustom + '<li data-value="'+ EnteredCurrency_key[i] +'">'+ EnteredCurrency_key[i] +'</li>'
+    }
+  }
+
+  CurrencySelector.innerHTML = CountryCurrencyDropDown;
+  // CurrencySelectorMobile.innerHTML = CountryCurrencyDropDown;
+
+  $('.select-currencies').each(function(){
+    $(this).html(CountryCurrencyDropDownCustom);
+  });
+
+  $('.custom-dropdown li').on('click', function () {
+    //debugger
+    var selectedCountry = $(this).attr("data-value");
+    if(sessionStorage.getItem("Country") != 'null'){
+      sessionStorage.removeItem("Country");
+    }
+    sessionStorage.setItem("Country", selectedCountry);
+
+    var optionSelectCountry = $(this).attr("data-value");
+    var countrySelect = sessionStorage.getItem("Country");
+
+    if(optionSelectCountry == countrySelect){
+      //$('select.currencies-dropdown option').prop('selected', true);
+      $('#currencies-mobile').val(optionSelectCountry).trigger('change')
+    }
+  })
+
+  $('.wrapper-dropdown').click(function () {
+    $(this).toggleClass('active');
+  });
+
+  $(".custom-dropdown li").click(function() {
+    var text = $(this).html();
+    $(".wrapper-dropdown span").html(text);
+  }); 
+</script>
