@@ -1,0 +1,125 @@
+Please see
+--------------------
+Hello,
+
+You’ve created all the pages allowed by your free plan. To add more, upgrade your site plan.
+- https://prnt.sc/NgpjKbMghmL8
+
+Thank you.
+
+dirabydimple
+-----------------------
+Hello,
+
+- Infinite option
+Send the message to support team
+https://prnt.sc/Y8_IKgcnrtFe
+- In this theme "Dev Working CodeTaskers - July 29th (Updated)" not need to show infinite options 
+	https://prnt.sc/8dpTXhJWAXK2
+	What to do can you please guide me.
+
+- Product Addon
+	- I have added the funcationlity When a standard product is added, it will be included in the cart. 
+	If an addon product is selected, clicking the 'Add to Cart' button will add both the addon product and the main product to the cart. Additionally, if the product has variants, the selected variant will also be added to the cart.
+
+- I have added functionality so that when a customer selects an add-on and clicks "Add to Cart," the main product is added to the cart along with the selected add-on product titles.
+
+- I have added the code Addon product hide in cart drawer.
+
+- I am working on remove funcationlity.
+
+Website :- https://dirabydimple.com/collections/sarees/products/organza-printed-handwork-saree?_ab=0&_fd=0&_sc=1&preview_theme_id=142863204585
+
+Thank you
+
+
+
+
+EOD Report [20/09/2024]
+
+Project : Yu N Me
+Link : https://codetasker.com/?_ab=0&_fd=0&_sc=1&preview_theme_id=136861876385
+
+Completed Task :
+- Process Section vector added
+- Our Results Section
+- Brands Section
+- Client's feed back Section
+- Build Shopify section
+- Shopify Tasks Section
+
+In Progress Task : 
+- Our Recent work section
+
+
+EOD Report [24/09/2024]
+
+Project : Yu N Me
+Link : https://yunme-selfcare.myshopify.com/?_ab=0&_bt=eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaUY1ZFc1dFpTMXpaV3htWTJGeVpTNXRlWE5vYjNCcFpua3VZMjl0QmpvR1JWUT0iLCJleHAiOiIyMDI0LTA5LTIzVDA1OjA2OjA0Ljc0MloiLCJwdXIiOiJwZXJtYW5lbnRfcGFzc3dvcmRfYnlwYXNzIn19--78904d1cfa0e9567c2941aef6cab9fac36a80925&_fd=0&_sc=1&key=a311633a76fc48788886f4b4c63784c8015a404892e1b1842471e54ce19b691b&preview_theme_id=135175438475
+
+Completed Task :
+- Product page - Our product play book section
+- Product page - How to use section
+- Product page - Recently viewed section
+
+In Progress Task : 
+- Product page - Main product section
+- Product page - Collapsible row
+
+
+
+
+EOD Report [25/09/2024]
+
+Project : Juicy chemistry
+
+Completed Task :
+- Add tag above Header menu
+- Check variant circle issue
+- Change apperance of mobile menu
+
+Project : Yu N Me
+Link : https://yunme-selfcare.myshopify.com/?_ab=0&_bt=eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaUY1ZFc1dFpTMXpaV3htWTJGeVpTNXRlWE5vYjNCcFpua3VZMjl0QmpvR1JWUT0iLCJleHAiOiIyMDI0LTA5LTIzVDA1OjA2OjA0Ljc0MloiLCJwdXIiOiJwZXJtYW5lbnRfcGFzc3dvcmRfYnlwYXNzIn19--78904d1cfa0e9567c2941aef6cab9fac36a80925&_fd=0&_sc=1&key=a311633a76fc48788886f4b4c63784c8015a404892e1b1842471e54ce19b691b&preview_theme_id=135175438475
+
+Completed Task :
+- Product page - Collapsible row
+
+In Progress Task : 
+- Product page - Related product
+- Product-page - You may also like section
+
+
+EOD Report [26/09/2024]
+
+Project : Ikkawear
+
+Completed Task :
+- Announcement bar
+
+In Progress Task :
+- Header
+
+Project : Juicy chemistry
+
+Completed Task :
+- Check megamenu issue
+- Check price alignment issue
+
+In Progress Task : 
+- megamenu redirect issue
+- variant selector and add to cart button alignment issue
+
+
+
+
+EOD Report [27/09/2024]
+
+Project : Ikkawear
+
+Completed Task :
+- Marquee section
+- Header sticky issue
+
+In Progress Task :
+- Bestsellers collection section
+- Playbook section
