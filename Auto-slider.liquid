@@ -1,0 +1,183 @@
+<style>
+    .ct-auto-slider{
+        width:100%;
+        background:{{ section.settings.bg-color}};
+        overflow: hidden;
+    }
+    .ct-auto-slider-inner {
+        width: 100%;
+        display: flex;
+        max-width: fit-content;
+        min-width: max-content;
+        padding: 5.5px 0;
+        column-gap: 50px;
+    }
+    .ct-auto-slider-content {
+        width: 100%;
+        display: flex;
+        column-gap: 50px;
+    }  
+    .{{ section.settings.moving_direction }} {
+        animation: {{ section.settings.moving_direction }} {{ section.settings.time }}s linear infinite;
+    }  
+    .ct-auto-slider-title {
+        width: 100%;
+        white-space: nowrap;
+        color: {{ section.settings.text-color }};
+        font-family: Poppins;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 500;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: normal;
+        position: relative;
+    }
+    .ct-auto-slider-title:after {
+        content: "";
+        width: 15px;
+        height: 15px;
+        background: {{ section.settings.text-color }};
+        position: absolute;
+        border-radius: 25px;
+        top: 50%;
+        left: -33px;
+        transform: translate(0, -50%);
+    }
+    
+    @keyframes ct-slide-left {
+        from {
+          -webkit-transform: translateX(0);
+          transform: translateX(0);
+        }
+        to {
+          -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+        }
+    } 
+      
+    @keyframes ct-slide-right {
+        from {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+        to {
+            -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+        }
+    } 
+    
+    @media(max-width:768px){
+        .ct-auto-slider-inner {
+            padding: 13px 0;
+            column-gap: 48px;
+        }
+    }  
+    </style>
+    <div class="ct-auto-slider">
+        <div class="ct-auto-slider-inner">
+            <div class="ct-auto-slider-content {{ section.settings.moving_direction }}">
+              {% for block in section.blocks %}          
+                <div class="ct-auto-slider-title">{{ block.settings.title }}</div>
+              {% endfor %}
+              {% for block in section.blocks %}          
+                <div class="ct-auto-slider-title">{{ block.settings.title }}</div>
+              {% endfor %}
+              {% for block in section.blocks %}          
+                <div class="ct-auto-slider-title">{{ block.settings.title }}</div>
+              {% endfor %}
+              {% for block in section.blocks %}          
+                <div class="ct-auto-slider-title">{{ block.settings.title }}</div>
+              {% endfor %}
+            </div>    
+    
+            <div class="ct-auto-slider-content">
+              {% for block in section.blocks %}          
+                <div class="ct-auto-slider-title">{{ block.settings.title }}</div>
+              {% endfor %}
+              {% for block in section.blocks %}          
+                <div class="ct-auto-slider-title">{{ block.settings.title }}</div>
+              {% endfor %}
+              {% for block in section.blocks %}          
+                <div class="ct-auto-slider-title">{{ block.settings.title }}</div>
+              {% endfor %}
+              {% for block in section.blocks %}          
+                <div class="ct-auto-slider-title">{{ block.settings.title }}</div>
+              {% endfor %}
+            </div>    
+    
+            <div class="ct-auto-slider-content">
+              {% for block in section.blocks %}          
+                <div class="ct-auto-slider-title">{{ block.settings.title }}</div>
+              {% endfor %}
+              {% for block in section.blocks %}          
+                <div class="ct-auto-slider-title">{{ block.settings.title }}</div>
+              {% endfor %}
+              {% for block in section.blocks %}          
+                <div class="ct-auto-slider-title">{{ block.settings.title }}</div>
+              {% endfor %}
+              {% for block in section.blocks %}          
+                <div class="ct-auto-slider-title">{{ block.settings.title }}</div>
+              {% endfor %}
+            </div>    
+        </div>
+    </div>
+    {% schema %}
+      {
+        "name": "CT Auto Slider",
+        "settings": [
+          {
+            "type": "color",
+            "id": "bg-color",
+            "label": "Background Color"
+          },
+          {
+            "type": "color",
+            "id": "text-color",
+            "label": "Text Color"
+          },
+          {
+            "type": "select",
+            "id": "moving_direction",
+            "label": "Moving Direction",
+            "options": [
+              {
+                "value": "ct-slide-left",
+                "label": "Right to Left"
+              },
+              {
+                "value": "ct-slide-right",
+                "label": "Left to Right"
+              }
+            ],
+            "default": "ct-slide-left"
+          },
+          {
+            "type": "range",
+            "id": "time",
+            "min": 10,
+            "max": 100,
+            "step": 2,
+            "unit": "ms",
+            "label": "Auto Slider Time",
+            "default": 40
+          }
+        ],
+        "blocks": [
+          {
+            "type": "Slider",
+            "name": "Slider",
+            "settings": [
+              {
+                "type": "text",
+                "id": "title",
+                "label": "Title"
+              }
+            ]
+          }
+        ],
+        "presets": [{
+          "name": "CT Auto Slider"
+        }]
+      }
+    {% endschema %}

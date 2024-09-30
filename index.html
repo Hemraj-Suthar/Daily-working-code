@@ -1,4 +1,3 @@
-
 <select id="product-select-3718510149696" name="id" title="Variant">
     <option selected="selected" value="42480238592164" data-sku="JC0703">30 ml - ₹630</option>
     <option value="45856372490404" data-sku="JC0703A">100 ml - ₹1,770</option>
@@ -6,31 +5,35 @@
 </select>
 
 <div class="Popover__ValueList" data-scrollable="">
-    <button type="button" class="Popover__Value Heading Link Link--primary u-h6 is-selected" data-value="30 ml" data-option-position="1" data-action="select-value">30 ml</button>
-    <button type="button" class="Popover__Value Heading Link Link--primary u-h6" data-value="100 ml" data-option-position="1" data-action="select-value">100 ml</button>
-    <button type="button" class="Popover__Value  Heading Link Link--primary u-h6" data-value="10 ml" data-option-position="1" data-action="select-value">10 ml</button>
+    <button type="button" class="Popover__Value Heading Link Link--primary u-h6 is-selected" data-value="30 ml"
+        data-option-position="1" data-action="select-value">30 ml</button>
+    <button type="button" class="Popover__Value Heading Link Link--primary u-h6" data-value="100 ml"
+        data-option-position="1" data-action="select-value">100 ml</button>
+    <button type="button" class="Popover__Value  Heading Link Link--primary u-h6" data-value="10 ml"
+        data-option-position="1" data-action="select-value">10 ml</button>
 </div>
 
-<button type="button" class="ProductForm__Item" aria-expanded="false" aria-controls="popover-3718510149696-product-template-size"></button>
+<button type="button" class="ProductForm__Item" aria-expanded="false"
+    aria-controls="popover-3718510149696-product-template-size"></button>
 
 
 <script>
     document.querySelectorAll('.Popover__Value').forEach(button => {
-    button.addEventListener('click', function() {
-        
+        button.addEventListener('click', function () {
+
             const selectedValue = this.getAttribute('data-value');
-            
+
             const selectElement = document.getElementById('product-select-3718510149696');
             const options = selectElement.options;
-            
+
             for (let i = 0; i < options.length; i++) {
                 options[i].removeAttribute('selected');
-                
+
                 if (options[i].text.includes(selectedValue)) {
                     options[i].setAttribute('selected', 'selected');
                     selectElement.selectedIndex = i;
                 }
-            } 
+            }
             hidePopover();
         });
     });
@@ -45,7 +48,7 @@
 
 
 <div class="ct-editors-pick">
-    <div class="ct-editors-pick-heading"></div>          
+    <div class="ct-editors-pick-heading"></div>
     <div class="ct-editors-pick-conatiner">
         <div class="ct-editors-pick-box">
             <div class="ct-editors-pick-img-box"></div>
@@ -54,7 +57,7 @@
                 <div class="ct-editors-pick-subtitle"></div>
             </div>
         </div>
-    </div>          
+    </div>
 </div>
 
 
@@ -63,7 +66,9 @@
         <h1 class="h1">{{ article.title }}</h1>
         <button class="print-btn">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.997 3L11.998 3.08C12.1403 3.10723 12.2782 3.15365 12.408 3.218C12.7843 3.40974 13.0903 3.71569 13.282 4.092C13.5 4.52 13.5 5.08 13.5 6.2V6.8C13.5 7.92 13.5 8.48 13.282 8.908C13.0903 9.28431 12.7843 9.59026 12.408 9.782C12.171 9.903 11.892 9.957 11.5 9.981V10.441C11.5 10.685 11.5 10.95 11.481 11.179C11.461 11.439 11.408 11.781 11.227 12.135C10.9874 12.6051 10.6051 12.9874 10.135 13.227C9.781 13.407 9.438 13.46 9.179 13.481C8.949 13.501 8.685 13.501 8.44 13.5H5.56C5.315 13.5 5.05 13.5 4.821 13.481C4.48867 13.4604 4.16374 13.374 3.865 13.227C3.39451 12.9875 3.01189 12.6053 2.772 12.135C2.6253 11.8362 2.53931 11.5113 2.519 11.179C2.499 10.949 2.499 10.685 2.5 10.44V9.98C2.108 9.957 1.83 9.903 1.592 9.782C1.21569 9.59026 0.909744 9.28431 0.718 8.908C0.5 8.48 0.5 7.92 0.5 6.8V6.2C0.5 5.08 0.5 4.52 0.718 4.092C0.909744 3.71569 1.21569 3.40974 1.592 3.218C1.72174 3.15331 1.85967 3.10654 2.002 3.079V3C2.012 2.325 2.051 1.92 2.218 1.592C2.40974 1.21569 2.71569 0.909744 3.092 0.718C3.52 0.5 4.08 0.5 5.2 0.5H8.8C9.92 0.5 10.48 0.5 10.908 0.718C11.2843 0.909744 11.5903 1.21569 11.782 1.592C11.949 1.92 11.988 2.325 11.997 3ZM5.2 2H8.8C9.385 2 9.733 2.001 9.991 2.022C10.149 2.035 10.215 2.052 10.233 2.058C10.3225 2.10485 10.3957 2.17772 10.443 2.267C10.448 2.285 10.465 2.351 10.478 2.509C10.488 2.642 10.494 2.799 10.497 3H3.503C3.506 2.799 3.511 2.642 3.523 2.509C3.535 2.351 3.553 2.285 3.558 2.267C3.60485 2.17749 3.67772 2.10428 3.767 2.057C3.785 2.052 3.851 2.035 4.009 2.022C4.267 2.002 4.615 2 5.2 2ZM3.7 4.5H10.3C10.885 4.5 11.233 4.501 11.491 4.522C11.649 4.535 11.715 4.552 11.733 4.558C11.8225 4.60485 11.8957 4.67772 11.943 4.767C11.948 4.785 11.965 4.851 11.978 5.009C11.998 5.267 12 5.615 12 6.2V6.8C12 7.385 11.999 7.733 11.978 7.991C11.965 8.149 11.948 8.215 11.942 8.233C11.8951 8.32251 11.8223 8.39572 11.733 8.443C11.6566 8.46176 11.5786 8.47314 11.5 8.477V7.886C11.5 7.833 11.5 7.721 11.492 7.614C11.4747 7.38479 11.4125 7.16121 11.309 6.956C11.1415 6.62675 10.874 6.35897 10.545 6.191C10.3395 6.0873 10.1156 6.02512 9.886 6.008C9.78 6 9.666 6 9.614 6H4.387C4.333 6 4.22 6 4.114 6.008C3.88479 6.02525 3.6612 6.08743 3.456 6.191C3.1266 6.3588 2.8588 6.6266 2.691 6.956C2.551 7.229 2.519 7.479 2.508 7.614C2.5 7.72 2.5 7.834 2.5 7.886V8.477C2.42139 8.47282 2.34337 8.4611 2.267 8.442C2.17749 8.39515 2.10428 8.32228 2.057 8.233C2.03748 8.15366 2.02576 8.07261 2.022 7.991C2.002 7.733 2 7.385 2 6.8V6.2C2 5.615 2.001 5.267 2.022 5.009C2.035 4.851 2.052 4.785 2.058 4.767C2.10485 4.67749 2.17772 4.60428 2.267 4.557C2.285 4.552 2.351 4.535 2.509 4.522C2.767 4.502 3.115 4.5 3.7 4.5ZM4.027 7.636C4 7.69 4 7.76 4 7.9V10.4C4 10.96 4 11.24 4.109 11.454C4.20487 11.6422 4.35785 11.7951 4.546 11.891C4.76 12 5.04 12 5.6 12H8.4C8.96 12 9.24 12 9.454 11.891C9.64215 11.7951 9.79513 11.6422 9.891 11.454C10 11.24 10 10.96 10 10.4V7.9C10 7.76 10 7.69 9.973 7.636C9.94874 7.58898 9.91024 7.55083 9.863 7.527C9.81 7.5 9.74 7.5 9.6 7.5H4.4C4.26 7.5 4.19 7.5 4.136 7.527C4.08894 7.55121 4.05078 7.58972 4.027 7.637V7.636ZM11.941 8.238V8.235C11.9411 8.236 11.9411 8.237 11.941 8.238Z" fill="#9CA0A7"/>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M11.997 3L11.998 3.08C12.1403 3.10723 12.2782 3.15365 12.408 3.218C12.7843 3.40974 13.0903 3.71569 13.282 4.092C13.5 4.52 13.5 5.08 13.5 6.2V6.8C13.5 7.92 13.5 8.48 13.282 8.908C13.0903 9.28431 12.7843 9.59026 12.408 9.782C12.171 9.903 11.892 9.957 11.5 9.981V10.441C11.5 10.685 11.5 10.95 11.481 11.179C11.461 11.439 11.408 11.781 11.227 12.135C10.9874 12.6051 10.6051 12.9874 10.135 13.227C9.781 13.407 9.438 13.46 9.179 13.481C8.949 13.501 8.685 13.501 8.44 13.5H5.56C5.315 13.5 5.05 13.5 4.821 13.481C4.48867 13.4604 4.16374 13.374 3.865 13.227C3.39451 12.9875 3.01189 12.6053 2.772 12.135C2.6253 11.8362 2.53931 11.5113 2.519 11.179C2.499 10.949 2.499 10.685 2.5 10.44V9.98C2.108 9.957 1.83 9.903 1.592 9.782C1.21569 9.59026 0.909744 9.28431 0.718 8.908C0.5 8.48 0.5 7.92 0.5 6.8V6.2C0.5 5.08 0.5 4.52 0.718 4.092C0.909744 3.71569 1.21569 3.40974 1.592 3.218C1.72174 3.15331 1.85967 3.10654 2.002 3.079V3C2.012 2.325 2.051 1.92 2.218 1.592C2.40974 1.21569 2.71569 0.909744 3.092 0.718C3.52 0.5 4.08 0.5 5.2 0.5H8.8C9.92 0.5 10.48 0.5 10.908 0.718C11.2843 0.909744 11.5903 1.21569 11.782 1.592C11.949 1.92 11.988 2.325 11.997 3ZM5.2 2H8.8C9.385 2 9.733 2.001 9.991 2.022C10.149 2.035 10.215 2.052 10.233 2.058C10.3225 2.10485 10.3957 2.17772 10.443 2.267C10.448 2.285 10.465 2.351 10.478 2.509C10.488 2.642 10.494 2.799 10.497 3H3.503C3.506 2.799 3.511 2.642 3.523 2.509C3.535 2.351 3.553 2.285 3.558 2.267C3.60485 2.17749 3.67772 2.10428 3.767 2.057C3.785 2.052 3.851 2.035 4.009 2.022C4.267 2.002 4.615 2 5.2 2ZM3.7 4.5H10.3C10.885 4.5 11.233 4.501 11.491 4.522C11.649 4.535 11.715 4.552 11.733 4.558C11.8225 4.60485 11.8957 4.67772 11.943 4.767C11.948 4.785 11.965 4.851 11.978 5.009C11.998 5.267 12 5.615 12 6.2V6.8C12 7.385 11.999 7.733 11.978 7.991C11.965 8.149 11.948 8.215 11.942 8.233C11.8951 8.32251 11.8223 8.39572 11.733 8.443C11.6566 8.46176 11.5786 8.47314 11.5 8.477V7.886C11.5 7.833 11.5 7.721 11.492 7.614C11.4747 7.38479 11.4125 7.16121 11.309 6.956C11.1415 6.62675 10.874 6.35897 10.545 6.191C10.3395 6.0873 10.1156 6.02512 9.886 6.008C9.78 6 9.666 6 9.614 6H4.387C4.333 6 4.22 6 4.114 6.008C3.88479 6.02525 3.6612 6.08743 3.456 6.191C3.1266 6.3588 2.8588 6.6266 2.691 6.956C2.551 7.229 2.519 7.479 2.508 7.614C2.5 7.72 2.5 7.834 2.5 7.886V8.477C2.42139 8.47282 2.34337 8.4611 2.267 8.442C2.17749 8.39515 2.10428 8.32228 2.057 8.233C2.03748 8.15366 2.02576 8.07261 2.022 7.991C2.002 7.733 2 7.385 2 6.8V6.2C2 5.615 2.001 5.267 2.022 5.009C2.035 4.851 2.052 4.785 2.058 4.767C2.10485 4.67749 2.17772 4.60428 2.267 4.557C2.285 4.552 2.351 4.535 2.509 4.522C2.767 4.502 3.115 4.5 3.7 4.5ZM4.027 7.636C4 7.69 4 7.76 4 7.9V10.4C4 10.96 4 11.24 4.109 11.454C4.20487 11.6422 4.35785 11.7951 4.546 11.891C4.76 12 5.04 12 5.6 12H8.4C8.96 12 9.24 12 9.454 11.891C9.64215 11.7951 9.79513 11.6422 9.891 11.454C10 11.24 10 10.96 10 10.4V7.9C10 7.76 10 7.69 9.973 7.636C9.94874 7.58898 9.91024 7.55083 9.863 7.527C9.81 7.5 9.74 7.5 9.6 7.5H4.4C4.26 7.5 4.19 7.5 4.136 7.527C4.08894 7.55121 4.05078 7.58972 4.027 7.637V7.636ZM11.941 8.238V8.235C11.9411 8.236 11.9411 8.237 11.941 8.238Z"
+                    fill="#9CA0A7" />
             </svg>
             Print this page
         </button>
@@ -86,29 +91,38 @@
 <div class="ct-blog-def">
     <div class="ct-blog-def-img">
         <img class="main-blog-img" height="410" width="410"
-        src="https://cdn.shopify.com/s/files/1/0534/3559/6954/files/sunscreen.png?v=1719208489" alt="">
+            src="https://cdn.shopify.com/s/files/1/0534/3559/6954/files/sunscreen.png?v=1719208489" alt="">
     </div>
     <div class="ct-blog-def-content">
-        <p class="ct-blog-def-heading" style="color: #6f8712;" data-mce-style="color: #6f8712;">NATURAL INGREDIENTS, POWERFUL PROTECTION: YOUR BEST CUSTOM MADE SKIN’S SHIELD</p>
-        <p class="ct-blog-def-detail">Creating your sunscreen can be a rewarding and empowering experience, especially when you know
-            exactly what goes into it. Introducing the Aloe Jojoba Sunshield 30, a handmade sunscreen cream that combines the
-            soothing properties of aloe vera with the nourishing benefits of jojoba oil. This DIY sunscreen offers SPF 30+ as
-            well as broad-spectrum protection against harmful UVA and UVB rays. Furthermore, it also ensures your skin stays
-            moisturized and non-greasy throughout the day. With its lightweight, non-tacky formula and a commitment to being
-            free from parabens, sulfates, mineral oil, silicones, and other irritants, the Aloe Jojoba Sunshield 30 is perfect
-            for all skin types, including sensitive skin. Join us as we guide you through this simple yet effective recipe for
+        <p class="ct-blog-def-heading" style="color: #6f8712;" data-mce-style="color: #6f8712;">NATURAL INGREDIENTS,
+            POWERFUL PROTECTION: YOUR BEST CUSTOM MADE SKIN’S SHIELD</p>
+        <p class="ct-blog-def-detail">Creating your sunscreen can be a rewarding and empowering experience, especially
+            when you know
+            exactly what goes into it. Introducing the Aloe Jojoba Sunshield 30, a handmade sunscreen cream that
+            combines the
+            soothing properties of aloe vera with the nourishing benefits of jojoba oil. This DIY sunscreen offers SPF
+            30+ as
+            well as broad-spectrum protection against harmful UVA and UVB rays. Furthermore, it also ensures your skin
+            stays
+            moisturized and non-greasy throughout the day. With its lightweight, non-tacky formula and a commitment to
+            being
+            free from parabens, sulfates, mineral oil, silicones, and other irritants, the Aloe Jojoba Sunshield 30 is
+            perfect
+            for all skin types, including sensitive skin. Join us as we guide you through this simple yet effective
+            recipe for
             crafting your sunshield, ensuring your skin stays naturally protected and healthy.
         </p>
     </div>
 </div>
 
-<h3 class="ct-why-make-heading" style="color: #155d0b;" data-mce-style="color: #155d0b;">WHY MAKE A SUNSCREEN CREAM AT HOME?</h3>
+<h3 class="ct-why-make-heading" style="color: #155d0b;" data-mce-style="color: #155d0b;">WHY MAKE A SUNSCREEN CREAM AT
+    HOME?</h3>
 <div class="ct-why-make">
     <div style="color: #6f8712;" data-mce-style="color: #6f8712;">Customization</div>
     <p>By making sunscreen at home, you can customize the formulation to suit your skin type and preferences, adding
         ingredients like aloe vera gel and jojoba oil for added skin benefits.
     </p>
-         
+
     <div style="color: #6f8712;" data-mce-style="color: #6f8712;">Natural Ingredients</div>
     <p>Homemade sunscreen ensures the use of natural ingredients, reducing the risk of exposure to harmful chemicals
         often found in commercial products.
@@ -120,10 +134,12 @@
     </p>
 
     <div style="color: #6f8712;" data-mce-style="color: #6f8712;">Broad Spectrum Protection</div>
-    <p>The base provides SPF 30+ and PA+++ protection, offering broad-spectrum defense against both UVA and UVB rays.</p>
+    <p>The base provides SPF 30+ and PA+++ protection, offering broad-spectrum defense against both UVA and UVB rays.
+    </p>
 
     <div style="color: #6f8712;" data-mce-style="color: #6f8712;">Moisturizing Formula</div>
-    <p>The gel-based formulation is moisturizing yet non-greasy, non-oily, and non-sticky, providing hydration without clogging pores.</p>
+    <p>The gel-based formulation is moisturizing yet non-greasy, non-oily, and non-sticky, providing hydration without
+        clogging pores.</p>
 
     <div style="color: #6f8712;" data-mce-style="color: #6f8712;">Lightweight and Comfortable</div>
     <p>The lightweight feel and non-oily texture ensure the sunscreen is comfortable for daily use, without the greasy
@@ -133,7 +149,8 @@
     <p>The formula avoids leaving a white cast, ensuring a natural and seamless finish on the skin.</p>
 
     <div style="color: #6f8712;" data-mce-style="color: #6f8712;">Easy to Apply</div>
-    <p>The gel-based consistency allows for smooth and effortless application, making it user-friendly and efficient.</p>
+    <p>The gel-based consistency allows for smooth and effortless application, making it user-friendly and efficient.
+    </p>
 
     <div style="color: #6f8712;" data-mce-style="color: #6f8712;">Cost-Effective</div>
     <p>Sunscreen made at home can be more cost-effective in the long run, especially since you can create larger
@@ -157,26 +174,23 @@
 <div class="ct-diya-recipe">
     <div class="ct-diya-recipe-right">
         <img height="410" width="410" style="display: block; margin-left: auto; margin-right: auto;"
-                    src="https://cdn.shopify.com/s/files/1/0534/3559/6954/files/2._Home_Mase_Sunscreen_1_480x480.jpg?v=1717399826"
-                    alt="" data-mce-style="display: block; margin-left: auto; margin-right: auto;"></strong>
+            src="https://cdn.shopify.com/s/files/1/0534/3559/6954/files/2._Home_Mase_Sunscreen_1_480x480.jpg?v=1717399826"
+            alt="" data-mce-style="display: block; margin-left: auto; margin-right: auto;"></strong>
     </div>
     <div class="ct-diya-recipe-left">
         <div style="color: #6f8712;" data-mce-style="color: #6f8712;">INGREDIENTS</div>
         <p>100 gm, <a style="color: #155d0b;" title="Sunscreen Gel Base (SPF 30)"
-                    href="https://soapytwist.com/products/spf-30?_pos=1&amp;_psq=SUNSCREEN&amp;_ss=e&amp;_v=1.0"
-                    data-mce-style="color: #155d0b;">Sunscreen base</a></p>
-        <p>0.5gm, <a style="color: #155d0b;"
-                    title="Aloe Vera Gel"
-                    href="https://soapytwist.com/products/aloe-vera-gel-bulk-buy?_pos=1&amp;_psq=aloe+vera+gel&amp;_ss=e&amp;_v=1.0"
-                    data-mce-style="color: #155d0b;">Aloe vera gel</a></p>
-        <p>0.3 gm, <a style="color: #155d0b;"
-                    title="Jojoba Oil"
-                    href="https://soapytwist.com/products/jojoba-oil?_pos=2&amp;_psq=jojoba+oil&amp;_ss=e&amp;_v=1.0"
-                    data-mce-style="color: #155d0b;">Jojoba oil</a></p>
-        <p>0.3 gm, <a style="color: #155d0b;"
-                    title="White Tea and Aloe Fragrance Oil"
-                    href="https://soapytwist.com/products/white-tea-and-aloe-fragrance-oil?_pos=1&amp;_psq=white+tea&amp;_ss=e&amp;_v=1.0"
-                    data-mce-style="color: #155d0b;">White Tea, and Aloe fragrance</a>
+                href="https://soapytwist.com/products/spf-30?_pos=1&amp;_psq=SUNSCREEN&amp;_ss=e&amp;_v=1.0"
+                data-mce-style="color: #155d0b;">Sunscreen base</a></p>
+        <p>0.5gm, <a style="color: #155d0b;" title="Aloe Vera Gel"
+                href="https://soapytwist.com/products/aloe-vera-gel-bulk-buy?_pos=1&amp;_psq=aloe+vera+gel&amp;_ss=e&amp;_v=1.0"
+                data-mce-style="color: #155d0b;">Aloe vera gel</a></p>
+        <p>0.3 gm, <a style="color: #155d0b;" title="Jojoba Oil"
+                href="https://soapytwist.com/products/jojoba-oil?_pos=2&amp;_psq=jojoba+oil&amp;_ss=e&amp;_v=1.0"
+                data-mce-style="color: #155d0b;">Jojoba oil</a></p>
+        <p>0.3 gm, <a style="color: #155d0b;" title="White Tea and Aloe Fragrance Oil"
+                href="https://soapytwist.com/products/white-tea-and-aloe-fragrance-oil?_pos=1&amp;_psq=white+tea&amp;_ss=e&amp;_v=1.0"
+                data-mce-style="color: #155d0b;">White Tea, and Aloe fragrance</a>
         </p>
     </div>
 </div>
@@ -198,11 +212,12 @@
 <div class="ct-best-before">
     <div class="ct-best-before-title" style="color: #ed274a;">For best results use within 12 months.</div>
     <img style="display: block; margin-left: auto; margin-right: auto;"
-            src="https://cdn.shopify.com/s/files/1/0534/3559/6954/files/3._SPF_30_Sunscreen_1_480x480.jpg?v=1717399916"
-            alt="" width="411" height="411" data-mce-style="display: block; margin-left: auto; margin-right: auto;">
+        src="https://cdn.shopify.com/s/files/1/0534/3559/6954/files/3._SPF_30_Sunscreen_1_480x480.jpg?v=1717399916"
+        alt="" width="411" height="411" data-mce-style="display: block; margin-left: auto; margin-right: auto;">
 
     <div class="ct-best-before-title" style="color: #ed274a;">BENEFITS OF EACH INGREDIENT</div>
-    <div class="ct-best-before-title-inner" style="color: #6f8712;" data-mce-style="color: #6f8712;">Sunscreen base</div>
+    <div class="ct-best-before-title-inner" style="color: #6f8712;" data-mce-style="color: #6f8712;">Sunscreen base
+    </div>
     <p>The Soapy Twist SPF 30 sunscreen base benefits your skin by providing broad-spectrum UVA and UVB protection while
         maintaining a lightweight, non-greasy feel. Its moisturizing gel formula prevents chemical absorption, ensuring
         safety for sensitive skin. The Sunscreen cream base is&nbsp;free from harmful additives like parabens and
@@ -222,7 +237,8 @@
         antibacterial and antifungal properties treat skin infections, while its anti-aging benefits reduce fine lines
         and wrinkles, enhancing the overall efficacy of sunscreen lotion.
     </p>
-    <div class="ct-best-before-title-inner" style="color: #6f8712;" data-mce-style="color: #6f8712;">White Tea and Aloe Fragrance</div>
+    <div class="ct-best-before-title-inner" style="color: #6f8712;" data-mce-style="color: #6f8712;">White Tea and Aloe
+        Fragrance</div>
     <p>Adding white tea and aloe fragrance to your sunscreen lotion provides a delightful, warm, and comforting scent.
         Soapy Twist's cosmetic-grade fragrance oil enhances the sensory experience, making daily application more
         enjoyable. Suitable for DIY moisturizers and body lotions, this fragrance complements the soothing and hydrating
@@ -274,7 +290,7 @@
     .header__primary-nav-item.active:before {
         transform: scaleX(1);
     }
-    
+
     .header__primary-nav-item:before {
         content: attr(data-title);
         transform-origin: var(--transform-origin-start);
@@ -309,12 +325,12 @@
 
 <script>
     const save_note_btn = document.querySelector(".ct-order-note-btn");
-    
+
     if (save_note_btn) {
         save_note_btn.addEventListener("click", (e) => {
             const orderNoteSection = e.target.closest(".ct_cart_active_parent");
             const orderNoteInput = document.querySelector(".ct-order-note-main textarea");
-            
+
             if (orderNoteInput.value.trim() !== "") {
                 orderNoteSection.classList.remove("is_open");
             } else {
@@ -323,131 +339,623 @@
         });
     }
 
-        $(document).ready(function () {
-            function updateCartTotal() {
-                var cart_total_get = $('.cart-drawer__button-price .money').text();
-                $('.ct-checkout-Ctitle .cart_total_class').text(cart_total_get);
-            }
-
-            // Run the updateCartTotal function every 2 seconds (2000 milliseconds)
-            setInterval(updateCartTotal, 200);
-
-            // Optionally, run the function immediately on page load
-            updateCartTotal();
-        });
-
-        $(document).ready(function () {
-            // Initialize cart total
+    $(document).ready(function () {
+        function updateCartTotal() {
             var cart_total_get = $('.cart-drawer__button-price .money').text();
             $('.ct-checkout-Ctitle .cart_total_class').text(cart_total_get);
+        }
 
-            // Toggle class for customize button
-            $(document).on("click", ".cartI-pro-Customize", function () {
-                const $clickedButton = $(this);
-                $clickedButton.toggleClass('is_active');
-                const $parent = $clickedButton.closest('.ct-line-item-info-main');
-                if ($parent.length) {
-                    $parent.toggleClass('is_active');
-                }
-            });
+        // Run the updateCartTotal function every 2 seconds (2000 milliseconds)
+        setInterval(updateCartTotal, 200);
 
-            // Cart active click event
-            $(document).on("click", ".ct_cart_active", function () {
-                var parent = $(this).closest('.ct_cart_active_parent');
-                if (parent.hasClass('is_open')) {
-                    parent.removeClass('is_open');
-                } else {
-                    $('.ct_cart_active_parent').removeClass('is_open');
-                    parent.addClass('is_open');
-                }
-            });
+        // Optionally, run the function immediately on page load
+        updateCartTotal();
+    });
 
-            // Add to cart click event
-            $(document).on("click", ".label-chek-product-btn .ct_add_cart", function () {
-                $(".ct-cart-drawer-main .ct-loader-main").show();
-                var variantId = $(this).attr("data-variant-id");
-                var mainVariantId = $(this).attr("data-main-var-id");
-                var properties = $(this).attr("data-prop");
-                var prop = properties ? add_properties(variantId, properties).properties : { addons: variantId };
+    $(document).ready(function () {
+        // Initialize cart total
+        var cart_total_get = $('.cart-drawer__button-price .money').text();
+        $('.ct-checkout-Ctitle .cart_total_class').text(cart_total_get);
 
-                let formData = {
-                    items: [{ id: variantId, quantity: 1 }],
-                };
-
-                fetch(window.Shopify.routes.root + "cart/add.js", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify(formData),
-                })
-                    .then(response => {
-                        updateProperties_add(mainVariantId, prop);
-                        return response.json();
-                    })
-                    .catch(error => {
-                        console.error("Error:", error);
-                    });
-            });
+        // Toggle class for customize button
+        $(document).on("click", ".cartI-pro-Customize", function () {
+            const $clickedButton = $(this);
+            $clickedButton.toggleClass('is_active');
+            const $parent = $clickedButton.closest('.ct-line-item-info-main');
+            if ($parent.length) {
+                $parent.toggleClass('is_active');
+            }
         });
+
+        // Cart active click event
+        $(document).on("click", ".ct_cart_active", function () {
+            var parent = $(this).closest('.ct_cart_active_parent');
+            if (parent.hasClass('is_open')) {
+                parent.removeClass('is_open');
+            } else {
+                $('.ct_cart_active_parent').removeClass('is_open');
+                parent.addClass('is_open');
+            }
+        });
+
+        // Add to cart click event
+        $(document).on("click", ".label-chek-product-btn .ct_add_cart", function () {
+            $(".ct-cart-drawer-main .ct-loader-main").show();
+            var variantId = $(this).attr("data-variant-id");
+            var mainVariantId = $(this).attr("data-main-var-id");
+            var properties = $(this).attr("data-prop");
+            var prop = properties ? add_properties(variantId, properties).properties : { addons: variantId };
+
+            let formData = {
+                items: [{ id: variantId, quantity: 1 }],
+            };
+
+            fetch(window.Shopify.routes.root + "cart/add.js", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            })
+                .then(response => {
+                    updateProperties_add(mainVariantId, prop);
+                    return response.json();
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                });
+        });
+    });
 </script>
 
 
 <script>
-  var Currency_rates =  JSON.parse(localStorage.getItem("EnteredCurrency"));
-  var CountryCurrencyDropDown ='<option value="'+ Shopify.currency.active +'">'+ Shopify.currency.active +'</option>', i;
-  var CountryCurrencyDropDownCustom ='<li data-value="'+ Shopify.currency.active +'">'+ Shopify.currency.active +'</li>', i;
-  var EnteredCurrency_key = Object.keys(Currency_rates);
-  const CurrencySelector = document.querySelector('#currencies');
-  // const CurrencySelectorMobile = document.querySelector('#currencies-mobile');
+    var Currency_rates = JSON.parse(localStorage.getItem("EnteredCurrency"));
+    var CountryCurrencyDropDown = '<option value="' + Shopify.currency.active + '">' + Shopify.currency.active + '</option>', i;
+    var CountryCurrencyDropDownCustom = '<li data-value="' + Shopify.currency.active + '">' + Shopify.currency.active + '</li>', i;
+    var EnteredCurrency_key = Object.keys(Currency_rates);
+    const CurrencySelector = document.querySelector('#currencies');
+    // const CurrencySelectorMobile = document.querySelector('#currencies-mobile');
 
-  const customSelector = document.querySelector('.select-currencies');
+    const customSelector = document.querySelector('.select-currencies');
 
-  var AllCodes = ['USD','EUR','GBP','CAD','ARS','AUD','ILS','BBD','BDT','BSD','BHD','BRL','BOB','BND','BGN','MMK','KYD','CLP','CNY','COP','CRC','HRK','CZK','DKK','DOP','XCD','EGP','XPF','FJD','GHS','GTQ','GYD','GEL','HKD','HUF','ISK','INR','IDR','NIS','JMD','JPY','JOD','KZT','KES','KWD','LVL','LTL','MXN','MYR','MUR','MDL','MAD','MNT','MZN','ANG','NZD','NGN','NOK','OMR','PKR','PYG','PEN','PHP','PLN','QAR','RON','RUB','SAR','RSD','SCR','SGD','SYP','ZAR','KRW','LKR','SEK','CHF','TWD','THB','TZS','TTD','TRY','TND','UAH','AED','UYU','VEB','VND','ZMK','EURO','Yen','Yuan'];
+    var AllCodes = ['USD', 'EUR', 'GBP', 'CAD', 'ARS', 'AUD', 'ILS', 'BBD', 'BDT', 'BSD', 'BHD', 'BRL', 'BOB', 'BND', 'BGN', 'MMK', 'KYD', 'CLP', 'CNY', 'COP', 'CRC', 'HRK', 'CZK', 'DKK', 'DOP', 'XCD', 'EGP', 'XPF', 'FJD', 'GHS', 'GTQ', 'GYD', 'GEL', 'HKD', 'HUF', 'ISK', 'INR', 'IDR', 'NIS', 'JMD', 'JPY', 'JOD', 'KZT', 'KES', 'KWD', 'LVL', 'LTL', 'MXN', 'MYR', 'MUR', 'MDL', 'MAD', 'MNT', 'MZN', 'ANG', 'NZD', 'NGN', 'NOK', 'OMR', 'PKR', 'PYG', 'PEN', 'PHP', 'PLN', 'QAR', 'RON', 'RUB', 'SAR', 'RSD', 'SCR', 'SGD', 'SYP', 'ZAR', 'KRW', 'LKR', 'SEK', 'CHF', 'TWD', 'THB', 'TZS', 'TTD', 'TRY', 'TND', 'UAH', 'AED', 'UYU', 'VEB', 'VND', 'ZMK', 'EURO', 'Yen', 'Yuan'];
 
-  var countrySelected = 'INR';
-  if(sessionStorage.getItem("Country")){
-    countrySelected = sessionStorage.getItem("Country");
-  }
-  $(".dropdown-text").text(countrySelected);
-
-  for (let i = 0; i < EnteredCurrency_key.length; i++) {
-    if(AllCodes.includes(EnteredCurrency_key[i])){
-      CountryCurrencyDropDown = CountryCurrencyDropDown + '<option value="'+ EnteredCurrency_key[i] +'">'+ EnteredCurrency_key[i] +'</option>'
-      CountryCurrencyDropDownCustom = CountryCurrencyDropDownCustom + '<li data-value="'+ EnteredCurrency_key[i] +'">'+ EnteredCurrency_key[i] +'</li>'
+    var countrySelected = 'INR';
+    if (sessionStorage.getItem("Country")) {
+        countrySelected = sessionStorage.getItem("Country");
     }
-  }
+    $(".dropdown-text").text(countrySelected);
 
-  CurrencySelector.innerHTML = CountryCurrencyDropDown;
-  // CurrencySelectorMobile.innerHTML = CountryCurrencyDropDown;
-
-  $('.select-currencies').each(function(){
-    $(this).html(CountryCurrencyDropDownCustom);
-  });
-
-  $('.custom-dropdown li').on('click', function () {
-    //debugger
-    var selectedCountry = $(this).attr("data-value");
-    if(sessionStorage.getItem("Country") != 'null'){
-      sessionStorage.removeItem("Country");
+    for (let i = 0; i < EnteredCurrency_key.length; i++) {
+        if (AllCodes.includes(EnteredCurrency_key[i])) {
+            CountryCurrencyDropDown = CountryCurrencyDropDown + '<option value="' + EnteredCurrency_key[i] + '">' + EnteredCurrency_key[i] + '</option>'
+            CountryCurrencyDropDownCustom = CountryCurrencyDropDownCustom + '<li data-value="' + EnteredCurrency_key[i] + '">' + EnteredCurrency_key[i] + '</li>'
+        }
     }
-    sessionStorage.setItem("Country", selectedCountry);
 
-    var optionSelectCountry = $(this).attr("data-value");
-    var countrySelect = sessionStorage.getItem("Country");
+    CurrencySelector.innerHTML = CountryCurrencyDropDown;
+    // CurrencySelectorMobile.innerHTML = CountryCurrencyDropDown;
 
-    if(optionSelectCountry == countrySelect){
-      //$('select.currencies-dropdown option').prop('selected', true);
-      $('#currencies-mobile').val(optionSelectCountry).trigger('change')
-    }
-  })
+    $('.select-currencies').each(function () {
+        $(this).html(CountryCurrencyDropDownCustom);
+    });
 
-  $('.wrapper-dropdown').click(function () {
-    $(this).toggleClass('active');
-  });
+    $('.custom-dropdown li').on('click', function () {
+        //debugger
+        var selectedCountry = $(this).attr("data-value");
+        if (sessionStorage.getItem("Country") != 'null') {
+            sessionStorage.removeItem("Country");
+        }
+        sessionStorage.setItem("Country", selectedCountry);
 
-  $(".custom-dropdown li").click(function() {
-    var text = $(this).html();
-    $(".wrapper-dropdown span").html(text);
-  }); 
+        var optionSelectCountry = $(this).attr("data-value");
+        var countrySelect = sessionStorage.getItem("Country");
+
+        if (optionSelectCountry == countrySelect) {
+            //$('select.currencies-dropdown option').prop('selected', true);
+            $('#currencies-mobile').val(optionSelectCountry).trigger('change')
+        }
+    })
+
+    $('.wrapper-dropdown').click(function () {
+        $(this).toggleClass('active');
+    });
+
+    $(".custom-dropdown li").click(function () {
+        var text = $(this).html();
+        $(".wrapper-dropdown span").html(text);
+    }); 
 </script>
+
+
+<div class="career_bg">
+    <div class="Container">
+        <div class="PageHeader">
+            <div class="career_wrapper">
+                <div class="career_left_wrapper">
+                    <div class="career_heading">
+                        <span>{{ section.settings.career-subheading }}</span>
+                        <h1>{{ section.settings.career-heading }}</h1>
+                        <p>{{ section.settings.career-description }}</p>
+                    </div>
+                    <div class="career_form">
+                        <!--  <form method="post" action="" id="contact_form" accept-charset="UTF-8" class="Form Form--spacingTight" onsubmit="">
+                  <h5>Apply with us</h5>
+                  <div class="Form__Item">
+                    <input type="text" class="Form__Input" name="contact[name]" aria-label="Your name" placeholder="Your name" required="">
+                    <label class="Form__FloatingLabel">Your name</label>
+                  </div>
+      
+                  <div class="Form__Item">
+                    <input type="email" class="Form__Input" name="contact[email]" aria-label="Your email" placeholder="Your email" required="">
+                    <label class="Form__FloatingLabel">Your email</label>
+                  </div>
+                  
+                  <div class="Form__Item">
+                  <textarea name="contact[body]" cols="30" rows="10" class="Form__Textarea" aria-label="Your message" placeholder="Your message" required=""></textarea>
+                  <label class="Form__FloatingLabel">Your message</label>
+                  </div>
+      
+                  <button type="submit" class="Form__Submit Button Button--primary Button--full">Apply</button>
+                </form> -->
+                        <div style="margin:0 auto;" class="pxFormGenerator" id="txBP_xKqGnIMf6kj4u0lLw"></div>
+                    </div>
+                </div>
+                <div class="career_right_wrapper">
+                    <div class="career_heading">
+                        <span>{{ section.settings.career-subheading }}</span>
+                        <h1>{{ section.settings.career-heading }}</h1>
+                        <p>{{ section.settings.career-description }}</p>
+                    </div>
+
+                    <div class="accordion" id="accordionExample">
+                        {% for block in section.blocks %}
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="{{ block.settings.accordion-id }}">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#description--{{ block.settings.accordion-id }}"
+                                    aria-expanded="false" aria-controls="collapseThree">
+                                    <div class="ac-wrap">
+                                        <h2 class="">{{ block.settings.accordion-heading }}</h2>
+                                        <span>{{ block.settings.accordion-subheading }}</span>
+                                    </div>
+                                </button>
+                            </div>
+                            <div id="description--{{ block.settings.accordion-id }}" class="accordion-collapse collapse"
+                                aria-labelledby="{{ block.settings.accordion-id }}" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">{{ block.settings.accordion-description }}
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- CSS only -->
+{% comment %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+{% endcomment %}
+<style>
+    a {
+        color: inherit !important;
+        text-decoration: inherit !important;
+    }
+
+    .career_bg {
+        display: block;
+        background: rgb(255, 248, 236);
+    }
+
+    .career_bg .PageHeader {
+        padding: 50px 0 !important;
+        margin: 0 !important;
+    }
+
+    .career_wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .career_left_wrapper {
+        width: 60%;
+    }
+
+    .career_right_wrapper {
+        width: 40%;
+        display: none;
+    }
+
+    .career_left_wrapper .career_heading {
+        display: block;
+    }
+
+    .career_right_wrapper .career_heading {
+        display: none;
+    }
+
+    .career_heading {
+        display: block;
+        margin: 48px;
+    }
+
+    .career_heading span {
+        font-family: 'Switzer';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #0D0D0D;
+    }
+
+    .career_heading h1 {
+        font-family: Libre Caslon Text;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 60px;
+        line-height: 73px;
+        color: #000000;
+        text-align: left !important;
+    }
+
+    .career_heading p {
+        font-family: 'Switzer';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+        color: #0D0D0D;
+    }
+
+    .career_form h5 {
+        font-family: 'Switzer';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+        color: #0D0D0D;
+        margin-bottom: 32px;
+    }
+
+    .career_right_wrapper .accordion-item {
+        border: none;
+    }
+
+    .accordion-item {
+        background: rgb(255, 248, 236);
+    }
+
+    .accordion-item .accordion-button {
+        background: rgb(255, 248, 236);
+    }
+
+    .career_right_wrapper .accordion-header button {
+        border-bottom: 1px solid #A9A9A9;
+        padding: 10px 0;
+    }
+
+    .career_right_wrapper .accordion-button:focus {
+        box-shadow: none;
+    }
+
+    .career_right_wrapper .accordion-body {
+        padding: 32px 0;
+    }
+
+    .career_right_wrapper .accordion-button:not(.collapsed)::after {
+        filter: contrast(0);
+    }
+
+    .accordion-button:not(.collapsed) {
+        color: #000000;
+        background-color: transparent;
+    }
+
+    .ac-wrap h2 {
+        font-family: Libre Caslon Text;
+        color: #553E23;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 48px;
+        color: #0D0D0D;
+    }
+
+    .ac-wrap span {
+        font-family: 'Switzer';
+        color: #553E23;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+        color: #0D0D0D;
+    }
+
+    @media only screen and (max-width: 620px) {
+        .career_left_wrapper {
+            width: 100%;
+        }
+
+        .career_left_wrapper {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .career_right_wrapper {
+            width: 100%;
+        }
+
+        .career_left_wrapper {
+            order: 2;
+        }
+
+        .career_right_wrapper {
+            order: 1;
+            margin-bottom: 30px;
+        }
+
+        .career_left_wrapper .career_heading {
+            margin: 0 35px;
+        }
+
+        .career_right_wrapper .career_heading {
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .career_heading h1 {
+            font-size: 40px;
+            line-height: 50px;
+        }
+    }
+</style>
+
+
+<div class="ct-announcement-desktop">
+    <div class="ct-announcement-desktop-inner">
+        <div class="ct-announcement-desktop-container">
+            <p class="ct-announcement-desktop-title">
+                <a href=""></a>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<div class="ct-trust-badge">
+    <div class="ct-trust-badge-container">
+
+        <div class="ct-trust-badge-box">
+            <div class="ct-trust-badge-icon"></div>
+            <div class="ct-trust-badge-title-box">
+                <h4 class="ct-trust-badge-title"></h4>
+                <p class="ct-trust-badge-subtitle"></p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-scrollbar"></div>
+    <div class="swiper-pagination"></div>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        centeredSlides: false,
+        slidesPerGroupSkip: 1,
+        grabCursor: true,
+        keyboard: {
+            enabled: true,
+        },
+        breakpoints: {
+            769: {
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+            },
+        },
+        scrollbar: {
+            el: ".swiper-scrollbar",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+</script>
+
+
+<div class="ct-review">
+    <div class="ct-review-inner page-width">
+        <div class="ct-review-heading">
+            <h2 class=""></h2>
+        </div>
+        <div class="ct-review-container">
+            <div class="ct-review-img-box">
+
+            </div>
+            <div class="ct-review-title-box">
+                <p class="ct-review-"></p>
+                <h4 class="ct-review-benifit"></h4>
+                <p class="ct-review-subtitle"></p>
+                <p class="ct-review-author"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="ct-problem">
+    <div class="ct-problem-inner page-width">
+        <div class="ct-problem-container">
+            <div class="ct-problem-title-box">
+                <h2 class="heading uppercase h2 inline-richtext">{{ section.settings.title }}</h2>
+                <p class="ct-problem-subtitle">{{ section.settings.subTitle }}</p>
+            </div>
+            <div class="swiper ct-problem-box-container-wrapper">
+                <div class="ct-problem-box-container swiper-wrapper">
+                    {% for block in section.blocks %}
+                    {% if block.settings.image != blank %}
+                    <div class="ct-problem-box swiper-slide">
+                        <a href="{{ block.settings.btn_url }}" class="ct-problem-link">
+                            <div class="ct-problem-img-box">
+                                <img class="ct-problem-img" src="{{ block.settings.image | image_url }}"
+                                    width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}"
+                                    {% if forloop.index==1 %}fetchpriority="high" {% endif %} {% if forloop.index> 2
+                                %}loading="lazy" {% endif %} loading = "eager">
+                            </div>
+                            <p>{{ block.settings.btn_text }}</p>
+                        </a>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="ct-recent-view">
+    <div class="ct-recent-view-inner">
+        <div class="recently-title">
+            <h2 class="heading uppercase center title inline-richtext h2 scroll-trigger animate--slide-in"><b>Recently
+                    Viewed</b></h2>
+        </div>
+        <div class="js-recentPdpBlock">
+        </div>
+    </div>
+</div>
+
+
+<div class="ct-coupon-main ct_cart_active_parent">
+    <div class="ct-coupon-heading ct_cart_active">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <mask id="mask0_164343_13487" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="22"
+                height="22">
+                <rect width="22" height="22" fill="url(#pattern0_164343_13487)" />
+            </mask>
+            <g mask="url(#mask0_164343_13487)">
+                <rect width="23" height="23" fill="#816B51" />
+            </g>
+            <defs>
+                <pattern id="pattern0_164343_13487" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_164343_13487" transform="scale(0.00195312)" />
+                </pattern>
+                <image id="image0_164343_13487" width="512" height="512"
+                    xlink:href="data:image/png;base64,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" />
+            </defs>
+        </svg>
+        {{ section.settings.heading }}
+    </div>
+    <div class="ct-coupon-inner">
+        <div class="ct-coupon-contaner">
+            {% if section.settings.offer_heading != blank %}
+            <div class="offer_class">{{ section.settings.offer_heading }}</div>
+            {% endif %}
+
+            {% if section.settings.Ctitle1 != blank %}
+            <div class="ct-coupon-box">
+                <div class="ct-coupon-heading-main">
+                    <div class="ct-coupon-title">{{ section.settings.Ctitle1 }}</div>
+                    {% if section.settings.COtitle1 != blank %}
+                    <div class="ct-coupon-code">{{ section.settings.COtitle1 }}</div>
+                    {% endif %}
+                </div>
+                <div class="ct-coupon-save-titlt">{{ section.settings.Cstitle1 }}</div>
+                <div class="ct-coupon-text">{{ section.settings.CTtitle1 }}</div>
+            </div>
+            {% endif %}
+
+            {% if section.settings.Ctitle2 != blank %}
+            <div class="ct-coupon-box">
+                <div class="ct-coupon-heading-main">
+                    <div class="ct-coupon-title">{{ section.settings.Ctitle2 }}</div>
+                    {% if section.settings.COtitle2 != blank %}
+                    <div class="ct-coupon-code">{{ section.settings.COtitle2 }}</div>
+                    {% endif %}
+                </div>
+                <div class="ct-coupon-save-titlt">{{ section.settings.Cstitle2 }}</div>
+                <div class="ct-coupon-text">{{ section.settings.CTtitle2 }}</div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+
+<div class="percentage">
+    <div class="percentage-box">
+        <div class="percentage-number"></div>
+        <div class="percentage-text"></div>
+    </div>
+    <div class="percentage-box">
+        <div class="percentage-number"></div>
+        <div class="percentage-text"></div>
+    </div>
+    <div class="percentage-box">
+        <div class="percentage-number"></div>
+        <div class="percentage-text"></div>
+    </div>
+</div>
+
+
+
+
+<div class="compare-custom">
+    <div class="compare-custom-inner">
+        <div class="compare-custom-heading-main">
+            <div class="compare-custom-text1"></div>
+            <div class="compare-custom-img"></div>
+            <div class="compare-custom-text2"></div>
+        </div>
+        <table class="compare-custom-table">
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+

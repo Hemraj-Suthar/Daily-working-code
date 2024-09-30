@@ -16,36 +16,37 @@
 -%}
 
 <script type="application/json" class="ctProductJson-{{ product.id }}" data-product-json>
-  {{ product | json }} 
+  {{ product | json }}
 </script>
 
-{% assign autoAddToCart = product.metafields.custom.cart  %}
-{% assign minimumPrice = product.metafields.custom.minimum_price  %}
+{% assign autoAddToCart = product.metafields.custom.cart %}
+{% assign minimumPrice = product.metafields.custom.minimum_price %}
 {% assign collection_handle = product.metafields.custom.ctcollectiondata | split: '/' | last %}
 {% assign related_collection = collections[collection_handle] %}
 
 <div class="ct-product-details-wrapper" style="display:none">
-    {% if autoAddToCart != blank %}
-      <div class="autoAddToCart-detail" style="display: none;">{{ autoAddToCart }}</div> 
-    {% endif %}
-    {% if minimumPrice != blank %}
-      <div class="minimumPrice" style="display: none;">{{ minimumPrice }}</div> 
-    {% endif %}
-  
-    <div class="ct-product-details" style="display:none">
-      <div class="collectionName" style="display: none;">{{ related_collection.title }}</div>
-      {% for product in related_collection.products %}
-        {% for variant in product.variants %}
-          <div class="ct-product-details-box ct_pro_{{ product.title | split: "Letter " | last | replace: ' ', '-' }}"
-               product-variant-color="{{ variant.title | split: "/ " | last }}"
-               product-name="{{ product.title | split: 'Letter ' | last | replace: ' ', '-' }}"                 
-               product-inventory="{{ variant.inventory_quantity }}"
-               product-price="{{ variant.price | divided_by: 100 | round: 2 }}"                         
-               product-variant-id="{{ variant.id }}">
-          </div>
-        {% endfor %}
+  {% if autoAddToCart != blank %}
+    <div class="autoAddToCart-detail" style="display: none;">{{ autoAddToCart }}</div>
+  {% endif %}
+  {% if minimumPrice != blank %}
+    <div class="minimumPrice" style="display: none;">{{ minimumPrice }}</div>
+  {% endif %}
+
+  <div class="ct-product-details" style="display:none">
+    <div class="collectionName" style="display: none;">{{ related_collection.title }}</div>
+    {% for product in related_collection.products %}
+      {% for variant in product.variants %}
+        <div
+          class="ct-product-details-box ct_pro_{{ product.title | split: "Letter " | last | replace: ' ', '-' }}"
+          product-variant-color="{{ variant.title | split: "/ " | last }}"
+          product-name="{{ product.title | split: 'Letter ' | last | replace: ' ', '-' }}"
+          product-inventory="{{ variant.inventory_quantity }}"
+          product-price="{{ variant.price | divided_by: 100 | round: 2 }}"
+          product-variant-id="{{ variant.id }}"
+        ></div>
       {% endfor %}
-    </div>
+    {% endfor %}
+  </div>
 </div>
 
 <div
@@ -163,24 +164,22 @@
 
                 {%- when 'title_and_price' -%}
                   <div class="product-detail__title-area row" {{ block.shopify_attributes }}>
-                    {% comment %}                   
-                        {% assign bold_collection_handle = 'collection-2' %}
-                        {% assign is_bold_product = false %}
-                        
-                        {% for collection in product.collections %}
-                          {% if collection.handle == bold_collection_handle %}
-                            {% assign is_bold_product = true %}
-                            {% break %}
-                          {% endif %}
-                        {% endfor %}
-                        
-                        {% if is_bold_product %}
-                          <div class="ct-special-caution">This product is underconstruction. Not sellable.</div>
+                    {% comment %}
+                      {% assign bold_collection_handle = 'collection-2' %}
+                      {% assign is_bold_product = false %}
+
+                      {% for collection in product.collections %}
+                        {% if collection.handle == bold_collection_handle %}
+                          {% assign is_bold_product = true %}
+                          {% break %}
                         {% endif %}
+                      {% endfor %}
+
+                      {% if is_bold_product %}
+                        <div class="ct-special-caution">This product is underconstruction. Not sellable.</div>
+                      {% endif %}
                     {% endcomment %}
 
-
-                    
                     <h1 class="product-detail__title small-title">
                       {{ product.title }}
 
@@ -386,10 +385,6 @@
                       {%- endfor -%}
                     </select>
 
-
-
-
-                    
                     <div
                       class="large-row{% if enable_dynamic_payment_button == true %} with-payment-buttons{% endif %}"
                       {{ block.shopify_attributes }}
@@ -438,40 +433,39 @@
                           {%- endif -%}
                         {%- endcapture -%}
 
+                          {% comment %}
+                            {% if product.title == 'Felt Bunting' %}
+                                <div class="ct_btn_perent" style= "display: none">
+                                <button
+                                  class="btn discout_check {% if enable_dynamic_payment_button == true %}{% endif %}"
+                                  type="submit"
+                                  name="add"
+                                  onclick="_tfa.push({notify: 'event', name: 'add_to_cart', id: 1572583});"
+                                  data-add-to-cart
+                                  {% unless current_variant.available %}
+                                    disabled
+                                  {% endunless %}
+                                >
+                                  <span data-add-to-cart-text>
+                                    {%- if current_variant.available -%}
+                                      {{ add_to_cart_text }}
+                                    {%- else -%}
+                                      {{ 'products.product.sold_out' | t }}
+                                    {%- endif -%}
+                                  </span>
+                                </button>
 
-                        {% comment %}
-                        {% if product.title == 'Felt Bunting' %}
-                            <div class="ct_btn_perent" style= "display: none">
-                            <button
-                              class="btn discout_check {% if enable_dynamic_payment_button == true %}{% endif %}"
-                              type="submit"
-                              name="add"
-                              onclick="_tfa.push({notify: 'event', name: 'add_to_cart', id: 1572583});"
-                              data-add-to-cart
-                              {% unless current_variant.available %}
-                                disabled
-                              {% endunless %}
-                            >
-                              <span data-add-to-cart-text>
-                                {%- if current_variant.available -%}
-                                  {{ add_to_cart_text }}
-                                {%- else -%}
-                                  {{ 'products.product.sold_out' | t }}
-                                {%- endif -%}
-                              </span>
-                            </button>
+                                {% if enable_dynamic_payment_button == true %}
+                                  <!-- {{ form | payment_button }} -->
+                                  <div class="shopify-payment-button">
+                                    {% render 'gokwik-buy-now' %}
+                                  </div>
+                                {% endif %}
+                               </div>
+                            {% else %}
+                          {% endcomment %}
 
-                            {% if enable_dynamic_payment_button == true %}
-                              <!-- {{ form | payment_button }} -->
-                              <div class="shopify-payment-button">
-                                {% render 'gokwik-buy-now' %}
-                              </div>
-                            {% endif %}
-                           </div>
-                        {% else %}
-                        {% endcomment %}
-                          
-                            <div class="ct_btn_perent">
+                          <div class="ct_btn_perent">
                             <button
                               class="btn discout_check  {% if enable_dynamic_payment_button == true %}{% endif %}"
                               type="submit"
@@ -497,16 +491,11 @@
                                 {% render 'gokwik-buy-now' %}
                               </div>
                             {% endif %}
-                           </div>
-              
-
-                          
+                          </div>
                         </div>
                       {% endunless %}
                     </div>
 
-
-                    
                     {%- if block.settings.show_pickup_availability -%}
                       {% render 'store-availability', product: product, current_variant: current_variant %}
                     {%- endif -%}
@@ -516,42 +505,43 @@
                     {% endif %}
                   {%- endform -%}
 
-                
-                
-                
                 {% when 'cutsom_input_tag' %}
-                    <div class="ct-felt-bunting">
-                        <div class="ct-felt-bunting-inner">
-                            <div class="ct-felt-bunting-input-tag">
-                                <input type="text" id="userChoice" placeholder="{{ block.settings.placeholder }}" class="ct-custom-input-data" oninput="validateTextInput(this)">
-                                <div class="ct-cart-clear">Reset</div>
-                            </div>
+                  <div class="ct-felt-bunting">
+                    <div class="ct-felt-bunting-inner">
+                      <div class="ct-felt-bunting-input-tag">
+                        <input
+                          type="text"
+                          id="userChoice"
+                          placeholder="{{ block.settings.placeholder }}"
+                          class="ct-custom-input-data"
+                          oninput="validateTextInput(this)"
+                        >
+                        <div class="ct-cart-clear">Reset</div>
+                      </div>
 
-                            {% render 'quantity-selector', variant: current_variant %}
- 
-                            <div class="felt-bunting-message" id="felt-bunting-message"></div>
-                            <div class="felt-bunting-addtocart">
-                            <button class="felt-bunting-addtocart-btn btn" type="submit">Add to cart
-                                {% comment %} <a id="felt-bunting-addtocart-btn" href="#felt-bunting-message"></a> {% endcomment %}
-                            </button>
-                            <button class="mobile-btn btn" type="button"><a id="mobile-btn">Click to Customize</a></button>
-                          </div>
-                        </div>
+                      {% render 'quantity-selector', variant: current_variant %}
+
+                      <div class="felt-bunting-message" id="felt-bunting-message"></div>
+                      <div class="felt-bunting-addtocart">
+                        <button class="felt-bunting-addtocart-btn btn" type="submit">
+                          Add to cart
+                          {% comment %} <a id="felt-bunting-addtocart-btn" href="#felt-bunting-message"></a> {% endcomment %}
+                        </button>
+                        <button class="mobile-btn btn" type="button"><a id="mobile-btn">Click to Customize</a></button>
+                      </div>
                     </div>
-                
+                  </div>
+
                 {% when 'cutsom_variant_picker' %}
-                    <div class="ct-custom-input">
-                        <div class="ct-custom-input-inner">
-                            <div class="ct-custom-input-heading">{{ block.settings.inputHeading }}</div>
-                            <div class="ct-custom-input-tag">
-                                <input type="text" id="userChoice" placeholder="Enter your choice" class="ct-custom-input-data">
-                            </div>
-                        </div>
+                  <div class="ct-custom-input">
+                    <div class="ct-custom-input-inner">
+                      <div class="ct-custom-input-heading">{{ block.settings.inputHeading }}</div>
+                      <div class="ct-custom-input-tag">
+                        <input type="text" id="userChoice" placeholder="Enter your choice" class="ct-custom-input-data">
+                      </div>
                     </div>
+                  </div>
 
-
-
-                
                 {%- when 'description' -%}
                   {%- capture product_description -%}
                     {% if block.settings.show_tabs %}
@@ -968,7 +958,7 @@
       "type": "cutsom_input_tag",
       "name": "Custom input tag",
       "limit": 1,
-      "settings":[
+      "settings": [
         {
           "type": "text",
           "id": "inputHeading",
@@ -2096,7 +2086,7 @@
           "options": [
             { "value": "button_1", "label": "Button - primary" },
             { "value": "button_2", "label": "Button - secondary" },
-            { "value": "link_style", "label": "Link"}
+            { "value": "link_style", "label": "Link" }
           ],
           "default": "button_1"
         }
@@ -2129,7 +2119,6 @@
       "type": "productnote",
       "name": "Product note",
       "settings": [
-
         {
           "type": "richtext",
           "id": "product_richtext",

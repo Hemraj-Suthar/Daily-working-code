@@ -117,9 +117,33 @@ EOD Report [27/09/2024]
 Project : Ikkawear
 
 Completed Task :
-- Marquee section
-- Header sticky issue
+- Collection tab section
+- Newsletter section
 
 In Progress Task :
-- Bestsellers collection section
+- Image with text section
 - Playbook section
+
+
+
+EOD Report [30/09/2024]
+
+Project : Ikkawear
+
+Completed Task :
+- Collection tab section
+- Newsletter section
+
+In Progress Task :
+- Image with text section
+
+
+Project : Get Clutch
+
+Completed Task :
+- Add photo in For the Science Advisory Board section
+- Make proper alignment of Percentage %
+- Make proper alignment of side effects
+
+In Progress Task :
+- Image Alignment issue on banner 
