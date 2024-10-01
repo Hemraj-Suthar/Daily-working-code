@@ -146,4 +146,26 @@ Completed Task :
 - Make proper alignment of side effects
 
 In Progress Task :
-- Image Alignment issue on banner 
+- Image Alignment issue on banner
+
+
+EOD Report [01/10/2024]
+
+Project : Ikkawear
+
+Completed Task :
+- Header logo color issue on sticky
+- Product card
+- Image Banner issue
+- Video section and Qunin app setup
+- Product page - Our product playbook section
+- Footer design
+
+In Progress Task :
+- Product page - Offer section
+
+
+Project : Get Clutch
+
+Completed Task :
+- Image Alignment issue on banner
