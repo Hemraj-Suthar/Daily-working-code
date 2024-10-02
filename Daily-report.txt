@@ -169,3 +169,18 @@ Project : Get Clutch
 
 Completed Task :
 - Image Alignment issue on banner
+
+
+
+EOD Report [02/10/2024]
+
+Project : Ikkawear
+
+Completed Task :
+- Product page - Offer section
+- Set up search and discovery app
+- Product page - Accordion
+- Product page - Donot lie section
+
+In Progress Task :
+- Product page - Main section
