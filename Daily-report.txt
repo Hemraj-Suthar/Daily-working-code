@@ -184,3 +184,24 @@ Completed Task :
 
 In Progress Task :
 - Product page - Main section
+
+
+
+EOD Report [03/10/2024]
+
+Project : Ikkawear
+
+Completed Task :
+- Product page - header issue
+- Product page - Main section
+- Product page - Video Review section
+- Product page - Our top seller section
+- Product page - Left Image section
+- Product page - Upgrade your routine section
+
+- Cart Drawer - Initial setup
+- Cart Drawer - Progress bar
+
+In Progress Task :
+- Cart Drawer - Claim product
+- Cart Drawer - Releted Product
