@@ -205,3 +205,18 @@ Completed Task :
 In Progress Task :
 - Cart Drawer - Claim product
 - Cart Drawer - Releted Product
+
+
+
+EOD Report [04/10/2024]
+
+Project : Ikkawear
+
+Completed Task :
+- Cart Drawer - Main product list
+- Cart Drawer - Add to cart button issue
+- Collection page - Image banner
+
+In Progress Task :
+- Cart Drawer - Addon product js functionality
+- Collection page - Collection tabbing
