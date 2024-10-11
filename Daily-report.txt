@@ -220,3 +220,62 @@ Completed Task :
 In Progress Task :
 - Cart Drawer - Addon product js functionality
 - Collection page - Collection tabbing
+
+
+
+EOD Report [07/10/2024]
+
+Project : Ikkawear
+
+In Progress Task :
+- Cart Drawer - Addon product js functionality
+
+
+Project : Skin Bae
+
+In Progress Task :
+- Add Product metafileds
+
+
+
+EOD Report [08/10/2024]
+
+Project : Skin Bae
+
+In Progress Task :
+- Add Product metafileds
+
+
+
+EOD Report [09/10/2024]
+
+Project : Skin Bae
+
+In Progress Task :
+- Add Product metafileds
+- QC on added product
+
+Project : Ikkawear
+
+Completed Task :
+- Check Video issue
+
+
+
+EOD Report [10/10/2024]
+
+Project : Skin Bae
+
+In Progress Task :
+- Add Product metafileds
+- QC on added product
+
+
+
+EOD Report [11/10/2024]
+
+Project : Skin Bae
+
+Completed Task :
+- Add Product metafileds
+- QC on added product
