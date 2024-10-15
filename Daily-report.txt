@@ -279,3 +279,44 @@ Project : Skin Bae
 Completed Task :
 - Add Product metafileds
 - QC on added product
+
+
+
+EOD Report [12/10/2024]
+
+Project : Ikkawear
+
+Completed Task :
+- 1. Announceent bar issues
+- 6. Manage custom Text below Hero banner
+- 7. Manage Heading of Playbook section, Collection tabbing section and Our top sellers section
+
+
+
+EOD Report [14/10/2024]
+
+Project : Ikkawear
+
+In Progress Task :
+
+- Set new image in Hero banner
+- Add whatsapp icon in header
+
+Project : CT Back In Stock app
+
+In Progress Task :
+- Initial setup of CT_BACK-in-app
+
+
+
+EOD Report [15/10/2024]
+
+Project : CT Back In Stock app
+
+Completed Task :
+- Get button data from database and show on frontend
+
+In Progress Task :
+- Make Button setting Frontend view
+- Update button data in database
+
