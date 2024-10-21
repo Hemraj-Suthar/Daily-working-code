@@ -320,3 +320,52 @@ In Progress Task :
 - Make Button setting Frontend view
 - Update button data in database
 
+
+EOD Report [16/10/2024]
+
+Project : CT Back In Stock app
+
+Completed Task :
+- Update button data in database
+- Get & update with shop name
+
+In Progress Task :
+- Make Popup setting Frontend view
+- Collection & Home page
+
+
+
+EOD Report [17/10/2024]
+
+Project : CT Back In Stock app
+
+Completed Task :
+- Email Template
+- Collection & Home page
+
+
+
+EOD Report [18/10/2024]
+
+Project : CT Back In Stock app
+
+Completed Task :
+- Pre Order - Widget settings
+- Pre Order - Product Report
+
+
+
+EOD Report [21/10/2024]
+
+Project : CT Back In Stock app
+
+In Progress Task :
+- Make pagination in table
+- Make Input field for color
+
+
+Project : Video vibe app
+
+Completed Task :
+- Show video on frontend
+
