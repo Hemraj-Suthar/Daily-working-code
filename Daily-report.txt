@@ -369,3 +369,15 @@ Project : Video vibe app
 Completed Task :
 - Show video on frontend
 
+
+
+EOD Report [22/10/2024]
+
+Project : Video vibe app
+
+Completed Task :
+- Make post request from Frontend
+
+In Progress Task :
+- Add "Add to cart" functionality in Video product
+
