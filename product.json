@@ -1,0 +1,833 @@
+[
+    {
+        "_id": "671b48ed1b7af761df3b57af",
+        "playListType": "tagToProduct",
+        "playListName": "Video",
+        "shopName": "hemrajct.myshopify.com",
+        "videoDetails": [
+            {
+                "productDetails": {
+                    "title": "A",
+                    "price": "10.00",
+                    "imageUrl": "https://cdn.shopify.com/s/files/1/0682/9483/6449/files/A.jpg?v=1709881343",
+                    "id": 8287529697505,
+                    "handle": "a",
+                    "variants": [
+                        {
+                            "variantId": 44625395482849,
+                            "variantTitle": "Default Title",
+                            "variantPrice": "10.00",
+                            "inventoryItemId": 46705890197729,
+                            "inventoryQuantity": 56,
+                            "oldInventoryQuantity": 56
+                        }
+                    ]
+                },
+                "videoDetails": {
+                    "shortVideoLink": "https://cdn.shopify.com/s/files/1/0682/9483/6449/files/trimmed_f70c64c7-cbcc-4fef-b71b-bd0793dc4c5d.mp4?v=1729771464",
+                    "fullVideoLink": "https://cdn.shopify.com/s/files/1/0682/9483/6449/files/video-1ff70978-0453-44ce-8832-d83a1400dfa2.mp4?v=1729592862",
+                    "videoId": "67177e26b7cbdf6868d14ebb"
+                }
+            },
+            {
+                "productDetails": {
+                    "title": "Blood Orange and Geranium Body Wash (Pack of 1)",
+                    "price": "500.00",
+                    "imageUrl": "https://cdn.shopify.com/s/files/1/0682/9483/6449/products/BloodOrange_GeraniumBodyWash.jpg?v=1705059301",
+                    "id": 8215224713441,
+                    "handle": "blood-orange-and-geranium-body-wash",
+                    "variants": [
+                        {
+                            "variantId": 44401140138209,
+                            "variantTitle": "Default Title",
+                            "variantPrice": "500.00",
+                            "inventoryItemId": 46482047107297,
+                            "inventoryQuantity": 49,
+                            "oldInventoryQuantity": 49
+                        }
+                    ]
+                },
+                "videoDetails": {
+                    "shortVideoLink": "https://cdn.shopify.com/s/files/1/0682/9483/6449/files/trimmed_621f4288-c445-4dea-8899-526f4b1f9461.mp4?v=1729593463",
+                    "fullVideoLink": "https://cdn.shopify.com/s/files/1/0682/9483/6449/files/video-7a5c7984-018b-4011-acc5-714539dfa7e8.mp4?v=1729593455",
+                    "videoId": "67178078b7cbdf6868d14ef5"
+                }
+            },
+            {
+                "productDetails": {
+                    "title": "Chilli, Horsetail & Black Seed Hair Oil",
+                    "price": "630.00",
+                    "imageUrl": "https://cdn.shopify.com/s/files/1/0682/9483/6449/products/chilli_horsetail_blackseedhairoil_30ml.jpg?v=1705059277",
+                    "id": 8215224451297,
+                    "handle": "chilly-horsetail-black-seed-hair-growth-oil",
+                    "variants": [
+                        {
+                            "variantId": 44401138827489,
+                            "variantTitle": "30 ml",
+                            "variantPrice": "630.00",
+                            "inventoryItemId": 46482045796577,
+                            "inventoryQuantity": 48,
+                            "oldInventoryQuantity": 48
+                        },
+                        {
+                            "variantId": 45846264283361,
+                            "variantTitle": "50ml",
+                            "variantPrice": "630.00",
+                            "inventoryItemId": 47919110389985,
+                            "inventoryQuantity": 30,
+                            "oldInventoryQuantity": 30
+                        },
+                        {
+                            "variantId": 44401138860257,
+                            "variantTitle": "100 ml",
+                            "variantPrice": "1475.00",
+                            "inventoryItemId": 46482045829345,
+                            "inventoryQuantity": 30,
+                            "oldInventoryQuantity": 30
+                        },
+                        {
+                            "variantId": 45846264316129,
+                            "variantTitle": "150ml",
+                            "variantPrice": "630.00",
+                            "inventoryItemId": 47919110422753,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846264348897,
+                            "variantTitle": "200ml",
+                            "variantPrice": "630.00",
+                            "inventoryItemId": 47919110455521,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        }
+                    ]
+                },
+                "videoDetails": {
+                    "shortVideoLink": "https://cdn.shopify.com/s/files/1/0682/9483/6449/files/trimmed_846516b0-b40e-4e05-b175-d1d0e10b1325.mp4?v=1729600675",
+                    "fullVideoLink": "https://cdn.shopify.com/s/files/1/0682/9483/6449/files/video-9e891c13-9d24-4805-b3e9-9c8450e7e114.mp4?v=1729600667",
+                    "videoId": "67179ca3b7cbdf6868d14fb3"
+                }
+            },
+            {
+                "productDetails": {
+                    "title": "Cold Pressed Pumpkin Seed Carrier Oil",
+                    "price": "315.00",
+                    "imageUrl": "https://cdn.shopify.com/s/files/1/0682/9483/6449/products/PumpkinSeedOil_30ml.jpg?v=1705059296",
+                    "id": 8215224647905,
+                    "handle": "cold-pressed-pumpkin-seed-carrier-oil",
+                    "variants": [
+                        {
+                            "variantId": 44401140072673,
+                            "variantTitle": "30 ml / Red",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 46482047041761,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846526558433,
+                            "variantTitle": "30 ml / Black",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372304609,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846526591201,
+                            "variantTitle": "30 ml / Green",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372337377,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846526623969,
+                            "variantTitle": "30 ml / Blue",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372370145,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846270345441,
+                            "variantTitle": "50 ml / Red",
+                            "variantPrice": "400.00",
+                            "inventoryItemId": 47919116452065,
+                            "inventoryQuantity": 50,
+                            "oldInventoryQuantity": 50
+                        },
+                        {
+                            "variantId": 45846526656737,
+                            "variantTitle": "50 ml / Black",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372402913,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846526689505,
+                            "variantTitle": "50 ml / Green",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372435681,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846526722273,
+                            "variantTitle": "50 ml / Blue",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372468449,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846270378209,
+                            "variantTitle": "100 ml / Red",
+                            "variantPrice": "500.00",
+                            "inventoryItemId": 47919116484833,
+                            "inventoryQuantity": 50,
+                            "oldInventoryQuantity": 50
+                        },
+                        {
+                            "variantId": 45846526755041,
+                            "variantTitle": "100 ml / Black",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372501217,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846526787809,
+                            "variantTitle": "100 ml / Green",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372533985,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846526820577,
+                            "variantTitle": "100 ml / Blue",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372566753,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846270410977,
+                            "variantTitle": "150 ml / Red",
+                            "variantPrice": "600.00",
+                            "inventoryItemId": 47919116517601,
+                            "inventoryQuantity": 50,
+                            "oldInventoryQuantity": 50
+                        },
+                        {
+                            "variantId": 45846526853345,
+                            "variantTitle": "150 ml / Black",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372599521,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846526886113,
+                            "variantTitle": "150 ml / Green",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372632289,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846526918881,
+                            "variantTitle": "150 ml / Blue",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372665057,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846270443745,
+                            "variantTitle": "200 ml / Red",
+                            "variantPrice": "700.00",
+                            "inventoryItemId": 47919116550369,
+                            "inventoryQuantity": 50,
+                            "oldInventoryQuantity": 50
+                        },
+                        {
+                            "variantId": 45846526951649,
+                            "variantTitle": "200 ml / Black",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372697825,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846526984417,
+                            "variantTitle": "200 ml / Green",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372730593,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846527017185,
+                            "variantTitle": "200 ml / Blue",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372763361,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846522167521,
+                            "variantTitle": "250 ml / Red",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919367946465,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846527049953,
+                            "variantTitle": "250 ml / Black",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372796129,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846527082721,
+                            "variantTitle": "250 ml / Green",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372828897,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846527115489,
+                            "variantTitle": "250 ml / Blue",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372861665,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846522200289,
+                            "variantTitle": "300 ml / Red",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919367979233,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846527148257,
+                            "variantTitle": "300 ml / Black",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372894433,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846527181025,
+                            "variantTitle": "300 ml / Green",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372927201,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846527213793,
+                            "variantTitle": "300 ml / Blue",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372959969,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846522233057,
+                            "variantTitle": "350 ml / Red",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919368012001,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846527246561,
+                            "variantTitle": "350 ml / Black",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372992737,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846527279329,
+                            "variantTitle": "350 ml / Green",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919373025505,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846527312097,
+                            "variantTitle": "350 ml / Blue",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919373058273,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846522265825,
+                            "variantTitle": "400 ml / Red",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919368044769,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846527344865,
+                            "variantTitle": "400 ml / Black",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919373091041,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846527377633,
+                            "variantTitle": "400 ml / Green",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919373123809,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846527410401,
+                            "variantTitle": "400 ml / Blue",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919373156577,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        }
+                    ]
+                },
+                "videoDetails": {
+                    "shortVideoLink": "https://cdn.shopify.com/s/files/1/0682/9483/6449/files/trimmed_67fb606f-0867-45ae-86a9-dd37b2fac12a.mp4?v=1729837284",
+                    "fullVideoLink": "https://cdn.shopify.com/s/files/1/0682/9483/6449/files/video-4b2268a3-e780-4239-91dd-f48cefcdf1d4.mp4?v=1729837272",
+                    "videoId": "671b38e7c9bbfa295f8f1034"
+                }
+            },
+            {
+                "productDetails": {
+                    "title": "Helichrysum and Rosehip Facial Oil",
+                    "price": "325.00",
+                    "imageUrl": "https://cdn.shopify.com/s/files/1/0682/9483/6449/products/Helichrysum_RosehipFacialOil_30ml.jpg?v=1705059287",
+                    "id": 8215224516833,
+                    "handle": "helichrysum-rosehip-facial-oil",
+                    "variants": [
+                        {
+                            "variantId": 44401138925793,
+                            "variantTitle": "10ml",
+                            "variantPrice": "325.00",
+                            "inventoryItemId": 46482045894881,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 44401138958561,
+                            "variantTitle": "30ml",
+                            "variantPrice": "825.00",
+                            "inventoryItemId": 46482045927649,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        }
+                    ]
+                },
+                "videoDetails": {
+                    "shortVideoLink": "https://cdn.shopify.com/s/files/1/0682/9483/6449/files/trimmed_f70c64c7-cbcc-4fef-b71b-bd0793dc4c5d.mp4?v=1729771464",
+                    "fullVideoLink": "https://cdn.shopify.com/s/files/1/0682/9483/6449/files/video-1ff70978-0453-44ce-8832-d83a1400dfa2.mp4?v=1729592862",
+                    "videoId": "67177e26b7cbdf6868d14ebb"
+                }
+            },
+            {
+                "productDetails": {
+                    "title": "Organic Hair Colour Doppio - Deep Black",
+                    "price": "455.00",
+                    "imageUrl": "https://cdn.shopify.com/s/files/1/0682/9483/6449/products/organic-hair-colour-doppio-deep-black-juicy-chemistry-34650030538916.png?v=1705059250",
+                    "id": 8215224156385,
+                    "handle": "organic-hair-colour-doppio",
+                    "variants": [
+                        {
+                            "variantId": 44401138368737,
+                            "variantTitle": "200 g",
+                            "variantPrice": "455.00",
+                            "inventoryItemId": 46482045337825,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        }
+                    ]
+                },
+                "videoDetails": {
+                    "shortVideoLink": "https://cdn.shopify.com/s/files/1/0682/9483/6449/files/trimmed_621f4288-c445-4dea-8899-526f4b1f9461.mp4?v=1729593463",
+                    "fullVideoLink": "https://cdn.shopify.com/s/files/1/0682/9483/6449/files/video-7a5c7984-018b-4011-acc5-714539dfa7e8.mp4?v=1729593455",
+                    "videoId": "67178078b7cbdf6868d14ef5"
+                }
+            },
+            {
+                "productDetails": {
+                    "title": "Cold Pressed Pumpkin Seed Carrier Oil",
+                    "price": "315.00",
+                    "imageUrl": "https://cdn.shopify.com/s/files/1/0682/9483/6449/products/PumpkinSeedOil_30ml.jpg?v=1705059296",
+                    "id": 8215224647905,
+                    "handle": "cold-pressed-pumpkin-seed-carrier-oil",
+                    "variants": [
+                        {
+                            "variantId": 44401140072673,
+                            "variantTitle": "30 ml / Red",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 46482047041761,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846526558433,
+                            "variantTitle": "30 ml / Black",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372304609,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846526591201,
+                            "variantTitle": "30 ml / Green",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372337377,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846526623969,
+                            "variantTitle": "30 ml / Blue",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372370145,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846270345441,
+                            "variantTitle": "50 ml / Red",
+                            "variantPrice": "400.00",
+                            "inventoryItemId": 47919116452065,
+                            "inventoryQuantity": 50,
+                            "oldInventoryQuantity": 50
+                        },
+                        {
+                            "variantId": 45846526656737,
+                            "variantTitle": "50 ml / Black",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372402913,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846526689505,
+                            "variantTitle": "50 ml / Green",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372435681,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846526722273,
+                            "variantTitle": "50 ml / Blue",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372468449,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846270378209,
+                            "variantTitle": "100 ml / Red",
+                            "variantPrice": "500.00",
+                            "inventoryItemId": 47919116484833,
+                            "inventoryQuantity": 50,
+                            "oldInventoryQuantity": 50
+                        },
+                        {
+                            "variantId": 45846526755041,
+                            "variantTitle": "100 ml / Black",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372501217,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846526787809,
+                            "variantTitle": "100 ml / Green",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372533985,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846526820577,
+                            "variantTitle": "100 ml / Blue",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372566753,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846270410977,
+                            "variantTitle": "150 ml / Red",
+                            "variantPrice": "600.00",
+                            "inventoryItemId": 47919116517601,
+                            "inventoryQuantity": 50,
+                            "oldInventoryQuantity": 50
+                        },
+                        {
+                            "variantId": 45846526853345,
+                            "variantTitle": "150 ml / Black",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372599521,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846526886113,
+                            "variantTitle": "150 ml / Green",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372632289,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846526918881,
+                            "variantTitle": "150 ml / Blue",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372665057,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846270443745,
+                            "variantTitle": "200 ml / Red",
+                            "variantPrice": "700.00",
+                            "inventoryItemId": 47919116550369,
+                            "inventoryQuantity": 50,
+                            "oldInventoryQuantity": 50
+                        },
+                        {
+                            "variantId": 45846526951649,
+                            "variantTitle": "200 ml / Black",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372697825,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846526984417,
+                            "variantTitle": "200 ml / Green",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372730593,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846527017185,
+                            "variantTitle": "200 ml / Blue",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372763361,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846522167521,
+                            "variantTitle": "250 ml / Red",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919367946465,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846527049953,
+                            "variantTitle": "250 ml / Black",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372796129,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846527082721,
+                            "variantTitle": "250 ml / Green",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372828897,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846527115489,
+                            "variantTitle": "250 ml / Blue",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372861665,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846522200289,
+                            "variantTitle": "300 ml / Red",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919367979233,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846527148257,
+                            "variantTitle": "300 ml / Black",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372894433,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846527181025,
+                            "variantTitle": "300 ml / Green",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372927201,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846527213793,
+                            "variantTitle": "300 ml / Blue",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372959969,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846522233057,
+                            "variantTitle": "350 ml / Red",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919368012001,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846527246561,
+                            "variantTitle": "350 ml / Black",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919372992737,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846527279329,
+                            "variantTitle": "350 ml / Green",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919373025505,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846527312097,
+                            "variantTitle": "350 ml / Blue",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919373058273,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846522265825,
+                            "variantTitle": "400 ml / Red",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919368044769,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846527344865,
+                            "variantTitle": "400 ml / Black",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919373091041,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846527377633,
+                            "variantTitle": "400 ml / Green",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919373123809,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 45846527410401,
+                            "variantTitle": "400 ml / Blue",
+                            "variantPrice": "315.00",
+                            "inventoryItemId": 47919373156577,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        }
+                    ]
+                },
+                "videoDetails": {
+                    "shortVideoLink": "https://cdn.shopify.com/s/files/1/0682/9483/6449/files/trimmed_846516b0-b40e-4e05-b175-d1d0e10b1325.mp4?v=1729600675",
+                    "fullVideoLink": "https://cdn.shopify.com/s/files/1/0682/9483/6449/files/video-9e891c13-9d24-4805-b3e9-9c8450e7e114.mp4?v=1729600667",
+                    "videoId": "67179ca3b7cbdf6868d14fb3"
+                }
+            },
+            {
+                "productDetails": {
+                    "title": "Helichrysum and Rosehip Facial Oil",
+                    "price": "325.00",
+                    "imageUrl": "https://cdn.shopify.com/s/files/1/0682/9483/6449/products/Helichrysum_RosehipFacialOil_30ml.jpg?v=1705059287",
+                    "id": 8215224516833,
+                    "handle": "helichrysum-rosehip-facial-oil",
+                    "variants": [
+                        {
+                            "variantId": 44401138925793,
+                            "variantTitle": "10ml",
+                            "variantPrice": "325.00",
+                            "inventoryItemId": 46482045894881,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        },
+                        {
+                            "variantId": 44401138958561,
+                            "variantTitle": "30ml",
+                            "variantPrice": "825.00",
+                            "inventoryItemId": 46482045927649,
+                            "inventoryQuantity": 0,
+                            "oldInventoryQuantity": 0
+                        }
+                    ]
+                },
+                "videoDetails": {
+                    "shortVideoLink": "https://cdn.shopify.com/s/files/1/0682/9483/6449/files/trimmed_67fb606f-0867-45ae-86a9-dd37b2fac12a.mp4?v=1729837284",
+                    "fullVideoLink": "https://cdn.shopify.com/s/files/1/0682/9483/6449/files/video-4b2268a3-e780-4239-91dd-f48cefcdf1d4.mp4?v=1729837272",
+                    "videoId": "671b38e7c9bbfa295f8f1034"
+                }
+            }
+        ],
+        "status": "Draft",
+        "configureData": [
+            {
+                "layout": "carousel",
+                "cardWidth": 100,
+                "gapBetween": 2,
+                "alignment": "center",
+                "displayHeading": true,
+                "fontWeight": 300,
+                "fontSize": 20,
+                "fontColor": "#000",
+                "productFontSize": 20,
+                "displayOn": [
+                    "Home Page"
+                ],
+                "priority": 1
+            }
+        ],
+        "playlistWidgetId": "fkr_502",
+        "isPublish": false,
+        "createdAt": "2024-10-25T07:29:49.788Z",
+        "updatedAt": "2024-10-25T08:18:37.553Z",
+        "__v": 0
+    }
+]

@@ -381,3 +381,197 @@ Completed Task :
 In Progress Task :
 - Add "Add to cart" functionality in Video product
 
+
+
+EOD Report [23/10/2024]
+
+Project : Video vibe app
+
+Completed Task :
+- Add condition for "sold out"
+- Manage condition for action and Product tag
+- Add variant for product
+
+
+EOD Report [24/10/2024]
+
+Project : Video vibe app
+
+Completed Task :
+- Change variant according to selection
+- Change price according to selection
+- More info redirect to product page
+
+
+EOD Report [25/10/2024]
+
+Project : Video vibe app
+
+Completed Task :
+- Make condition for Grid and carousal
+- Add Collection name input field
+
+
+
+EOD Report [28/10/2024]
+
+Project : Video vibe app
+
+In Progress Task :
+- Make Document for app according to new design
+
+
+
+EOD Report [29/10/2024]
+
+Project : Video vibe app
+
+Completed Task :
+- Make Document for as Reels up app
+- Make Document for as Whatmore app
+
+
+
+EOD Report [06/10/2024]
+
+Project : Video vibe app
+
+Completed Task :
+- R & D on Index table component
+- Upload reels from frontend side
+
+In Progress Task :
+- Show uploaded reels in table view
+
+
+
+
+EOD Report [07/10/2024]
+
+Project : Video vibe app
+
+Completed Task :
+- Get Reels from backend side on show on frontend side
+- Show App frontend on shopify admin
+- Upload reels from Device
+
+
+
+EOD Report [09/11/2024]
+
+Project : Video vibe app
+
+Completed Task :
+- Make Pricing component with devraj sir
+- Customize Design component with devraj sir
+- Welcome component
+
+
+EOD Report [11/11/2024]
+
+Project : Video vibe app
+
+Completed Task :
+- Make routing of for welcome page
+- Make routing of for Widgets page
+- Store selected reels in array
+
+
+
+EOD Report [12/11/2024]
+
+Project : Video vibe app
+
+Completed Task :
+- Manage pricing component & hit api
+- Manage code of hardik and maulik
+- Manage Reels Library component fix bug of delete and dupilacte  
+
+
+
+
+EOD Report [13/11/2024]
+
+Project : Video vibe app
+
+Completed Task :
+- Make Cancel & analytics button click event
+- Resolve instagarm upload error
+- Add price condition in Pricing 
+- Hit API in Add new Playlist and Playlist List
+
+
+
+EOD Report [14/11/2024]
+
+Project : Video vibe app
+
+Completed Task :
+- Manage pagination funcationlity in reels library
+- Add checkbox in Add new Playlist
+- Hit Reels Playlsit Duplicate API
+- Remove add filter in all app
+- Delete Popup in Reel Playlist
+
+
+
+
+EOD Report [15/11/2024]
+
+Project : Video vibe app
+
+Completed Task :
+- Edit Reels fucntionality
+- API hit on Tag Product component
+- Product view - Redirect to product page
+
+
+
+
+EOD Report [20/11/2024]
+
+Project : Video vibe app
+
+Completed Task :
+- Trimming functionality of Reels
+- API hit of Trimming video component
+- Resolve issue of customize design component
+
+
+
+
+EOD Report [21/11/2024]
+
+Project : Video vibe app
+
+Completed Task :
+- Show popup when user second time select plan
+- Plan Selection and redirect to payment page
+- Add filter in Reels Library
+- Add filter in Reels Playlist
+- Editing functionality of particular Reel Playlist
+
+
+
+
+EOD Report [22/11/2024]
+
+Project : Video vibe app
+
+Completed Task :
+- Sync customize design data on frontend
+- Api hit in Customize design
+- Show analytics data in Graphical way
+- Error handling in different component
+
+
+
+EOD Report [27/11/2024]
+
+Project : Video vibe app
+
+
+In Progress Task :
+- Manage extension on frontend side
+- Testing of app in different store
+- Bug fixing in testing duration

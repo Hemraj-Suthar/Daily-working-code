@@ -214,3 +214,81 @@ if (bundleAppDiv.length > 0) {
 
 
 
+
+
+
+// VIDEOWISE TRACKING PIXEL
+const PIXEL_VERSION = '1.4';
+const UID_COOKIE_NAME = "reeview_uid";
+const CAMPAIGN_COOKIE_NAME = "reeview_campaign";
+const LS_COOKIE_NAME = "reeview_lsid";
+function setSessionCookie(name, value) {
+  document.cookie = `${name}=${value}; path=/`;
+}
+function getCookie(name) {
+  let cookieArr = document.cookie.split(";");
+  for (let i = 0; i < cookieArr.length; i++) {
+    let cookiePair = cookieArr[i].split("=");
+    if (name === cookiePair[0].trim()) {
+      return decodeURIComponent(cookiePair[1]);
+    }
+  }
+  return null;
+}
+function deleteCookie(name) {
+  document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+}
+
+function VW(orderId, orderTotal, orderCurrency, orderItems, shop) {
+  const getDeviceType = () => {
+    const size = 1024;
+    const isDesktop = window.screen.width > size;
+    return isDesktop ? "DESKTOP" : "MOBILE";
+  };
+
+  if (getCookie(UID_COOKIE_NAME) && shop && orderId && orderTotal) {
+    const clientTs = new Date();
+    const trackingUrl = `https://api.videowise.com/tracking/pixel?uid=${getCookie(UID_COOKIE_NAME)}&deviceType=${getDeviceType()}&orderId=${orderId}&shop=${shop}&checkout_type=SHOPIFY&order_total=${orderTotal}&currency=${orderCurrency}&order_items=${orderItems}&campaignId=${getCookie(CAMPAIGN_COOKIE_NAME)}&lsId=${getCookie(LS_COOKIE_NAME)}&clientTs=${clientTs.toISOString()}`;
+    fetch(trackingUrl).then((res) => {
+      console.log(`Videowise pixel (version: ${PIXEL_VERSION}) executed correctly`);
+      deleteCookie(CAMPAIGN_COOKIE_NAME);
+    });
+  }
+}
+
+analytics.subscribe("checkout_completed", (event) => {
+  const checkout = event.data.checkout;
+  VW(
+    checkout.order.id,
+    checkout.totalPrice.amount,
+    checkout.currencyCode,
+    checkout.lineItems.length,
+    event.context.window.location.host
+  );
+});
+
+analytics.subscribe("page_viewed", (event) => {
+  if (!event.context.window.location.search.includes("videowise_campaign_id")) {
+    console.log("Videowise no campaign cookie detected");
+    return;
+  }
+  const vars = new URLSearchParams(event.context.window.location.search);
+  const campaignId = vars.get("videowise_campaign_id");
+  if(campaignId){
+      setSessionCookie(
+        CAMPAIGN_COOKIE_NAME,
+        campaignId
+      );
+  }
+});  
+
+
+
+
+
+
+
+
+
+
+
