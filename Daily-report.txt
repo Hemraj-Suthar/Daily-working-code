@@ -1,0 +1,577 @@
+Please see
+--------------------
+Hello,
+
+You’ve created all the pages allowed by your free plan. To add more, upgrade your site plan.
+- https://prnt.sc/NgpjKbMghmL8
+
+Thank you.
+
+dirabydimple
+-----------------------
+Hello,
+
+- Infinite option
+Send the message to support team
+https://prnt.sc/Y8_IKgcnrtFe
+- In this theme "Dev Working CodeTaskers - July 29th (Updated)" not need to show infinite options 
+	https://prnt.sc/8dpTXhJWAXK2
+	What to do can you please guide me.
+
+- Product Addon
+	- I have added the funcationlity When a standard product is added, it will be included in the cart. 
+	If an addon product is selected, clicking the 'Add to Cart' button will add both the addon product and the main product to the cart. Additionally, if the product has variants, the selected variant will also be added to the cart.
+
+- I have added functionality so that when a customer selects an add-on and clicks "Add to Cart," the main product is added to the cart along with the selected add-on product titles.
+
+- I have added the code Addon product hide in cart drawer.
+
+- I am working on remove funcationlity.
+
+Website :- https://dirabydimple.com/collections/sarees/products/organza-printed-handwork-saree?_ab=0&_fd=0&_sc=1&preview_theme_id=142863204585
+
+Thank you
+
+
+
+
+EOD Report [20/09/2024]
+
+Project : Yu N Me
+Link : https://codetasker.com/?_ab=0&_fd=0&_sc=1&preview_theme_id=136861876385
+
+Completed Task :
+- Process Section vector added
+- Our Results Section
+- Brands Section
+- Client's feed back Section
+- Build Shopify section
+- Shopify Tasks Section
+
+In Progress Task : 
+- Our Recent work section
+
+
+EOD Report [24/09/2024]
+
+Project : Yu N Me
+Link : https://yunme-selfcare.myshopify.com/?_ab=0&_bt=eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaUY1ZFc1dFpTMXpaV3htWTJGeVpTNXRlWE5vYjNCcFpua3VZMjl0QmpvR1JWUT0iLCJleHAiOiIyMDI0LTA5LTIzVDA1OjA2OjA0Ljc0MloiLCJwdXIiOiJwZXJtYW5lbnRfcGFzc3dvcmRfYnlwYXNzIn19--78904d1cfa0e9567c2941aef6cab9fac36a80925&_fd=0&_sc=1&key=a311633a76fc48788886f4b4c63784c8015a404892e1b1842471e54ce19b691b&preview_theme_id=135175438475
+
+Completed Task :
+- Product page - Our product play book section
+- Product page - How to use section
+- Product page - Recently viewed section
+
+In Progress Task : 
+- Product page - Main product section
+- Product page - Collapsible row
+
+
+
+
+EOD Report [25/09/2024]
+
+Project : Juicy chemistry
+
+Completed Task :
+- Add tag above Header menu
+- Check variant circle issue
+- Change apperance of mobile menu
+
+Project : Yu N Me
+Link : https://yunme-selfcare.myshopify.com/?_ab=0&_bt=eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaUY1ZFc1dFpTMXpaV3htWTJGeVpTNXRlWE5vYjNCcFpua3VZMjl0QmpvR1JWUT0iLCJleHAiOiIyMDI0LTA5LTIzVDA1OjA2OjA0Ljc0MloiLCJwdXIiOiJwZXJtYW5lbnRfcGFzc3dvcmRfYnlwYXNzIn19--78904d1cfa0e9567c2941aef6cab9fac36a80925&_fd=0&_sc=1&key=a311633a76fc48788886f4b4c63784c8015a404892e1b1842471e54ce19b691b&preview_theme_id=135175438475
+
+Completed Task :
+- Product page - Collapsible row
+
+In Progress Task : 
+- Product page - Related product
+- Product-page - You may also like section
+
+
+EOD Report [26/09/2024]
+
+Project : Ikkawear
+
+Completed Task :
+- Announcement bar
+
+In Progress Task :
+- Header
+
+Project : Juicy chemistry
+
+Completed Task :
+- Check megamenu issue
+- Check price alignment issue
+
+In Progress Task : 
+- megamenu redirect issue
+- variant selector and add to cart button alignment issue
+
+
+
+
+EOD Report [27/09/2024]
+
+Project : Ikkawear
+
+Completed Task :
+- Collection tab section
+- Newsletter section
+
+In Progress Task :
+- Image with text section
+- Playbook section
+
+
+
+EOD Report [30/09/2024]
+
+Project : Ikkawear
+
+Completed Task :
+- Collection tab section
+- Newsletter section
+
+In Progress Task :
+- Image with text section
+
+
+Project : Get Clutch
+
+Completed Task :
+- Add photo in For the Science Advisory Board section
+- Make proper alignment of Percentage %
+- Make proper alignment of side effects
+
+In Progress Task :
+- Image Alignment issue on banner
+
+
+EOD Report [01/10/2024]
+
+Project : Ikkawear
+
+Completed Task :
+- Header logo color issue on sticky
+- Product card
+- Image Banner issue
+- Video section and Qunin app setup
+- Product page - Our product playbook section
+- Footer design
+
+In Progress Task :
+- Product page - Offer section
+
+
+Project : Get Clutch
+
+Completed Task :
+- Image Alignment issue on banner
+
+
+
+EOD Report [02/10/2024]
+
+Project : Ikkawear
+
+Completed Task :
+- Product page - Offer section
+- Set up search and discovery app
+- Product page - Accordion
+- Product page - Donot lie section
+
+In Progress Task :
+- Product page - Main section
+
+
+
+EOD Report [03/10/2024]
+
+Project : Ikkawear
+
+Completed Task :
+- Product page - header issue
+- Product page - Main section
+- Product page - Video Review section
+- Product page - Our top seller section
+- Product page - Left Image section
+- Product page - Upgrade your routine section
+
+- Cart Drawer - Initial setup
+- Cart Drawer - Progress bar
+
+In Progress Task :
+- Cart Drawer - Claim product
+- Cart Drawer - Releted Product
+
+
+
+EOD Report [04/10/2024]
+
+Project : Ikkawear
+
+Completed Task :
+- Cart Drawer - Main product list
+- Cart Drawer - Add to cart button issue
+- Collection page - Image banner
+
+In Progress Task :
+- Cart Drawer - Addon product js functionality
+- Collection page - Collection tabbing
+
+
+
+EOD Report [07/10/2024]
+
+Project : Ikkawear
+
+In Progress Task :
+- Cart Drawer - Addon product js functionality
+
+
+Project : Skin Bae
+
+In Progress Task :
+- Add Product metafileds
+
+
+
+EOD Report [08/10/2024]
+
+Project : Skin Bae
+
+In Progress Task :
+- Add Product metafileds
+
+
+
+EOD Report [09/10/2024]
+
+Project : Skin Bae
+
+In Progress Task :
+- Add Product metafileds
+- QC on added product
+
+Project : Ikkawear
+
+Completed Task :
+- Check Video issue
+
+
+
+EOD Report [10/10/2024]
+
+Project : Skin Bae
+
+In Progress Task :
+- Add Product metafileds
+- QC on added product
+
+
+
+EOD Report [11/10/2024]
+
+Project : Skin Bae
+
+Completed Task :
+- Add Product metafileds
+- QC on added product
+
+
+
+EOD Report [12/10/2024]
+
+Project : Ikkawear
+
+Completed Task :
+- 1. Announceent bar issues
+- 6. Manage custom Text below Hero banner
+- 7. Manage Heading of Playbook section, Collection tabbing section and Our top sellers section
+
+
+
+EOD Report [14/10/2024]
+
+Project : Ikkawear
+
+In Progress Task :
+
+- Set new image in Hero banner
+- Add whatsapp icon in header
+
+Project : CT Back In Stock app
+
+In Progress Task :
+- Initial setup of CT_BACK-in-app
+
+
+
+EOD Report [15/10/2024]
+
+Project : CT Back In Stock app
+
+Completed Task :
+- Get button data from database and show on frontend
+
+In Progress Task :
+- Make Button setting Frontend view
+- Update button data in database
+
+
+EOD Report [16/10/2024]
+
+Project : CT Back In Stock app
+
+Completed Task :
+- Update button data in database
+- Get & update with shop name
+
+In Progress Task :
+- Make Popup setting Frontend view
+- Collection & Home page
+
+
+
+EOD Report [17/10/2024]
+
+Project : CT Back In Stock app
+
+Completed Task :
+- Email Template
+- Collection & Home page
+
+
+
+EOD Report [18/10/2024]
+
+Project : CT Back In Stock app
+
+Completed Task :
+- Pre Order - Widget settings
+- Pre Order - Product Report
+
+
+
+EOD Report [21/10/2024]
+
+Project : CT Back In Stock app
+
+In Progress Task :
+- Make pagination in table
+- Make Input field for color
+
+
+Project : Video vibe app
+
+Completed Task :
+- Show video on frontend
+
+
+
+EOD Report [22/10/2024]
+
+Project : Video vibe app
+
+Completed Task :
+- Make post request from Frontend
+
+In Progress Task :
+- Add "Add to cart" functionality in Video product
+
+
+
+EOD Report [23/10/2024]
+
+Project : Video vibe app
+
+Completed Task :
+- Add condition for "sold out"
+- Manage condition for action and Product tag
+- Add variant for product
+
+
+EOD Report [24/10/2024]
+
+Project : Video vibe app
+
+Completed Task :
+- Change variant according to selection
+- Change price according to selection
+- More info redirect to product page
+
+
+EOD Report [25/10/2024]
+
+Project : Video vibe app
+
+Completed Task :
+- Make condition for Grid and carousal
+- Add Collection name input field
+
+
+
+EOD Report [28/10/2024]
+
+Project : Video vibe app
+
+In Progress Task :
+- Make Document for app according to new design
+
+
+
+EOD Report [29/10/2024]
+
+Project : Video vibe app
+
+Completed Task :
+- Make Document for as Reels up app
+- Make Document for as Whatmore app
+
+
+
+EOD Report [06/10/2024]
+
+Project : Video vibe app
+
+Completed Task :
+- R & D on Index table component
+- Upload reels from frontend side
+
+In Progress Task :
+- Show uploaded reels in table view
+
+
+
+
+EOD Report [07/10/2024]
+
+Project : Video vibe app
+
+Completed Task :
+- Get Reels from backend side on show on frontend side
+- Show App frontend on shopify admin
+- Upload reels from Device
+
+
+
+EOD Report [09/11/2024]
+
+Project : Video vibe app
+
+Completed Task :
+- Make Pricing component with devraj sir
+- Customize Design component with devraj sir
+- Welcome component
+
+
+EOD Report [11/11/2024]
+
+Project : Video vibe app
+
+Completed Task :
+- Make routing of for welcome page
+- Make routing of for Widgets page
+- Store selected reels in array
+
+
+
+EOD Report [12/11/2024]
+
+Project : Video vibe app
+
+Completed Task :
+- Manage pricing component & hit api
+- Manage code of hardik and maulik
+- Manage Reels Library component fix bug of delete and dupilacte  
+
+
+
+
+EOD Report [13/11/2024]
+
+Project : Video vibe app
+
+Completed Task :
+- Make Cancel & analytics button click event
+- Resolve instagarm upload error
+- Add price condition in Pricing 
+- Hit API in Add new Playlist and Playlist List
+
+
+
+EOD Report [14/11/2024]
+
+Project : Video vibe app
+
+Completed Task :
+- Manage pagination funcationlity in reels library
+- Add checkbox in Add new Playlist
+- Hit Reels Playlsit Duplicate API
+- Remove add filter in all app
+- Delete Popup in Reel Playlist
+
+
+
+
+EOD Report [15/11/2024]
+
+Project : Video vibe app
+
+Completed Task :
+- Edit Reels fucntionality
+- API hit on Tag Product component
+- Product view - Redirect to product page
+
+
+
+
+EOD Report [20/11/2024]
+
+Project : Video vibe app
+
+Completed Task :
+- Trimming functionality of Reels
+- API hit of Trimming video component
+- Resolve issue of customize design component
+
+
+
+
+EOD Report [21/11/2024]
+
+Project : Video vibe app
+
+Completed Task :
+- Show popup when user second time select plan
+- Plan Selection and redirect to payment page
+- Add filter in Reels Library
+- Add filter in Reels Playlist
+- Editing functionality of particular Reel Playlist
+
+
+
+
+EOD Report [22/11/2024]
+
+Project : Video vibe app
+
+Completed Task :
+- Sync customize design data on frontend
+- Api hit in Customize design
+- Show analytics data in Graphical way
+- Error handling in different component
+
+
+
+EOD Report [27/11/2024]
+
+Project : Video vibe app
+
+
+In Progress Task :
+- Manage extension on frontend side
+- Testing of app in different store
+- Bug fixing in testing duration

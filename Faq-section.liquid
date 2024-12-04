@@ -1,0 +1,504 @@
+{{ 'CT-FAQ-section.css' | asset_url | stylesheet_tag }}
+
+<div id="ct_faq" class="ct-faq-main for_JS">
+  <div class="ct-faq-inner">
+    <div class="ct-faq-mainTitle">{{ section.settings.mainTitle }}</div>
+    <div class="ct-faq-mainSubtitle">{{ section.settings.mainSubtitle }}</div>
+    <div class="ct-faq-container">
+      <div class="ct-faq-headding-box">
+        {% if section.settings.headding1 != blank %}
+          <div id="faq_headding1" class="faq_headding1 ct--faq-container-headding1 faq_headding ct_active">
+            {{ section.settings.headding1 }}
+          </div>
+        {% endif %}
+        {% if section.settings.headding2 != blank %}
+          <div id="faq_headding2" class="faq_headding2 ct--faq-container-headding2 faq_headding">
+            {{ section.settings.headding2 }}
+          </div>
+        {% endif %}
+        {% if section.settings.headding3 != blank %}
+          <div id="faq_headding3" class="faq_headding3 ct--faq-container-headding3 faq_headding">
+            {{ section.settings.headding3 }}
+          </div>
+        {% endif %}
+        {% if section.settings.headding4 != blank %}
+          <div id="faq_headding4" class="faq_headding4 ct--faq-container-headding4 faq_headding">
+            {{ section.settings.headding4 }}
+          </div>
+        {% endif %}
+        {% if section.settings.headding5 != blank %}
+          <div id="faq_headding5" class="faq_headding5 ct--faq-container-headding5 faq_headding">
+            {{ section.settings.headding5 }}
+          </div>
+        {% endif %}
+        {% if section.settings.headding6 != blank %}
+          <div id="faq_headding6" class="faq_headding6 ct--faq-container-headding6 faq_headding">
+            {{ section.settings.headding6 }}
+          </div>
+        {% endif %}
+        {% if section.settings.headding7 != blank %}
+          <div id="faq_headding7" class="faq_headding7 ct--faq-container-headding7 faq_headding">
+            {{ section.settings.headding7 }}
+          </div>
+        {% endif %}
+        {% comment %}
+          {% if section.settings.headding8 != blank and product.metafields.custom.product_faq_s_heading != blank %}
+          <div id="faq_headding8" class="faq_headding8 ct--faq-container-headding8 faq_headding">{{ section.settings.headding8 }}</div>
+          {% endif %}
+        {% endcomment %}
+      </div>
+      <div class="ct-faq-box">
+        {% for block in section.blocks %}
+          <div id="" for="{{ block.settings.cid }}" class="ct-faq-container-title {% if forloop.index0 == 0 %} ct_active {% endif %}">
+            <div class="ct--faq-container-title">{{ block.settings.Ctitle }}</div>
+            <div class="ct-faq-container-options">
+              {% if block.settings.Htitle1 != blank %}
+                <div class="ct--faq-potions-main">
+                  <div class="ct--faq-potions-title">
+                    <div class="ct--faq-potions">{{ block.settings.Htitle1 }}</div>
+                    {{ 'icon-faq-plus.svg' | inline_asset_content }}
+                    </div>
+                  <div class="ct-faq-answer">{{ block.settings.answer1 }}</div>
+                </div>
+              {% endif %}
+              {% if block.settings.Htitle2 != blank %}
+                <div class="ct--faq-potions-main">
+                  <div class="ct--faq-potions-title">
+                    <div class="ct--faq-potions">{{ block.settings.Htitle2 }}</div>
+                    {{ 'icon-faq-plus.svg' | inline_asset_content }}
+                  </div>
+                  <div class="ct-faq-answer">{{ block.settings.answer2 }}</div>
+                </div>
+              {% endif %}
+              {% if block.settings.Htitle3 != blank %}
+                <div class="ct--faq-potions-main">
+                  <div class="ct--faq-potions-title">
+                    <div class="ct--faq-potions">{{ block.settings.Htitle3 }}</div>
+                    {{ 'icon-faq-plus.svg' | inline_asset_content }}
+                  </div>
+                  <div class="ct-faq-answer">{{ block.settings.answer3 }}</div>
+                </div>
+              {% endif %}
+              {% if block.settings.Htitle4 != blank %}
+                <div class="ct--faq-potions-main">
+                  <div class="ct--faq-potions-title">
+                    <div class="ct--faq-potions">{{ block.settings.Htitle4 }}</div>
+                    {{ 'icon-faq-plus.svg' | inline_asset_content }}
+                  </div>
+                  <div class="ct-faq-answer">{{ block.settings.answer4 }}</div>
+                </div>
+              {% endif %}
+              {% if block.settings.Htitle5 != blank %}
+                <div class="ct--faq-potions-main">
+                  <div class="ct--faq-potions-title">
+                    <div class="ct--faq-potions">{{ block.settings.Htitle5 }}</div>
+                    {{ 'icon-faq-plus.svg' | inline_asset_content }}
+                  </div>
+                  <div class="ct-faq-answer">{{ block.settings.answer5 }}</div>
+                </div>
+              {% endif %}
+              {% if block.settings.Htitle6 != blank %}
+                <div class="ct--faq-potions-main">
+                  <div class="ct--faq-potions-title">
+                    <div class="ct--faq-potions">{{ block.settings.Htitle6 }}</div>
+                    {{ 'icon-faq-plus.svg' | inline_asset_content }}
+                  </div>
+                  <div class="ct-faq-answer">{{ block.settings.answer6 }}</div>
+                </div>
+              {% endif %}
+              {% if block.settings.Htitle7 != blank %}
+                <div class="ct--faq-potions-main">
+                  <div class="ct--faq-potions-title">
+                    <div class="ct--faq-potions">{{ block.settings.Htitle7 }}</div>
+                    {{ 'icon-faq-plus.svg' | inline_asset_content }}
+                  </div>
+                  <div class="ct-faq-answer">{{ block.settings.answer7 }}</div>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    $('.ct--faq-container-title').click(function () {
+      $('.ct--faq-container-title').not(this).parent().removeClass('active');
+      $(this).parent().toggleClass('active');
+    });
+
+    $('.ct--faq-potions-title').click(function () {
+      $('.ct--faq-potions-title').not(this).parent().removeClass('active');
+      $(this).parent().toggleClass('active');
+    });
+
+    jQuery('.ct-faq-headding-box .faq_headding').click(function () {
+        jQuery('.ct-faq-headding-box .faq_headding').removeClass( 'ct_active');
+        jQuery(this).addClass('ct_active');
+        const id = jQuery(this).attr('id');
+        jQuery('.ct-faq-box .ct-faq-container-title').each(function () {
+            var side_id = jQuery(this).attr('for');
+            if (id == side_id) {
+            jQuery('.ct-faq-box .ct-faq-container-title').removeClass('ct_active');
+            jQuery(this).addClass('ct_active');
+            }
+        });
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "CT FAQ",
+  "settings": [
+    {
+      "type": "text",
+      "id": "mainTitle",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "mainSubtitle",
+      "label": "description"
+    },
+    {
+      "type": "text",
+      "id": "headding1",
+      "label": "Option Heading1"
+    },
+    {
+      "type": "text",
+      "id": "headding2",
+      "label": "Option Heading 2"
+    },
+    {
+      "type": "text",
+      "id": "headding3",
+      "label": "Option Heading 3"
+    },
+    {
+      "type": "text",
+      "id": "headding4",
+      "label": "Option Heading 4"
+    },
+    {
+      "type": "text",
+      "id": "headding5",
+      "label": "Option Heading 5"
+    },
+    {
+      "type": "text",
+      "id": "headding6",
+      "label": "Option Heading 6"
+    },
+    {
+      "type": "text",
+      "id": "headding7",
+      "label": "Option Heading 7"
+    },
+    {
+      "type": "text",
+      "id": "headding8",
+      "label": "Option Heading 8 Do Not Touch",
+      "default": "Product FAQ`s"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "option",
+      "type": "option",
+      "limit": 7,
+      "settings": [
+        {
+          "type": "text",
+          "id": "cid",
+          "label": "Custom Class",
+          "info": "Use Custom Class: faq_headding1, 2 , 3 & 4"
+        },
+        {
+          "type": "text",
+          "id": "Ctitle",
+          "label": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "Htitle1",
+          "label": "Option Heading 1"
+        },
+        {
+          "type": "text",
+          "id": "asnwer1",
+          "label": "Option asnwer 1"
+        },
+        {
+          "type": "text",
+          "id": "Htitle2",
+          "label": "Option Heading 2"
+        },
+        {
+          "type": "text",
+          "id": "asnwer2",
+          "label": "Option asnwer 2"
+        },
+        {
+          "type": "text",
+          "id": "Htitle3",
+          "label": "Option Heading 3"
+        },
+        {
+          "type": "text",
+          "id": "asnwer3",
+          "label": "Option asnwer 3"
+        },
+        {
+          "type": "text",
+          "id": "Htitle4",
+          "label": "Option Heading 4"
+        },
+        {
+          "type": "text",
+          "id": "asnwer4",
+          "label": "Option asnwer 4"
+        },
+        {
+          "type": "text",
+          "id": "Htitle5",
+          "label": "Option Heading 5"
+        },
+        {
+          "type": "text",
+          "id": "asnwer5",
+          "label": "Option asnwer 5"
+        },
+        {
+          "type": "text",
+          "id": "Htitle6",
+          "label": "Option Heading 6"
+        },
+        {
+          "type": "text",
+          "id": "asnwer6",
+          "label": "Option asnwer 6"
+        },
+        {
+          "type": "text",
+          "id": "Htitle7",
+          "label": "Option Heading 7"
+        },
+        {
+          "type": "text",
+          "id": "asnwer7",
+          "label": "Option asnwer 7"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "CT FAQ"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+  .ct-faq-main {
+    width: 100%;
+    background: #faf7e6;
+    padding: 36px 0 50px 0;
+  }
+  .ct-faq-inner {
+    width: 100%;
+    max-width: 981px;
+    margin: 0 auto;
+  }
+  .ct-faq-mainTitle {
+    color: #263537;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: capitalize;
+  }
+  .ct-faq-mainSubtitle p {
+    margin-block-start: 4px;
+  }
+  .ct-faq-mainSubtitle {
+    color: #263537;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: center;
+  }
+  .ct-faq-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 33px;
+  }
+  .ct-faq-headding-box {
+    height: max-content;
+    border-left: 1px solid #ccc;
+  }
+  .faq_headding {
+    cursor: pointer;
+    padding: 6px 11px;
+    color: #263537;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .faq_headding ct_active {
+    border-left: 2px solid #0b879c;
+    font-weight: 700;
+  }
+  .ct--faq-container-headding3 {
+    margin-bottom: 0px;
+  }
+  .ct-faq-container-title {
+    width: 100%;
+    max-width: 668px;
+    display: none;
+  }
+  .ct-faq-container-title.ct_active {
+    display: block;
+  }
+  .ct--faq-container-title {
+    width: 668px;
+    padding: 12px 0 11px 20px;
+    background: #e1d48b;
+    color: #263537;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+  }
+  .ct-faq-container-options {
+    width: 100%;
+  }
+  .ct--faq-potions-main:first-child {
+    border-top: none;
+  }
+  .ct--faq-potions-main {
+    padding: 20px 24px;
+    border-bottom: 0.8px solid rgba(26, 26, 26, 0.15);
+  }
+  .ct--faq-potions-main.active svg {
+    transform: rotate(45deg);
+  }
+  .ct--faq-potions-title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  .ct--faq-potions,
+  .ct-faq-answer {
+    color: #263537;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+  }
+  .ct-faq-answer {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.2s ease-out;
+  }
+  .ct-faq-answer a {
+    color: #1a1a1a;
+  }
+  .ct--faq-potions-main.active .ct-faq-answer {
+    height: auto;
+    line-height: normal;
+    margin-block-start: 10px;
+  }
+  .ct-faq-headding-box .faq_headding1,
+  .ct-faq-headding-box .faq_headding2,
+  .ct-faq-headding-box .faq_headding3,
+  .ct-faq-headding-box .faq_headding4,
+  .ct-faq-headding-box .faq_headding5,
+  .ct-faq-headding-box .faq_headding6,
+  .ct-faq-headding-box .faq_headding7,
+  .ct-faq-headding-box .faq_headding8 {
+    display: block;
+  }
+  .faq_headding2,
+  .faq_headding3,
+  .faq_headding4 {
+    display: none;
+  }
+
+  @media screen and (max-width: 989px) {
+    .ct-faq-container-title {
+      max-width: 100%;
+    }
+    .ct--faq-container-title {
+      width: auto;
+    }
+    .ct-faq-container-main {
+      justify-content: center;
+    }
+    .ct--faq-potions-title {
+      gap: 40px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .ct-faq-main {
+      padding: 30px 16px 50px 16px !important;
+    }
+    .ct-faq-container-main {
+      margin-top: 0px;
+    }
+    .ct-faq-mainSubtitle {
+      font-size: 14px;
+      margin: 1px 0 0 0;
+    }
+    .ct-faq-mainSubtitle p {
+      margin: 0;
+    }
+    .ct-faq-container {
+      margin-top: 20px;
+    }
+    .ct-faq-headding-box {
+      display: none;
+    }
+    .ct-faq-container-main .ct-faq-box {
+      width: 100%;
+    }
+    .ct-faq-container-title {
+      display: block;
+    }
+    .ct-faq-container-options {
+      height: 0;
+      overflow: hidden;
+      transition: all 0.2s ease-out;
+    }
+    .ct-faq-container-title.active .ct-faq-container-options {
+      height: auto;
+      line-height: normal;
+      margin-block-start: 10px;
+    }
+    .ct--faq-container-title {
+      padding: 11px 0 12px 14px;
+      font-size: 16px;
+      line-height: 24px;
+      margin-top: 30px;
+    }
+    .ct-faq-container-title:first-of-type .ct--faq-container-title {
+      margin-top: 0px;
+    }
+    .ct--faq-potions-main {
+      padding: 9px 2px 16px 0px;
+    }
+    .ct--faq-potions-title svg {
+      width: 8px;
+      height: 8px;
+    }
+    #shopify-section-template--20240771187013__3861ebf9-4754-4635-a507-9b401a844586 .ct-faq-main {
+      padding-block-start: 60px !important;
+    }
+  }
+{% endstylesheet %}

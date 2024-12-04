@@ -1,0 +1,597 @@
+<style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .Collection-tag {
+        width: 100%;
+        background: #FAF7E6;
+    }
+    .Collection-tag-inner {
+        width: 100%;
+        display: flex;
+        /* overflow: hidden; */
+    }
+    .Collection-tag-left {
+        display: block !important;
+        width: 191px;
+        min-width: 191px;
+        margin-top: 70px;
+    }
+    .Collection-tag-left li .active-heading{
+        color: #263537;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+    }
+    .Collection-tag-left li a{
+        color: #263537;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px; 
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .Collection-tag-left ul {
+        padding: 0 19px 0 0;
+        list-style: none;
+        margin: 0;
+        position: sticky;
+        top: 11rem;
+        z-index: 11;
+    }
+    .Collection-tag-left li {
+        margin-bottom: 25px;
+    }
+    .Collection-tag-right {
+        width: calc(100% - 191px);
+    }
+    .Collection-tag-head {
+        color: #263537;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 30px;
+        margin-bottom: 5px;
+    }
+    .Collection-tag-text {
+        color: #263537;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 22.5px;
+        margin: 9px 0 12px 0;
+    }
+    .Collection-tag-product-list{
+        width:320px;
+    }
+    .Collection-tag-product-list .card__content {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+    }
+    .Collection-tag-product-list .ct-compare-at-price {
+        display: inline-block !important;
+        margin-left: 5px;
+    }
+    .Collection-tag-product {
+        padding: 0 10px 0 0;
+    }
+    .Collection-tag-box {
+        margin-top: 70px;
+    }
+    
+    .Collection-tag-head svg{
+        display:none;
+    }
+    .ct-swiper-button-wrapper {
+        margin-top: 45px;
+        display: flex;
+        column-gap: 15px;
+    }
+    .Collection-tag-product-pagination {
+        position: unset;
+        background: #EAEAEA;
+        height: 3px !important;
+        border-radius: 5px;
+    }
+    .Collection-tag-product-pagination .swiper-pagination-progressbar-fill {
+        border-radius: 5px;
+        background: #DAC554;
+    }
+    .ct-swiper-arrow-wrapper {
+        width: 100%;
+        max-width: 106px;
+        display: flex;
+        column-gap: 10px;
+    }
+    .ct-swiper-button-wrapper .swiper-button-prev, .ct-swiper-button-wrapper .swiper-button-next {
+        position: unset;
+        width: 100%;
+        background: #E1D48B;
+        border-radius: 50%;
+    }
+    .ct-swiper-button-wrapper .swiper-button-next svg, .ct-swiper-button-wrapper .swiper-button-prev svg {
+        width: 24px;
+        height: 24px;
+    }
+    .ct-swiper-button-wrapper .swiper-button-next:after, .ct-swiper-button-wrapper .swiper-button-prev:after {
+        font-size: 0;
+    }
+    .Collection-tag-product-pagination .swiper-pagination-bullet-active {
+        background-color: #000;
+    }
+    .Collection-tag-right .swiper-pagination-clickable .swiper-pagination-bullet {
+        margin-inline: 2px !important;
+    }
+    /* .Collection-tag-product-main.items_scroll {
+        overflow: hidden;
+        overflow-x: auto;
+    } */
+    .Collection-tag-product-main.items_scroll::-webkit-scrollbar{
+        display: none;
+    }  
+    .Collection-tag-product-list.ct-scroll-box {
+        margin-right: 20px;
+    }
+    .Collection-tag-product-list.ct-scroll-box:last-child {
+        margin-right: 5px;
+    }
+    .quick-add__submit {
+       color:{{ section.settings.btn_color }};
+       background-color:{{section.settings.btn_bg_color}};
+        
+    }
+    .quick-add__submit:hover{
+        color:{{section.settings.hover_btn_color}};
+        background-color:{{ section.settings.hover_btn_bg_color }};   
+    }
+    
+    @media(max-width:1400px){
+      .Collection-tag-left {
+        width: 250px;
+        min-width: 250px;
+    }
+    .Collection-tag-right {
+        width: calc(100% - 250px);
+    }
+    .Collection-tag-left ul {
+        padding: 0 19px 0 35px;
+    }
+    }
+    
+    @media(max-width:990px){
+    .Collection-tag-inner {
+        margin-bottom: 0px;
+    }
+    .Collection-tag-left {
+        display: none !important;
+    }
+    .Collection-tag-right {
+        width: calc(100% - 0px);
+    }
+    .Collection-tag-head {
+        border-radius: 5px;
+        color: #263537;
+        background: #E1D48B;
+        padding: 12px 14px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        margin-bottom: 0px;
+    }
+    .Collection-tag-head svg path {
+        stroke: #000;
+    }
+    .Collection-tag-head.open {
+        color: #fff;
+        background: #0B879C;
+    }
+    .Collection-tag-head.open svg path {
+        stroke: #fff;
+    }
+    .Collection-tag-head svg{
+        display:block;
+        width: 12px;
+        height: 6px;
+        transition: all .3s ease-out;
+        transform: rotate(180deg);
+    }
+    .Collection-tag-head.open .Collection-tag-head-svg {
+        transform: rotate(0deg);
+    }  
+    .Collection-tag-text {
+        overflow: hidden;
+        height: 0;
+        display: none;
+    }  
+    .Collection-tag-text.open {
+        overflow: visible;
+        height: auto;
+        display: block;
+    }
+    .Collection-tag-product {
+        margin-top: 0;
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+    }
+    .Collection-tag-box.open .Collection-tag-product {
+        margin-top: 30px;
+        visibility: visible;
+        opacity: 1;
+        height: auto;
+    }
+    
+    .ct-swiper-button-wrapper {
+        display: none;
+    }
+    .Collection-tag-box {
+        margin-top: 30px;
+    }
+    .Collection-tag-box:first-child {
+        margin-top: 0px;
+    }
+      .head-coll{
+        font-size: 24px;
+      }
+      .text-coll {
+        font-size: 14px;
+        line-height: 17.5px;
+      }
+    }
+    
+      
+    @media(max-width:768px){
+    .Collection-tag-product-list {
+        width: 166px;
+    }
+    .Collection-tag-head {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .Collection-tag-product {
+        padding: 0px;
+    }  
+    .Collection-tag-product-list.ct-scroll-box {
+        margin-right: 10px;
+    }  
+    .ct-product-form-view-main {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 5px;
+        padding: 1px 0;
+        box-sizing: border-box;  
+        border-radius: 5px;
+    }
+    .ct-custom-collection .quick-add__submit, .quick-add .quick-add__submit {
+        border-radius: 4px!important;
+        padding: 8px 12px!important;
+        font-size: 12px;
+    }
+    .card__information.ct-custom-coll-pro-title-price {
+        padding-bottom: 0;
+    } 
+    }
+    </style>
+    
+    {%- if section.settings.quick_add -%}
+        {{ 'quick-add.css' | asset_url | stylesheet_tag }}
+        <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
+        <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
+    
+    <div class="Collection-tag">
+        <div class="Collection-tag-inner container">
+            <div class="Collection-tag-left">
+                <ul>
+                    <li><a class="ct_coll_tab_btn active-heading" data-target="{{ section.settings.heading1 }}">{{ section.settings.heading1 }}</a></li>
+                    <li><a class="ct_coll_tab_btn" data-target="{{ section.settings.heading2 }}">{{ section.settings.heading2 }}</a></li>
+                    <li><a class="ct_coll_tab_btn" data-target="{{ section.settings.heading3 }}">{{ section.settings.heading3 }}</a></li>
+                    <li><a class="ct_coll_tab_btn" data-target="{{ section.settings.heading4 }}">{{ section.settings.heading4 }}</a></li>
+                    <li><a class="ct_coll_tab_btn" data-target="{{ section.settings.heading5 }}">{{ section.settings.heading5 }}</a></li>
+                    <li><a class="ct_coll_tab_btn" data-target="{{ section.settings.heading6 }}">{{ section.settings.heading6 }}</a></li>
+                    <li><a class="ct_coll_tab_btn" data-target="{{ section.settings.heading7 }}">{{ section.settings.heading7 }}</a></li>
+                </ul>
+            </div>
+            <div class="Collection-tag-right">
+                {% for block in section.blocks %}
+                    {% if block.settings.heading != blank %} 
+                        <div id="ct-{{ forloop.index }}" class="Collection-tag-box open">
+                            <div id="{{ block.settings.heading }}" class="Collection-tag-head open">
+                                <span> {{ block.settings.heading }}</span> {{ 'icon-down-arrow.svg' | inline_asset_content }}
+                            </div>
+                            {% if block.settings.textt !=blank %}
+                                <div class="Collection-tag-text open">{{ block.settings.textt }}</div>
+                            {% endif %}
+            
+                            <div class="Collection-tag-product swiper">
+                                <div class="Collection-tag-product-main swiper-wrapper items_scroll ">
+                                    {%- for product in block.settings.collection.products limit: section.settings.products_to_show -%}
+                                        <div class="Collection-tag-product-list swiper-slide ct-scroll-box">
+                                            {% render 'card-product',
+                                                card_product: product,
+                                                media_aspect_ratio: section.settings.image_ratio,
+                                                image_shape: section.settings.image_shape,
+                                                show_secondary_image: section.settings.show_secondary_image,
+                                                section_id: section.id,
+                                                quick_add: section.settings.quick_add
+                                            %}
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                                <div class="ct-swiper-button-wrapper">
+                                    <div class="Collection-tag-product-pagination swiper-pagination"></div>
+                                    <div class="ct-swiper-arrow-wrapper">
+                                        <div class="swiper-button-prev">{{ 'icon-prev-arrow.svg' | inline_asset_content }}</div>
+                                        <div class="swiper-button-next">{{ 'icon-next-arrow.svg' | inline_asset_content }}</div>
+                                    </div>
+                                </div>
+                            </div>        
+                        </div>
+                    {% endif %}    
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    
+    <script>
+     var ct_coll = new Swiper(".Collection-tag-product", {
+          slidesPerView: 1.7,
+          spaceBetween: 20,
+          pagination: {
+            el: ".swiper-pagination",
+            type: "progressbar",
+            clickable: true,
+          },
+         navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          breakpoints: {
+            990: {
+              slidesPerView: 3.6,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+        }
+    });
+    
+    document.querySelectorAll('.Collection-tag-left a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelectorAll('.Collection-tag-left a').forEach(link => link.parentElement.classList.remove('is_active'));
+            this.parentElement.classList.add('is_active');
+            const targetId = this.getAttribute('data-target');
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+              const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+              const offset = 120;
+              window.scrollTo({
+                top: targetPosition - offset,
+                behavior: 'smooth'
+              });
+            }
+        });
+    }); 
+    
+    var ct_tab_btn = document.querySelectorAll(".ct_coll_tab_btn");
+          ct_tab_btn.forEach((add_c) => {
+            add_c.addEventListener("click", function(){          
+              ct_tab_btn.forEach((add_r) => {
+                 add_r.classList.remove('active-heading');        
+              })
+              add_c.classList.add('active-heading');
+          });
+      });
+    
+    var Collection_tag = document.querySelectorAll('.Collection-tag-head');
+        Collection_tag.forEach((add_co) => {
+        add_co.addEventListener("click", function(){
+        add_co.classList.toggle('open');
+        add_co.parentElement.classList.toggle('open');
+        var add_CO = add_co.nextElementSibling; 
+        add_CO.classList.toggle('open');
+      });
+    }); 
+    </script>
+    
+    {% schema %}
+    {
+      "name": "Collection-tag",
+      "settings": [    
+        {
+          "type": "range",
+          "id": "products_to_show",
+          "min": 2,
+          "max": 25,
+          "step": 1,
+          "default": 4,
+          "label": "t:sections.featured-collection.settings.products_to_show.label"
+        },
+        {
+          "type": "select",
+          "id": "image_ratio",
+          "options": [
+            {
+              "value": "adapt",
+              "label": "t:sections.featured-collection.settings.image_ratio.options__1.label"
+            },
+            {
+              "value": "portrait",
+              "label": "t:sections.featured-collection.settings.image_ratio.options__2.label"
+            },
+            {
+              "value": "square",
+              "label": "t:sections.featured-collection.settings.image_ratio.options__3.label"
+            }
+          ],
+          "default": "adapt",
+          "label": "t:sections.featured-collection.settings.image_ratio.label"
+        },
+        {
+          "type": "select",
+          "id": "image_shape",
+          "options": [
+            {
+              "value": "default",
+              "label": "t:sections.all.image_shape.options__1.label"
+            },
+            {
+              "value": "arch",
+              "label": "t:sections.all.image_shape.options__2.label"
+            },
+            {
+              "value": "blob",
+              "label": "t:sections.all.image_shape.options__3.label"
+            },
+            {
+              "value": "chevronleft",
+              "label": "t:sections.all.image_shape.options__4.label"
+            },
+            {
+              "value": "chevronright",
+              "label": "t:sections.all.image_shape.options__5.label"
+            },
+            {
+              "value": "diamond",
+              "label": "t:sections.all.image_shape.options__6.label"
+            },
+            {
+              "value": "parallelogram",
+              "label": "t:sections.all.image_shape.options__7.label"
+            },
+            {
+              "value": "round",
+              "label": "t:sections.all.image_shape.options__8.label"
+            }
+          ],
+          "default": "default",
+          "label": "t:sections.all.image_shape.label",
+          "info": "t:sections.all.image_shape.info"
+        },
+    
+        {
+          "type": "text",
+          "id": "heading1",
+          "label": "Heading 1"
+        },
+        {
+          "type": "text",
+          "id": "heading2",
+          "label": "Heading 2"
+        },
+        {
+          "type": "text",
+          "id": "heading3",
+          "label": "Heading 3"
+        },
+        {
+          "type": "text",
+          "id": "heading4",
+          "label": "Heading 4"
+        },
+        {
+          "type": "text",
+          "id": "heading5",
+          "label": "Heading 5"
+        },
+        {
+          "type": "text",
+          "id": "heading6",
+          "label": "Heading 6"
+        },
+        {
+          "type": "text",
+          "id": "heading7",
+          "label": "Heading 7"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_secondary_image",
+          "default": false,
+          "label": "t:sections.featured-collection.settings.show_secondary_image.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_vendor",
+          "default": false,
+          "label": "t:sections.featured-collection.settings.show_vendor.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_rating",
+          "default": false,
+          "label": "t:sections.featured-collection.settings.show_rating.label",
+          "info": "t:sections.featured-collection.settings.show_rating.info"
+        },
+        {
+          "type": "select",
+          "id": "quick_add",
+          "default": "none",
+          "label": "t:sections.main-collection-product-grid.settings.quick_add.label",
+          "info": "t:sections.main-collection-product-grid.settings.quick_add.info",
+          "options": [
+            {
+              "value": "none",
+              "label": "t:sections.main-collection-product-grid.settings.quick_add.options.option_1"
+            },
+            {
+              "value": "standard",
+              "label": "t:sections.main-collection-product-grid.settings.quick_add.options.option_2"
+            },
+            {
+              "value": "bulk",
+              "label": "t:sections.main-collection-product-grid.settings.quick_add.options.option_3"
+            }
+          ]
+        },
+        {
+          "type": "color",
+          "id" : "btn_bg_color",
+          "label": "Buttton Bg Color"
+        },
+         {
+          "type": "color",
+          "id" : "btn_color",
+          "label": "Buttton Color"
+        },
+         {
+          "type": "color",
+          "id" : "hover_btn_bg_color",
+          "label": "Hover Buttton Bg Color"
+        },
+         {
+          "type": "color",
+          "id" : "hover_btn_color",
+          "label": "Hover Buttton Color"
+        },
+      ],
+      "blocks":[{
+        "type":"Collection",
+        "name":"Collection",
+        "settings":[
+          {
+          "type": "collection",
+          "id": "collection",
+          "label": "t:sections.featured-collection.settings.collection.label"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+           {
+          "type": "text",
+          "id": "textt",
+          "label": "Sub-Heading"
+        }
+        ]
+      }],
+      "presets":[{
+            "name": "Collection-tag"
+      }]
+    }
+    {% endschema %}
+    

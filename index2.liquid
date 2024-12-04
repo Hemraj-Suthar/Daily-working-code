@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Hemraj Suthar</h1>
+    </body>
+</html>
+
+<div class="ct-bold-hoops">
+    <div class="ct-bold-hoops-inner">
+        <div class="ct-bold-hoops-heading-box">
+            <div class="ct-bold-hoops-heading"></div>
+            <div class="ct-bold-hoops-sub-heading"></div>
+        </div>
+        <div class="ct-bold-hoops-box-wrapper">
+            <div class="ct-bold-hoops-box">
+                <div class="ct-bold-hoops-quantity"></div>
+                <div class="ct-bold-hoops-discount"></div>
+            </div>
+        </div>
+        <div class="ct-bold-hoops-bottom-title"><span
+                class=".ct-bold-hoops-price"></span></div>
+        <div class="ct-bold-hoops-button"><a href></a></div>
+    </div>
+</div>
+
+<input type="hidden" class="oiling" value>
+<input type="hidden" class="extra-grip" value>
+
+<div class="ct-our-commitment">
+    <div class="ct-our-commitment-inner">
+        <div class="ct-our-commitment-container">
+            <div class="ct-our-commitment-heading"></div>
+            <div class="ct-our-commitment-flex-wrapper">
+
+                <div class="ct-our-commitment-box">
+                    <div class="ct-our-commitment-icon"></div>
+                    <div class="ct-our-commitment-title"></div>
+                    <div class="ct-our-commitment-subtitle"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="ct-getTheLook-link-wrapper">
+    <div class="ct-getTheLook-link-box">
+        <a href class="ct-getTheLook-link-title"></a>
+    </div>
+    <div class="ct-getTheLook-link-box">
+        <a href class="ct-getTheLook-link-title"></a>
+    </div>
+    <div class="ct-getTheLook-link-box">
+        <a href class="ct-getTheLook-link-title"></a>
+    </div>
+</div>
+
+<!-- chatgpt structure -->
+{% assign current_time = 'now' | date: "%s" %}
+{% assign end_time = current_time | plus: 68700 %}
+{% assign time_left = end_time | minus: current_time %}
+{% assign arrival_date_start = '2024-04-04' %}
+{% assign arrival_date_end = '2024-04-06' %}
+
+<div class="policy-info">
+  {% if time_left > 0 %}
+    <p>Order in <strong>{{ time_left | divided_by: 3600 }} hrs {{ time_left | modulo: 3600 | divided_by: 60 }} mins</strong> and your order will arrive between <strong>{{ arrival_date_start }} - {{ arrival_date_end }}</strong></p>
+  {% else %}
+    <p>The time window for today has passed. Please check again tomorrow.</p>
+  {% endif %}
+  
+  <div class="shipping-details">
+    <div class="shipping-item">
+      <img src="path/to/shipping-icon.png" alt="Shipping Icon">
+      <span>Free shipping on orders above <strong>$500 MXN</strong></span>
+    </div>
+    <div class="shipping-item">
+      <img src="path/to/warranty-icon.png" alt="Warranty Icon">
+      <span>1 year warranty</span>
+    </div>
+    <div class="shipping-item">
+      <img src="path/to/return-icon.png" alt="Return Icon">
+      <span>30 days return</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- my custom structure -->
+{% assign current_time = 'now' | date: "%s" %}
+{% assign end_time = current_time | plus: 68700 %}
+{% assign time_left = end_time | minus: current_time %}
+{% assign arrival_date_start = '2024-04-04' %}
+{% assign arrival_date_end = '2024-04-06' %}
+
+<div class="ct-timeTracker">
+    <div class="ct-timeTracker-inner">
+        <div class="ct-timeTracker-title">
+            Order in <strong>{{ time_left | divided_by: 3600 }} hrs {{ time_left | modulo: 3600 | divided_by: 60 }} mins</strong> and your order will arrive between <strong>{{ arrival_date_start }} - {{ arrival_date_end }}</strong>
+        </div>
+        <div class="ct-policy-wrapper">
+            <div class="ct-policy-upper">
+                {% if  != blank %}  
+                    {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: fetchpriority:'high',  sizes: '50px)', widths: '100, 200, 750', class: 'ct-trust-badge-img' -}}
+                {% endif %}
+                <div class="ct-policy-title"></div>
+            </div>
+            <div class=".ct-policy-bottom">
+                <div class="ct-policy-left">
+                    {% if  != blank %}  
+                        {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: fetchpriority:'high',  sizes: '50px)', widths: '100, 200, 750', class: 'ct-trust-badge-img' -}}
+                    {% endif %}
+                    <div class="ct-policy-title"></div>
+                </div>
+                <div class="ct-policy-right">
+                    {% if  != blank %}  
+                        {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: fetchpriority:'high',  sizes: '50px)', widths: '100, 200, 750', class: 'ct-trust-badge-img' -}}
+                    {% endif %}
+                    <div class="ct-policy-title"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="ct-review-heading">
+    <div class="ct-review-heading-inner">
+        <div class="ct-review-heading-container"></div>
+    </div>
+</div>
+
+
+<div class="ct-reviews">
+    <div class="ct-reviews-inner">
+        <div class="ct-reviews-container">
+
+            <div class="ct-reviews-card">
+                <div class="ct-reviews-card-img"><img src="" alt=""></div>
+                <div class="ct-reviews-card-information">
+                    <div class="ct-reviews-upper">
+                        <div class="ct-reviews-upper-img-left"><img src="" alt=""></div>
+                        <div class="ct-reviews-upper-title"></div>
+                        <div class="ct-reviews-upper-img-right"><img src="" alt=""></div>
+                    </div>
+                    <div class="ct-reviews-paragraph"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class=".ct-size-chart">
+    <div class="ct-size-chart-inner">
+        <div class="ct-size-chart-heading"></div>
+        <div class="ct-size-chart-line"></div>
+        <div class="ct-size-chart-upper-container">
+            <div class="upper-left-box">
+                <ol>
+                    <li>Select a ring that fits well on the finger you want</li>
+                    <li>Measure the internal diameter of ring 2 (only the inside of the ring)</li>
+                    <li>Use the table below to compare measurements.</li>
+                </ol>
+            </div>
+            <div class="upper-right-box">
+                <img src="" alt="">
+                <div class="image-title"></div>
+            </div>
+        </div>
+        <div class="ct-size-chart-bottom-container">
+            <div class="bottom-left-box">
+                <table>
+                    <tr>
+                        <th>Size</th>
+                        <th>Diameter</th>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>1.56cm</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>1.65cm</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>1.73cm</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>1.82cm</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>1.89cm</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>1.98cm</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="bottom-right-box">
+                <div class="bottom-left-box">At the moment we do not have half sizes, if you are unsure which one to choose between two sizes, we suggest you choose the larger size oF the two</div>
+                <div class="bottom-right-box">*We do not make size changes please make sure your size is correct*</div>
+            </div>
+        </div>
+        <div class="ct-size-chart-bottom-title">You have doubts? Please write to us on: 33-1293-6083</div>
+    </div>
+</div>
+
+
+<div class="ct-discount {{ section.settings.custom_class | handle}}"
+    style="margin:{{ section.settings.margin_top}}px 0px {{ section.settings.margin_bottom}}px 0px">
+    <div class="ct-discount-top-part">
+        <div class="ct-discount-heading">{{ collection.metafields.custom.collection_heading.value }}</div>
+        <div class="ct-discount-sub-heading">{{ collection.metafields.custom.collection_subheading.value }}</div>
+    </div>
+    <div class="ct-discount-inner">
+        <div class="ct-discount-bgimage">
+            {% if section.settings.imageD != blank %}
+            {{- section.settings.imageD | image_url: width: section.settings.imageD.width | image_tag:
+            fetchpriority:'high', sizes: '1920px)', widths: '750,800,900,1200,1920', class: 'ct-discount-desk-img' -}}
+            {% endif %}
+            {% if section.settings.imageM != blank %}
+            {{- section.settings.imageM | image_url: width: section.settings.imageM.width | image_tag:
+            fetchpriority:'high', sizes: '750px)', widths: '750,800,900', class: 'ct-discount-mobile-img' -}}
+            {% endif %}
+        </div>
+        <div class="ct-discount-bottom-part">
+            <div class="ct-discount-box-wrapper">
+                {% for block in section.blocks %}
+                {% if block.settings.quantity != blank %}
+                <div class="ct-discount-box">
+                    <div class="ct-discount-quantity">{{ block.settings.quantity }}</div>
+                    <div class="ct-discount-discount">{{ block.settings.discount }}</div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+            <div class="ct-discount-bottom-inner">
+                {% if section.settings.bottomFirstTitle != blank %} <div class="ct-discount-bottom-title fist-title">{{
+                    section.settings.bottomFirstTitle }}</div>{% endif %}
+                {% if section.settings.bottomTitle != blank %} <div class="ct-discount-bottom-title">{{
+                    section.settings.bottomTitle }}<span class="ct-discount-price"> {{ section.settings.price }}</span>
+                </div>{% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    .ct-explore {
+        width: 100%;
+    }
+    .ct-explore-inner {
+        width: 100%;
+        max-width: 1214px;
+        /* padding: 0 30px; */
+        margin: 0 auto;
+    }
+    .ct-explore-heading {
+        width: 100%;
+        max-width: 100%;
+        font-family: PP Editorial New;
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 46.08px;
+        letter-spacing: -0.02em;
+        text-align: left;
+        margin-bottom: 30px;
+        color: #000;
+        text-transform: capitalize;
+     }
+    .ct-explore-content-main {
+        width: 100%;
+        display: flex;
+        gap: 16px;
+        align-items: baseline;
+    }
+    .ct-explore-content {
+        width: 100%;
+        max-width: 230px;
+        text-align: center;
+        line-height: 0;
+    }
+    .ct-explore-content img {
+        width: 100%;
+        height: 100%;
+    } 
+    .ct-explore-title {
+        text-align: center;
+        margin-top: 10px;
+    } 
+    .ct-explore-title a {
+        font-family: Apercu;
+        text-decoration: none;
+        color: #000000;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.38px;
+        letter-spacing: normal;
+    }
+    
+    
+    @media(max-width:1300px){
+      .ct-explore {
+          padding: 0px 30px;
+      }
+    }
+      
+    @media(max-width:990px){
+      .ct-explore {
+          margin-top: 20px !important;
+      }
+      .ct-explore-content {
+          max-width: 150px;
+      } 
+    }
+      
+    @media(max-width:768px){
+      .ct-explore-heading {
+        font-size: 26px;
+        line-height: 33.28px;
+        margin-bottom: 20px;
+     }
+      .ct-explore-content-main {
+          flex-wrap: wrap;
+      }
+      .ct-explore-content {
+          max-width: 120px;
+      }
+      .ct-explore-title {
+          line-height: 14px;
+          margin-top: 5px;
+      } 
+      .ct-explore-title a {
+          font-size: 13px;
+      }
+    }  
+    </style>
+    
+    <div class="ct-explore" style="margin: {{ section.settings.margintop }}px 0px {{ section.settings.marginbot }}px 0px; background-color: {{ section.settings.bgcolor }};">
+        <div class="ct-explore-inner">
+            {% if section.settings.heading != blank %} 
+               <div class="ct-explore-heading">{{ section.settings.heading }}</div>
+            {% endif %}
+              <div class="ct-explore-content-main">
+                {% for block in section.blocks %}
+                      <div class="ct-explore-content">
+                           {% if block.settings.image != blank %}  
+                              <div>{{- block.settings.image | image_url: width: block.settings.image.width | image_tag: fetchpriority:'high',  sizes: '50px)', widths: '100, 200, 750', class: 'ct-explore-img' -}}</div>
+                           {% endif %}
+                           {% if block.settings.link_title != blank %}
+                              <div class="ct-explore-title">
+                                  <a href="{{ block.settings.link_url }}" title="{{ block.settings.link_title | escape }}">
+                                      {{ block.settings.link_title }}
+                                  </a>
+                              </div>
+                           {% endif %}
+                      </div>
+                {% endfor %}
+              </div>
+        </div>
+    </div>
+    
+    {% schema %}
+      {
+        "name": "CT Explore category",
+        "settings": [
+          {
+            "type": "range",
+            "id": "margintop",
+            "min": 0,
+            "max": 100,
+            "step": 2,
+            "unit": "px",
+            "label": "Margin Top",
+            "default": 0
+          },
+          {
+            "type": "range",
+            "id": "marginbot",
+            "min": 0,
+            "max": 100,
+            "step": 2,
+            "unit": "px",
+            "label": "Margin Bottom",
+            "default": 0
+          },
+          {
+            "type": "color",
+            "id": "bgcolor",
+            "label": "Background Color"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+          }
+        ],
+        "blocks": [{
+         "type": "Explore_category",
+         "name": "Explore_category",
+          "settings": [
+            {
+              "type": "image_picker",
+              "id": "image",
+              "label": "Image"
+            },
+            {
+              "type": "text",
+              "id": "link_title",
+              "label": "Link Title"
+            },
+            {
+              "type": "url",
+              "id": "link_url",
+              "label": "Link URL"
+            }
+          ]
+        }],
+        "presets": [{
+          "name": "CT Explore category"
+        }]
+      }
+    {% endschema %}
+
+
+
+<style>
+    .whychooseimg {
+      width: 100%;
+    }
+    .whychooseimg img {
+      width: 100%;
+    }
+  </style>
+  
+  {%- if section.settings.image != blank -%}
+    <div class="whychooseimg" style="margin: {{ section.settings.margintop }}px 0px {{ section.settings.marginbot }}px 0px;">
+      <img loading="lazy" src="{{ section.settings.image | image_url }}" data-src="{{ section.settings.image | image_url}}" width="{{ section.settings.image.width }}" height="{{ section.settings.image.height }}" alt="{{ section.settings.image.alt }}" class="lazy lazyImage" />
+    </div>
+  {%- endif -%} 
+  
+  {% schema %}
+    {
+      "name": "Why Choose Us 2",
+      "settings": [
+         {
+          "type": "range",
+          "id": "margintop",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "unit": "px",
+          "label": "Margin Top",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "marginbot",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "unit": "px",
+          "label": "Margin Bottom",
+          "default": 0
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ],
+      "presets": [
+      {
+        "name": "Why Choose Us 2"
+      }
+    ]
+  }
+  {% endschema %}
